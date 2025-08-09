@@ -193,7 +193,7 @@ export const jasturConfig = {
   // Cores da identidade visual - Nova Paleta JasTur
   colors: {
     "primary": "#3BBF72",    // Verde principal
-    "secondary": "#1E90FF",  // Azul apoio (mar)
+    "secondary": "#1E90FF",  // Azul apoio
     "accent": "#FFD93B",     // Amarelo sol
     "cta": "#FF8C42",        // Laranja CTA
     "neutral": "#F5F5F5"     // Neutro claro

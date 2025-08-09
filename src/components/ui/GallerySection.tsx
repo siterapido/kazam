@@ -113,8 +113,8 @@ const DestinationsSection: React.FC = () => {
   return (
     <Section id="destinos" background="white" padding="xl">
       <SectionHeader
-        title="Próximas Saídas e Destinos Populares"
-        subtitle="Descubra nossos roteiros mais procurados e reserve sua vaga para a próxima aventura"
+        title="Nossos Destinos e Passeios"
+        subtitle="Descubra nossos roteiros e reserve sua vaga para a próxima aventura"
         align="center"
       />
 
@@ -127,15 +127,15 @@ const DestinationsSection: React.FC = () => {
           className="text-center mb-12"
         >
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            🚀 Próximas Saídas Confirmadas
+            🚀 Passeios Disponíveis
           </h3>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Garanta sua vaga nos nossos roteiros mais populares com datas já confirmadas
+            Escolha seu destino ideal e garanta sua vaga na próxima aventura
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {jasturConfig.featuredDestinations.slice(0, 3).map((destination, index) => (
+          {jasturConfig.featuredDestinations.map((destination, index) => (
             <Card
               key={destination.id}
               delay={index * 0.2}
@@ -206,60 +206,6 @@ const DestinationsSection: React.FC = () => {
         </div>
       </div>
 
-      {/* Seção de Destinos Populares */}
-      <div className="mb-20">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12"
-        >
-          <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-            ⭐ Destinos Mais Procurados
-          </h3>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Conheça os destinos que nossos clientes mais amam e que sempre fazem sucesso
-          </p>
-        </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-          {jasturConfig.featuredDestinations.slice(3, 7).map((destination, index) => (
-            <motion.div
-              key={destination.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group cursor-pointer"
-              onClick={() => handleDestinationClick(destination.id)}
-            >
-              <div className="relative h-64 overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-500">
-                <DestinationImageSlider
-                  images={getDestinationImages(destination.id)}
-                  alt={destination.name}
-                  className="w-full h-full group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                
-                {/* Conteúdo sobre a imagem */}
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h4 className="text-lg font-bold mb-2 group-hover:text-accent-300 transition-colors duration-300">
-                    {destination.name}
-                  </h4>
-                  <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-accent-400" />
-                    <span className="text-sm">{destination.rating}/5</span>
-                  </div>
-                </div>
-
-                {/* Ícone de seta */}
-                <div className="absolute top-4 right-4 w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <ArrowRight className="w-4 h-4 text-white" />
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
 
       {/* CTA final da seção */}
       <motion.div
