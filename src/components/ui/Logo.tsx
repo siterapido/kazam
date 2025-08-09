@@ -24,8 +24,8 @@ export function Logo({ className = '', size = 'md', variant = 'full' }: LogoProp
 
   const renderIcon = () => (
     <motion.img
-      src="/id /jastur-logo.png"
-      alt="JasTur Logo"
+      src="/id/logo.png"
+      alt="Passeios Natal Tur Logo"
       className={`${sizeClasses[size]} object-contain`}
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.2 }}
@@ -34,8 +34,8 @@ export function Logo({ className = '', size = 'md', variant = 'full' }: LogoProp
 
   const renderText = () => (
     <span className="text-gray-900">
-      <span className="text-primary-500">Jas</span>
-      <span className="text-secondary-500">Tur</span>
+      <span className="text-primary-500">Passeios</span>
+      <span className="text-secondary-500">NatalTur</span>
     </span>
   );
 

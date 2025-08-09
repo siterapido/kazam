@@ -26,7 +26,7 @@ export function HeroSection() {
                   transition={{ duration: 0.6 }}
                   className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8"
                 >
-                  <MapPin className="w-4 h-4 text-secondary-400" />
+                  <MapPin className="w-4 h-4 text-accent-400" />
                   <span className="text-white text-sm font-medium">Destinos incríveis em todo o Brasil</span>
                 </motion.div>
 
@@ -37,8 +37,8 @@ export function HeroSection() {
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
                 >
-                  <span className="text-primary-200">JasTur:</span> sua próxima{' '}
-                  <span className="text-secondary-400">parada é aqui!</span>
+                  <span className="text-primary-200">Passeios Natal Tur:</span>{' '}
+                  <span className="text-accent-400">descubra as maravilhas de Natal!</span>
                 </motion.h1>
 
                 {/* Subtítulo */}
@@ -181,9 +181,9 @@ const HeroHeader = () => {
 
   const getCTAButtonClasses = () => {
     if (scrolled && isOverWhiteSection) {
-      return '!bg-transparent !border-secondary-500 !text-gray-900 hover:!bg-transparent hover:!border-secondary-600 hover:!text-gray-900 !shadow-none';
+      return '!bg-transparent !border-primary-500 !text-gray-900 hover:!bg-transparent hover:!border-primary-600 hover:!text-gray-900 !shadow-none';
     }
-    return '!bg-transparent !border-secondary-500 !text-white hover:!bg-transparent hover:!border-secondary-400 hover:!text-white !shadow-none';
+    return '!bg-transparent !border-primary-500 !text-white hover:!bg-transparent hover:!border-primary-400 hover:!text-white !shadow-none';
   };
 
   return (

@@ -25,7 +25,7 @@ const FooterSection: React.FC = () => {
             >
               <div className="flex items-center gap-3 mb-4">
                 <Logo size="lg" variant="icon" className="text-white" />
-                <h3 className="text-2xl font-bold text-white">JasTur Turismo</h3>
+                <h3 className="text-2xl font-bold text-white">Passeios Natal Tur</h3>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 {jasturConfig.company.description} Conectamos pessoas a experiências inesquecíveis 
@@ -35,8 +35,8 @@ const FooterSection: React.FC = () => {
               {/* Estatísticas da empresa */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="text-center p-4 bg-gray-800 rounded-lg">
-                  <div className="text-2xl font-bold text-primary-400">{jasturConfig.stats.viagensRealizadas}</div>
-                  <div className="text-sm text-gray-400">Viagens Realizadas</div>
+                  <div className="text-2xl font-bold text-primary-400">{jasturConfig.stats.passeiosRealizados}</div>
+                  <div className="text-sm text-gray-400">Passeios Realizados</div>
                 </div>
                 <div className="text-center p-4 bg-gray-800 rounded-lg">
                   <div className="text-2xl font-bold text-primary-400">{jasturConfig.stats.clientesSatisfeitos}</div>
@@ -114,7 +114,7 @@ const FooterSection: React.FC = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Contato</h4>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary-400" />
+                <Phone className="w-5 h-5 text-secondary-400" />
                 <div>
                   <div className="text-white font-medium">{jasturConfig.contact.phone}</div>
                   <div className="text-sm text-gray-400">Telefone</div>
@@ -122,7 +122,7 @@ const FooterSection: React.FC = () => {
               </div>
               
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary-400" />
+                <Mail className="w-5 h-5 text-secondary-400" />
                 <div>
                   <div className="text-white font-medium">{jasturConfig.contact.email}</div>
                   <div className="text-sm text-gray-400">Email</div>
@@ -130,7 +130,7 @@ const FooterSection: React.FC = () => {
               </div>
               
               <div className="flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-primary-400" />
+                <MapPin className="w-5 h-5 text-secondary-400" />
                 <div>
                   <div className="text-white font-medium">Pernambuco, Brasil</div>
                   <div className="text-sm text-gray-400">Localização</div>
@@ -238,15 +238,15 @@ const FooterSection: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col gap-4 md:flex-row md:justify-center md:items-center text-center">
             <div className="flex items-center justify-center gap-2">
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+              <div className="w-3 h-3 bg-primary-500 rounded-full"></div>
               <span className="text-gray-400 text-sm">Empresa Certificada</span>
             </div>
             <div className="flex items-center justify-center gap-2">
-              <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+              <div className="w-3 h-3 bg-secondary-500 rounded-full"></div>
               <span className="text-gray-400 text-sm">Seguro Viagem Incluso</span>
             </div>
             <div className="flex items-center justify-center gap-2">
-              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+              <div className="w-3 h-3 bg-accent-500 rounded-full"></div>
               <span className="text-gray-400 text-sm">Atendimento 24/7</span>
             </div>
           </div>

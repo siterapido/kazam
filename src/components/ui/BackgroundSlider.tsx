@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 
 // Array com as imagens existentes na pasta slides
 const slides = [
-  'garanhuns-pe.webp',
-  'gramado-rs.png',
-  'maragogi.jpg',
+  'genipabu-dunas.jpg',
+  'maracajau-mergulho.jpg',
+  'pipa-praia.jpg',
 ];
 
 const images = slides.map((img) => `/slides/${img}`);

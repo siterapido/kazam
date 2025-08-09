@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Calendar, Users, Star, ArrowRight, Clock } from 'lucide-react';
+import { Calendar, Star, ArrowRight, Clock, DollarSign } from 'lucide-react';
 import { Section, SectionHeader } from './Section';
 import { Card, CardBody } from './Card';
 import { CTAButton } from './CTAButton';
+import { DestinationImageSlider } from './DestinationImageSlider';
 
 import { jasturConfig } from '../../config/jastur';
 import { openWhatsApp } from '../../lib/utils';
@@ -11,12 +12,12 @@ import { openWhatsApp } from '../../lib/utils';
 const DestinationsSection: React.FC = () => {
   const handleDestinationClick = (destinationId: string) => {
     const destination = jasturConfig.featuredDestinations.find(d => d.id === destinationId);
-    const message = `Olá! Gostaria de saber mais sobre ${destination?.name} da JasTur. ${destination?.description}`;
+    const message = `Olá! Gostaria de saber mais sobre ${destination?.name} da Passeios Natal Tur. ${destination?.description}`;
     openWhatsApp(jasturConfig.contact.whatsapp, message);
   };
 
   // Função para obter características específicas de cada destino
-  const getDestinationFeatures = (destination: any) => {
+  const getDestinationFeatures = (destination: { id: string }) => {
     const features = {
       galinhos: {
         clima: 'Tropical',
@@ -64,6 +65,51 @@ const DestinationsSection: React.FC = () => {
     };
   };
 
+  // Função para obter as imagens de cada destino
+  const getDestinationImages = (destinationId: string): string[] => {
+    const imageMap: Record<string, string[]> = {
+      'litoral-norte': [
+        '/destinations/litoral-norte/WhatsApp Image 2025-08-09 at 15.57.05 (1).jpeg',
+        '/destinations/litoral-norte/WhatsApp Image 2025-08-09 at 15.57.05.jpeg',
+        '/destinations/litoral-norte/WhatsApp Image 2025-08-09 at 15.57.06.jpeg',
+        '/destinations/litoral-norte/WhatsApp Image 2025-08-09 at 15.57.07 (1).jpeg',
+        '/destinations/litoral-norte/WhatsApp Image 2025-08-09 at 15.57.07.jpeg'
+      ],
+      'genipabu': [
+        '/destinations/genipabu/dunas doradas.jpeg',
+        '/destinations/genipabu/WhatsApp Image 2025-08-09 at 15.57.08.jpeg',
+        '/destinations/genipabu/WhatsApp Image 2025-08-09 at 15.57.07 (2).jpeg',
+        '/destinations/genipabu/WhatsApp Image 2025-08-09 at 15.57.08 (1).jpeg'
+      ],
+      'litoral-sul-4x4': [
+        '/destinations/litoral-sul/WhatsApp Image 2025-08-09 at 15.53.28.jpeg',
+        '/destinations/litoral-sul/WhatsApp Image 2025-08-09 at 15.53.30.jpeg',
+        '/destinations/litoral-sul/WhatsApp Image 2025-08-09 at 15.53.31.jpeg',
+        '/destinations/litoral-sul/cajuerio.jpeg'
+      ],
+      'rio-do-fogo': [
+        '/destinations/rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.16.jpeg',
+        '/destinations/rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.17.jpeg',
+        '/destinations/rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.17 (1).jpeg',
+        '/destinations/rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.18.jpeg'
+      ],
+      'maracajau': [
+        '/destinations/maracajau/WhatsApp Image 2025-08-09 at 15.58.31.jpeg',
+        '/destinations/maracajau/WhatsApp Image 2025-08-09 at 15.58.32.jpeg',
+        '/destinations/maracajau/WhatsApp Image 2025-08-09 at 15.58.34.jpeg',
+        '/destinations/maracajau/WhatsApp Image 2025-08-09 at 15.58.35.jpeg'
+      ],
+      'quadriciclo': [
+        '/destinations/quadriciclo/WhatsApp Image 2025-08-09 at 15.58.33.jpeg',
+        '/destinations/quadriciclo/WhatsApp Image 2025-08-09 at 15.58.34 (1).jpeg',
+        '/destinations/quadriciclo/WhatsApp Image 2025-08-09 at 15.58.34 (2).jpeg',
+        '/destinations/quadriciclo/WhatsApp Image 2025-08-09 at 15.58.34 (3).jpeg'
+      ]
+    };
+
+    return imageMap[destinationId] || ['/destinations/' + destinationId + '.jpg'];
+  };
+
   return (
     <Section id="destinos" background="white" padding="xl">
       <SectionHeader
@@ -98,15 +144,15 @@ const DestinationsSection: React.FC = () => {
               <CardBody className="p-0">
                 {/* Imagem do destino */}
                 <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={destination.image}
+                  <DestinationImageSlider
+                    images={getDestinationImages(destination.id)}
                     alt={destination.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                   
                   {/* Badge de destaque */}
-                  <div className="absolute top-4 left-4 bg-secondary-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute top-4 left-4 bg-cta-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                     {destination.category}
                   </div>
                   
@@ -126,19 +172,19 @@ const DestinationsSection: React.FC = () => {
                   {/* Informações do roteiro */}
                   <div className="space-y-3 mb-6">
                     <div className="flex items-center gap-3 text-sm text-gray-700">
-                      <Calendar className="w-4 h-4 text-primary-500" />
+                      <Calendar className="w-4 h-4 text-secondary-500" />
                       <span><strong>Clima:</strong> {getDestinationFeatures(destination).clima}</span>
                     </div>
                     <div className="flex items-center gap-3 text-sm text-gray-700">
-                      <Clock className="w-4 h-4 text-primary-500" />
+                      <Clock className="w-4 h-4 text-secondary-500" />
                       <span><strong>Melhor época:</strong> {getDestinationFeatures(destination).melhorEpoca}</span>
                     </div>
                     <div className="flex items-center gap-3 text-sm text-gray-700">
-                      <Users className="w-4 h-4 text-primary-500" />
-                      <span><strong>População:</strong> {getDestinationFeatures(destination).populacao}</span>
+                      <DollarSign className="w-4 h-4 text-primary-500" />
+                      <span><strong>Preço:</strong> R$ {destination.price}</span>
                     </div>
                     <div className="flex items-center gap-3 text-sm text-gray-700">
-                      <Star className="w-4 h-4 text-secondary-500" />
+                      <Star className="w-4 h-4 text-accent-500" />
                       <span><strong>Destaque:</strong> {getDestinationFeatures(destination).destaque}</span>
                     </div>
                   </div>
@@ -187,20 +233,20 @@ const DestinationsSection: React.FC = () => {
               onClick={() => handleDestinationClick(destination.id)}
             >
               <div className="relative h-64 overflow-hidden rounded-xl shadow-lg group-hover:shadow-2xl transition-all duration-500">
-                <img
-                  src={destination.image}
+                <DestinationImageSlider
+                  images={getDestinationImages(destination.id)}
                   alt={destination.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                 
                 {/* Conteúdo sobre a imagem */}
                 <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h4 className="text-lg font-bold mb-2 group-hover:text-secondary-300 transition-colors duration-300">
+                  <h4 className="text-lg font-bold mb-2 group-hover:text-accent-300 transition-colors duration-300">
                     {destination.name}
                   </h4>
                   <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-secondary-400" />
+                    <Star className="w-4 h-4 text-accent-400" />
                     <span className="text-sm">{destination.rating}/5</span>
                   </div>
                 </div>

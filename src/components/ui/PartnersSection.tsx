@@ -38,12 +38,12 @@ const PartnersSection: React.FC = () => {
   return (
     <Section id="parceiros" background="white" padding="xl" className="relative overflow-hidden">
       {/* Background com gradiente sutil */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-blue-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-secondary-50"></div>
       
       {/* Elementos decorativos */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-secondary-100/30 rounded-full translate-x-32 -translate-y-32"></div>
-      <div className="absolute bottom-0 left-0 w-48 h-48 bg-secondary-200/20 rounded-full -translate-x-24 translate-y-24"></div>
-      <div className="absolute top-1/2 right-1/4 w-32 h-32 bg-secondary-100/40 rounded-full"></div>
+      <div className="absolute top-0 right-0 w-64 h-64 bg-primary-100/30 rounded-full translate-x-32 -translate-y-32"></div>
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-200/20 rounded-full -translate-x-24 translate-y-24"></div>
+      <div className="absolute top-1/2 right-1/4 w-32 h-32 bg-primary-100/40 rounded-full"></div>
       
       <div className="relative z-10">
         <SectionHeader
@@ -68,14 +68,14 @@ const PartnersSection: React.FC = () => {
                   <div className="relative mb-8 overflow-hidden rounded-2xl">
                     <motion.img
                       src={partner.image}
-                      alt={`${partner.name} - Parceiro JasTur`}
+                      alt={`${partner.name} - Parceiro Passeios Natal Tur`}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                       whileHover={{ scale: 1.05 }}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     
                     {/* Badge de parceiro */}
-                    <div className="absolute top-4 right-4 bg-secondary-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
+                    <div className="absolute top-4 right-4 bg-cta-500 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2">
                       <Handshake size={16} />
                       Parceiro
                     </div>
@@ -83,7 +83,7 @@ const PartnersSection: React.FC = () => {
 
                   {/* Informações do parceiro */}
                   <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-secondary-600 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">
                       {partner.name}
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
@@ -99,9 +99,9 @@ const PartnersSection: React.FC = () => {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.2 + idx * 0.1 }}
-                        className="flex items-center gap-3 text-sm text-gray-700 bg-secondary-50 rounded-lg p-3 group-hover:bg-secondary-100 transition-colors duration-300"
+                        className="flex items-center gap-3 text-sm text-gray-700 bg-accent-50 rounded-lg p-3 group-hover:bg-accent-100 transition-colors duration-300"
                       >
-                        <Star size={16} className="text-secondary-600 flex-shrink-0" />
+                        <Star size={16} className="text-accent-600 flex-shrink-0" />
                         <span className="font-medium">{feature}</span>
                       </motion.div>
                     ))}
@@ -123,7 +123,7 @@ const PartnersSection: React.FC = () => {
         >
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Por que trabalhamos com <span className="text-secondary-600">parceiros de qualidade</span>?
+              Por que trabalhamos com <span className="text-primary-600">parceiros de qualidade</span>?
             </h3>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Nossas parcerias garantem que você tenha acesso aos melhores serviços de transporte
@@ -160,8 +160,8 @@ const PartnersSection: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="text-center group"
               >
-                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-secondary-100 to-secondary-200 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-secondary-200 group-hover:to-secondary-300 transition-all duration-300 shadow-lg">
-                  <benefit.icon size={32} className="text-secondary-600" />
+                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-accent-100 to-accent-200 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-accent-200 group-hover:to-accent-300 transition-all duration-300 shadow-lg">
+                  <benefit.icon size={32} className="text-accent-600" />
                 </div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   {benefit.title}

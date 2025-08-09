@@ -21,13 +21,13 @@ const FAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="w-full py-20 px-4 bg-gradient-to-br from-blue-50 via-white to-orange-50">
+    <section className="w-full py-20 px-4 bg-gradient-to-br from-secondary-50 via-white to-accent-50">
       <div className="max-w-2xl mx-auto mb-12 text-center">
         <div className="flex justify-center mb-6">
           <Logo size="lg" />
         </div>
-        <div className="inline-flex items-center gap-2 bg-secondary-100 text-secondary-700 rounded-full px-4 py-2 mb-4">
-          <HelpCircle className="w-5 h-5 text-secondary-500" />
+        <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-700 rounded-full px-4 py-2 mb-4">
+          <HelpCircle className="w-5 h-5 text-primary-500" />
           <span className="font-semibold">Dúvidas? Estamos aqui para ajudar!</span>
         </div>
         <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-3">Perguntas Frequentes</h2>
@@ -39,20 +39,20 @@ const FAQSection: React.FC = () => {
           return (
             <div
               key={idx}
-              className={`transition-all duration-300 rounded-2xl shadow-md border border-gray-200 bg-white/90 overflow-hidden ${isOpen ? 'ring-2 ring-secondary-400' : ''}`}
+              className={`transition-all duration-300 rounded-2xl shadow-md border border-gray-200 bg-white/90 overflow-hidden ${isOpen ? 'ring-2 ring-primary-400' : ''}`}
             >
               <button
-                className="w-full flex items-center justify-between px-6 py-5 text-lg font-semibold text-gray-900 focus:outline-none hover:bg-secondary-50 transition-colors"
+                className="w-full flex items-center justify-between px-6 py-5 text-lg font-semibold text-gray-900 focus:outline-none hover:bg-primary-50 transition-colors"
                 onClick={() => setOpenIndex(isOpen ? null : idx)}
                 aria-expanded={isOpen}
                 aria-controls={`faq-answer-${idx}`}
               >
                 <span className="flex items-center gap-3">
-                  <HelpCircle className="w-5 h-5 text-secondary-400" />
+                  <HelpCircle className="w-5 h-5 text-primary-400" />
                   {faq.question}
                 </span>
                 {isOpen ? (
-                  <ChevronUp className="w-6 h-6 text-secondary-500" />
+                  <ChevronUp className="w-6 h-6 text-primary-500" />
                 ) : (
                   <ChevronDown className="w-6 h-6 text-gray-400" />
                 )}

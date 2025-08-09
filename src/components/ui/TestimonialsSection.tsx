@@ -21,7 +21,7 @@ const TestimonialsSection: React.FC = () => {
       destination: "Maragogi/AL",
       date: "há 2 semanas",
       image: "https://img.freepik.com/fotos-gratis/homem-barbudo-expressivo-vestindo-camisa_273609-5894.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Excelente experiência! A JasTur superou todas as expectativas. Maragogi é um paraíso e a equipe cuidou de tudo nos mínimos detalhes. Recomendo muito!",
+      text: "Excelente experiência! A Passeios Natal Tur superou todas as expectativas. Maragogi é um paraíso e a equipe cuidou de tudo nos mínimos detalhes. Recomendo muito!",
       highlights: ["Superou expectativas", "Equipe atenciosa", "Paraíso"],
       verified: true,
       helpful: 12
@@ -34,7 +34,7 @@ const TestimonialsSection: React.FC = () => {
       destination: "Gramado/RS",
       date: "há 1 mês",
       image: "https://img.freepik.com/fotos-gratis/ainda-bem-que-mulher-bonita-com-rabo-de-cavalo-encaracolado-tem-sorriso-charmoso-usa-sueter-listrado-poses_273609-8851.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Viagem incrível! Gramado é encantador e a organização da JasTur fez toda diferença. Voltarei a viajar com eles!",
+      text: "Viagem incrível! Gramado é encantador e a organização da Passeios Natal Tur fez toda diferença. Voltarei a viajar com eles!",
       highlights: ["Organização", "Destino encantador", "Voltarei"],
       verified: true,
       helpful: 9
@@ -60,7 +60,7 @@ const TestimonialsSection: React.FC = () => {
       destination: "Natal/RN",
       date: "há 2 meses",
       image: "https://img.freepik.com/fotos-gratis/retrato-de-uma-jovem-mulher-roxa_273609-11669.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Amei cada momento! O grupo era animado e a equipe da JasTur foi sensacional. Recomendo para quem quer viajar sem preocupações.",
+      text: "Amei cada momento! O grupo era animado e a equipe da Passeios Natal Tur foi sensacional. Recomendo para quem quer viajar sem preocupações.",
       highlights: ["Grupo animado", "Equipe sensacional", "Sem preocupações"],
       verified: true,
       helpful: 11
@@ -73,7 +73,7 @@ const TestimonialsSection: React.FC = () => {
       destination: "Bonito/MS",
       date: "há 1 semana",
       image: "https://img.freepik.com/fotos-gratis/homem-maduro-com-barba-e-cabelo-grisalho_23-2148884340.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Experiência única! Bonito é deslumbrante e a JasTur organizou tudo perfeitamente. Os passeios foram incríveis e a equipe muito profissional.",
+      text: "Experiência única! Bonito é deslumbrante e a Passeios Natal Tur organizou tudo perfeitamente. Os passeios foram incríveis e a equipe muito profissional.",
       highlights: ["Experiência única", "Organização perfeita", "Equipe profissional"],
       verified: true,
       helpful: 15
@@ -86,7 +86,7 @@ const TestimonialsSection: React.FC = () => {
       destination: "Porto Seguro/BA",
       date: "há 3 dias",
       image: "https://img.freepik.com/fotos-gratis/mulher-jovem-e-atraente-com-cabelo-longo-e-escuro_23-2148884345.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Viagem dos sonhos! Porto Seguro é mágico e a JasTur transformou nossa experiência em algo inesquecível. Já estou planejando a próxima!",
+      text: "Viagem dos sonhos! Porto Seguro é mágico e a Passeios Natal Tur transformou nossa experiência em algo inesquecível. Já estou planejando a próxima!",
       highlights: ["Viagem dos sonhos", "Destino mágico", "Inesquecível"],
       verified: true,
       helpful: 8
@@ -124,7 +124,7 @@ const TestimonialsSection: React.FC = () => {
       <Star
         key={i}
         className={`w-5 h-5 ${
-          i < rating ? 'text-yellow-400 fill-current' : 'text-gray-300'
+          i < rating ? 'text-accent-400 fill-current' : 'text-gray-300'
         }`}
       />
     ));
@@ -180,7 +180,7 @@ const TestimonialsSection: React.FC = () => {
     <Section id="depoimentos" background="white" padding="xl">
       <SectionHeader
         title="Avaliações dos nossos clientes"
-        subtitle="Veja o que nossos clientes estão dizendo sobre suas experiências com a JasTur"
+        subtitle="Veja o que nossos clientes estão dizendo sobre suas experiências com a Passeios Natal Tur"
         align="center"
       />
 
@@ -237,7 +237,7 @@ const TestimonialsSection: React.FC = () => {
                           {testimonials[currentIndex].name}
                         </h3>
                         {testimonials[currentIndex].verified && (
-                          <div className="bg-blue-100 text-blue-600 text-xs px-2 py-1 rounded-full">
+                          <div className="bg-secondary-100 text-secondary-600 text-xs px-2 py-1 rounded-full">
                             ✓ Verificado
                           </div>
                         )}
@@ -265,7 +265,7 @@ const TestimonialsSection: React.FC = () => {
 
                 {/* Destino visitado */}
                 <div className="flex items-center gap-2 mb-6">
-                  <MapPin className="w-4 h-4 text-primary-500" />
+                  <MapPin className="w-4 h-4 text-secondary-500" />
                   <span className="text-sm text-gray-600">
                     Visitou <strong>{testimonials[currentIndex].destination}</strong>
                   </span>
@@ -276,7 +276,7 @@ const TestimonialsSection: React.FC = () => {
                   {testimonials[currentIndex].highlights.map((highlight, idx) => (
                     <span
                       key={idx}
-                      className="bg-primary-50 text-primary-700 text-sm px-3 py-1 rounded-full"
+                      className="bg-accent-50 text-accent-700 text-sm px-3 py-1 rounded-full"
                     >
                       {highlight}
                     </span>
@@ -385,7 +385,7 @@ const TestimonialsSection: React.FC = () => {
             Junte-se aos nossos clientes satisfeitos!
           </h3>
           <p className="text-lg mb-8 text-white/90 max-w-2xl mx-auto">
-            Faça parte das mais de 1.200 avaliações positivas e descubra por que a JasTur é a escolha certa para suas viagens.
+            Faça parte das mais de 1.200 avaliações positivas e descubra por que a Passeios Natal Tur é a escolha certa para seus passeios.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:gap-4 justify-center">
             <CTAButton
