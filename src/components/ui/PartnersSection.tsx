@@ -11,7 +11,7 @@ const PartnersSection: React.FC = () => {
       id: 'renascer-vans',
       name: 'Renascer Vans',
       description: 'Especializada em transporte executivo e turístico com frota moderna e confortável',
-      image: '/images/parceiro1.jpeg',
+      image: '/partners/renascer-vans.jpg',
       features: [
         'Frota moderna e bem conservada',
         'Motoristas experientes e certificados',
@@ -24,7 +24,7 @@ const PartnersSection: React.FC = () => {
       id: 'parvi',
       name: 'Parvi Transporte',
       description: 'Líder em fretamento e turismo com opções de semi-leito e leito para viagens de longa distância',
-      image: '/images/parceiro2.jpeg',
+      image: '/partners/parvi-transporte.jpg',
       features: [
         'Ônibus de luxo com semi-leito e leito',
         'Wi-Fi e acessibilidade para cadeirantes',

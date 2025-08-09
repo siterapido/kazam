@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Calendar, Star, ArrowRight, Clock, DollarSign } from 'lucide-react';
+import { Calendar, Star, Clock, DollarSign } from 'lucide-react';
 import { Section, SectionHeader } from './Section';
 import { Card, CardBody } from './Card';
 import { CTAButton } from './CTAButton';

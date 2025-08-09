@@ -135,6 +135,24 @@ export const jasturConfig = {
         "description": "Aventura 4x4 pelo litoral sul com as mais belas paisagens aquáticas."
     },
     {
+        "name": "Pipa - Litoral Sul",
+        "included": [
+            "Transporte van/ônibus",
+            "Dia completo",
+            "Tempo livre na praia"
+        ],
+        "id": "pipa",
+        "category": "Praia",
+        "image": "destinations/pipa.jpg",
+        "departureDate": "Diário",
+        "duration": "1 dia",
+        "price": "80",
+        "availableSpots": "Disponível",
+        "rating": "4.6",
+        "reviewCount": "420",
+        "description": "Conheça a famosa Pipa, suas praias paradisíacas e falésias coloridas."
+    },
+    {
         "name": "Parrachos do Rio do Fogo",
         "included": [
             "Transporte",
@@ -190,13 +208,11 @@ export const jasturConfig = {
     }
 ],
 
-  // Cores da identidade visual - Nova Paleta JasTur
+  // Cores da identidade visual
   colors: {
-    "primary": "#3BBF72",    // Verde principal
-    "secondary": "#1E90FF",  // Azul apoio
-    "accent": "#FFD93B",     // Amarelo sol
-    "cta": "#FF8C42",        // Laranja CTA
-    "neutral": "#F5F5F5"     // Neutro claro
+    "primary": "#0ea5e9",
+    "secondary": "#f59e0b",
+    "accent": "#06b6d4"
 },
 
   // SEO
