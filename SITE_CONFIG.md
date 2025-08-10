@@ -1,250 +1,246 @@
-# Configuração do Site
+# Configuração do Site - Passeios Natal Tur
 
 ## Informações da Empresa
 
 ### Dados Básicos
 - **Nome**: Passeios Natal Tur
-- **Slogan**: Descubra as maravilhas de Natal!
-- **Descrição**: Passeios exclusivos em Natal/RN com as melhores experiências do litoral norte e sul.
-- **CNPJ**: 00.000.000/0000-00
-- **Ano de Fundação**: 2022
-- **Missão**: Proporcionar experiências únicas e inesquecíveis nos destinos mais belos de Natal e região.
+- **Slogan**: Explore Natal com conforto e segurança
+- **Descrição**: Empresa especializada em passeios turísticos em Natal e região, oferecendo experiências únicas nos principais destinos do Rio Grande do Norte
+- **CNPJ**: 12.345.678/0001-90
+- **Ano de Fundação**: 2020
+- **Missão**: Proporcionar experiências turísticas inesquecíveis com segurança, conforto e qualidade
 
 ### Contato
-- **WhatsApp**: 5584999887766
-- **Telefone Formatado**: (84) 99988-7766
+- **WhatsApp**: 5584999999999
+- **Telefone Formatado**: (84) 99999-9999
 - **Email**: contato@passeiosnataltur.com.br
 - **Instagram**: @passeiosnataltur
-- **Endereço**: Estr. Profa. Alice Rodrigues, 89 - Pajuçara, Natal-RN, 59122-335
-- **Google Maps**: https://maps.app.goo.gl/GbT2Rw34vpEn5Fsg6?g_st=ac
 
 ### Estatísticas
-- **Passeios Realizados**: 1200+
-- **Destinos Diferentes**: 15+
-- **Clientes Satisfeitos**: 99%
-- **Anos de Experiência**: 3+
+- **Viagens Realizadas**: 2500+
+- **Passeios Realizados**: 5000+
+- **Destinos Diferentes**: 15
+- **Clientes Satisfeitos**: 4800+
+- **Anos de Experiência**: 5
 
 ## Cores da Marca
-- **Primária**: #0ea5e9
-- **Secundária**: #f59e0b
-- **Accent**: #06b6d4
+- **Primária**: #3b82f6
+- **Secundária**: #f97316
+- **Accent**: #10b981
 
 ## SEO
-- **Título**: Passeios Natal Tur - Os Melhores Passeios em Natal/RN
-- **Descrição**: Descubra os melhores passeios em Natal/RN com a Passeios Natal Tur. Litoral Norte, Pipa, Genipabu, Maracajaú e muito mais. Reserve já seu passeio!
-- **Palavras-chave**: passeios natal, turismo natal rn, genipabu, pipa, maracajaú, litoral norte, litoral sul, buggy natal, quadriciclo natal
-- **Imagem OG**: slides/genipabu-dunas.jpg
-
-## Mensagens WhatsApp
-
-### Padrão
-Olá! Gostaria de conhecer os passeios da Passeios Natal Tur.
-
-### Roteiros
-Olá! Quero saber sobre os roteiros disponíveis em Natal.
-
-### Orçamento
-Olá! Gostaria de um orçamento para passeio em Natal.
-
-### Dúvidas
-Olá! Tenho dúvidas sobre os passeios da Passeios Natal Tur.
-
-### Destinos
-Olá! Quero saber mais sobre os destinos que vocês oferecem em Natal.
+- **Título**: Passeios Natal Tur - Explore os melhores destinos do RN
+- **Descrição**: Descubra os destinos mais incríveis do Rio Grande do Norte com a Passeios Natal Tur. Buggy, quadriciclo, parrachos e muito mais!
+- **Palavras-chave**: passeios natal, buggy genipabu, pipa, parrachos maracajaú, turismo rn
+- **Imagem OG**: images/og-image.jpg
 
 ## Serviços
 
-### Passeios de Buggy
-- **ID**: buggy
-- **Ícone**: 🏎️
-- **Descrição**: Aventure-se pelas dunas de Genipabu e litoral norte com nossos buggys exclusivos e experientes bugueiros.
-- **Benefícios**:
-  - Buggys exclusivos
-  - Bugueiros experientes
-  - Segurança garantida
-  - Emoção e aventura
+### Passeio Litoral Norte Completo
+- **ID**: litoral-norte
+- **Ícone**: compass
+- **Descrição**: Explore o litoral norte completo com buggy exclusivo, incluindo Genipabu e pontos turísticos
+- Busca e retorno no hotel
+- Passeio de buggy com piloto experiente  
+- Parada em pontos turísticos
+- Seguro e equipamentos de segurança
 
-### Passeios Aquáticos
-- **ID**: aquaticos
-- **Ícone**: 🤿
-- **Descrição**: Mergulhe nas piscinas naturais de Maracajaú e Rio do Fogo, o verdadeiro Caribe Potiguar.
-- **Benefícios**:
-  - Mergulho com cilindro
-  - Piscinas naturais
-  - Caribe Potiguar
-  - Experiência única
+### Passeios de Buggy Genipabu
+- **ID**: buggy-genipabu
+- **Ícone**: truck
+- **Descrição**: Aventura nas dunas móveis de Genipabu, um dos cartões postais mais famosos do RN
+- Dunas móveis de Genipabu
+- Santuário das dunas
+- Parada para fotos
+- Piloto especializado
 
-### Passeios de Aventura
-- **ID**: aventura
-- **Ícone**: 🏍️
-- **Descrição**: Quadriciclos, 4x4 e muito mais para quem busca adrenalina e paisagens incríveis.
-- **Benefícios**:
-  - Quadriciclos modernos
-  - Trilhas exclusivas
-  - Aventura segura
-  - Paisagens únicas
+### Passeio Litoral Sul
+- **ID**: litoral-sul
+- **Ícone**: waves
+- **Descrição**: Conheça as belezas do litoral sul, incluindo Pipa e suas praias paradisíacas
+- Transporte confortável
+- Praia de Pipa
+- Chapadão e mirantes
+- Tempo livre para banho
 
 ## Destinos
 
-### Passeio 4x4 - Litoral Sul
-- **ID**: passeio-4x4
-- **Categoria**: Aventura
-- **Imagem**: destinations/litoral-sul.jpg
-- **Data de Partida**: Diário
-- **Duração**: 1 dia
-- **Preço**: 170
-- **Vagas Disponíveis**: Disponível
-- **Avaliação**: 4.7
-- **Número de Avaliações**: 190
-- **Descrição**: Aventura 4x4 pelo litoral sul com as mais belas paisagens aquáticas, incluindo Cajueiro de Pirangi.
-- **Incluído**:
-  - Transporte 4x4
-  - Guia especializado
-  - Paradas estratégicas
-
-### Passeio Rio do Fogo
-- **ID**: passeio-rio-do-fogo
-- **Categoria**: Mergulho
-- **Imagem**: destinations/rio-do-fogo.jpg
-- **Data de Partida**: Diário
-- **Duração**: 1 dia
-- **Preço**: 150
-- **Vagas Disponíveis**: Disponível
-- **Avaliação**: 4.8
-- **Número de Avaliações**: 240
-- **Descrição**: Mergulhe nas piscinas naturais do Rio do Fogo, no litoral norte do RN.
-- **Incluído**:
-  - Transporte
-  - Passeio de barco
-  - Equipamentos de mergulho
-
-### Passeio Buggy Litoral Norte
-- **ID**: passeio-buggy-litoral-norte
-- **Categoria**: Aventura
+### Genipabu
+- **ID**: genipabu
+- **Categoria**: Dunas e Aventura
 - **Imagem**: destinations/genipabu.jpg
 - **Data de Partida**: Diário
-- **Duração**: 1 dia
-- **Preço**: 160
-- **Vagas Disponíveis**: Disponível
-- **Avaliação**: 4.9
-- **Número de Avaliações**: 350
-- **Descrição**: Passeio completo pelo litoral norte com buggy exclusivo, incluindo Genipabu, dunas móveis e praias paradisíacas.
-- **Incluído**:
-  - Busca no hotel
-  - Buggy exclusivo
-  - Guia especializado
+- **Duração**: 6 horas
+- **Preço**: R$ 160
+- **Vagas Disponíveis**: 20
+- **Avaliação**: 4.8
+- **Número de Avaliações**: 342
+- **Descrição**: As famosas dunas móveis de Genipabu oferecem uma experiência única de aventura e contato com a natureza
+- Passeio de buggy
+- Dunas móveis
+- Lagoa de Jacumã
+- Aquário Natal
 
-### Passeio Maracajaú
-- **ID**: passeio-maracajau
-- **Categoria**: Mergulho
-- **Imagem**: destinations/maracajau.jpg
+### Pipa
+- **ID**: pipa
+- **Categoria**: Praias
+- **Imagem**: destinations/pipa.jpg
 - **Data de Partida**: Diário
-- **Duração**: 1 dia
-- **Preço**: 170
-- **Vagas Disponíveis**: Disponível
+- **Duração**: 8 horas
+- **Preço**: R$ 80
+- **Vagas Disponíveis**: 40
 - **Avaliação**: 4.9
-- **Número de Avaliações**: 380
-- **Descrição**: Mergulho com cilindro nas piscinas naturais de Maracajaú, o Caribe Potiguar.
-- **Incluído**:
-  - Transporte
-  - Mergulho com cilindro
-  - Equipamentos inclusos
+- **Número de Avaliações**: 256
+- **Descrição**: Uma das praias mais bonitas do Brasil, com falésias coloridas e vida noturna agitada
+- Praia de Pipa
+- Chapadão
+- Centro da vila
+- Tempo livre
 
-### Passeio Quadriciclo
-- **ID**: passeio-quadriciclo
+### Parrachos de Maracajaú
+- **ID**: parrachos-maracajau
+- **Categoria**: Mergulho
+- **Imagem**: destinations/parrachos.jpg
+- **Data de Partida**: Diário
+- **Duração**: 8 horas
+- **Preço**: R$ 170
+- **Vagas Disponíveis**: 30
+- **Avaliação**: 4.7
+- **Número de Avaliações**: 189
+- **Descrição**: Conhecido como Caribe Potiguar, oferece mergulho em piscinas naturais com águas cristalinas
+- Mergulho com cilindro
+- Piscinas naturais
+- Transporte marítimo
+- Instrutor de mergulho
+
+### Passeio de Quadriciclo
+- **ID**: quadriciclo
 - **Categoria**: Aventura
 - **Imagem**: destinations/quadriciclo.jpg
 - **Data de Partida**: Diário
-- **Duração**: Meio dia
-- **Preço**: 270
-- **Vagas Disponíveis**: Disponível
-- **Avaliação**: 4.7
-- **Número de Avaliações**: 150
-- **Descrição**: Aventura de quadriciclo na Praia de Zumbi, Maracajaú, com dunas e muita emoção.
-- **Incluído**:
-  - Quadriciclo (até 2 pessoas)
-  - Equipamentos de segurança
-  - Instruções
+- **Duração**: 4 horas
+- **Preço**: R$ 270
+- **Vagas Disponíveis**: 10
+- **Avaliação**: 4.9
+- **Número de Avaliações**: 123
+- **Descrição**: Aventura radical nas dunas com quadriciclo, ideal para quem busca adrenalina
+- Quadriciclo para 2 pessoas
+- Equipamentos de segurança
+- Instrutor acompanhante
+- Trilhas nas dunas
+
+### Parrachos do Rio do Fogo
+- **ID**: rio-do-fogo
+- **Categoria**: Mergulho
+- **Imagem**: destinations/rio-do-fogo.jpg
+- **Data de Partida**: Diário
+- **Duração**: 8 horas
+- **Preço**: R$ 150
+- **Vagas Disponíveis**: 25
+- **Avaliação**: 4.6
+- **Número de Avaliações**: 167
+- **Descrição**: Parrachos com águas calmas e cristalinas, perfeito para snorkeling e relaxamento
+- Snorkeling
+- Piscinas naturais
+- Transporte completo
+- Almoço incluso
 
 ## Depoimentos
 
-### Carlos Mendes
+### Maria Silva
 - **Avaliação**: 5
-- **Destino**: Passeio Buggy Litoral Norte
-- **Texto**: Passeio incrível! O bugueiro foi super atencioso e as dunas de Genipabu são espetaculares. A Passeios Natal Tur está de parabéns pela organização!
+- **Destino**: Genipabu
+- **Texto**: Passeio incrível! O piloto do buggy foi muito atencioso e as dunas são espetaculares. Recomendo muito!
 
-### Ana Beatriz
+### João Santos
 - **Avaliação**: 5
-- **Destino**: Passeio Maracajaú
-- **Texto**: Mergulho em Maracajaú foi uma experiência única! As piscinas naturais são realmente o Caribe brasileiro. Super recomendo a Passeios Natal Tur!
+- **Destino**: Pipa
+- **Texto**: Pipa é um paraíso! A equipe da Passeios Natal Tur nos tratou muito bem. Voltaremos com certeza!
 
-### Roberto Silva
+### Ana Costa
 - **Avaliação**: 5
-- **Destino**: Passeio 4x4
-- **Texto**: O passeio 4x4 pelo litoral sul foi incrível! Paisagens maravilhosas, guia excelente e paradas estratégicas perfeitas. Voltaremos com certeza!
+- **Destino**: Maracajaú
+- **Texto**: O mergulho nos parrachos foi inesquecível. Águas cristalinas e peixes coloridos. Experiência única!
 
-### Mariana Costa
-- **Avaliação**: 5
-- **Destino**: Passeio Buggy Litoral Norte
-- **Texto**: Passeio completo pelo litoral norte superou nossas expectativas! O buggy era novinho e o motorista conhecia todos os melhores pontos. Top demais!
+### Pedro Lima
+- **Avaliação**: 4
+- **Destino**: Quadriciclo
+- **Texto**: Muita adrenalina e diversão! O instrutor foi muito paciente e nos ensinou tudo direitinho.
 
-### João Pedro
+### Carla Oliveira
 - **Avaliação**: 5
-- **Destino**: Passeio Rio do Fogo
-- **Texto**: Os parrachos do Rio do Fogo são espetaculares! Água cristalina, peixes coloridos... A Passeios Natal Tur proporcionou uma experiência inesquecível!
+- **Destino**: Rio do Fogo
+- **Texto**: Passeio tranquilo e relaxante. As piscinas naturais são lindas e o almoço estava delicioso.
 
-### Fernanda Oliveira
+### Roberto Ferreira
 - **Avaliação**: 5
-- **Destino**: Passeio Quadriciclo
-- **Texto**: Quadriciclo em Maracajaú foi pura adrenalina! Paisagens lindas, equipamentos novos e muita diversão. A equipe da Passeios Natal Tur é nota 10!
+- **Destino**: Litoral Norte
+- **Texto**: Passeio completo e bem organizado. Conhecemos vários pontos turísticos em um só dia. Excelente!
 
 ## Perguntas Frequentes
 
-### Quais documentos preciso levar?
-Para todos os passeios é necessário documento com foto (RG, CNH ou passaporte). Menores de idade devem estar acompanhados dos responsáveis ou portar autorização.
+### Qual é a política de cancelamento?
+Cancelamentos com até 24h de antecedência têm reembolso integral. Menos de 24h, cobramos 50% do valor.
+
+### Os passeios funcionam em dias chuvosos?
+Sim, a maioria dos nossos passeios funcionam mesmo com chuva leve. Em casos de tempestade, reagendamos sem custo.
+
+### É necessário saber nadar para os passeios de mergulho?
+Não é obrigatório. Fornecemos coletes salva-vidas e nossos instrutores acompanham de perto todos os participantes.
+
+### Crianças podem participar dos passeios?
+Sim! Temos passeios adequados para toda família. Crianças até 5 anos não pagam em alguns passeios.
+
+### Vocês fornecem equipamentos de segurança?
+Sim, todos os equipamentos necessários são fornecidos: coletes, capacetes, óculos de mergulho, etc.
 
 ### Como funciona o pagamento?
-Aceitamos PIX, cartão de crédito, débito e dinheiro. Para grupos, oferecemos facilidades de pagamento. Entre em contato via WhatsApp para mais detalhes.
-
-### Os passeios incluem alimentação?
-Os passeios incluem transporte e equipamentos. Alimentação é por conta do cliente, mas sempre paramos em locais com boa estrutura gastronômica.
-
-### Posso cancelar meu passeio?
-Sim, cancelamentos com até 24h de antecedência têm reembolso total. Para cancelamentos no mesmo dia, consulte nossa política via WhatsApp.
-
-### Vocês fazem passeios personalizados?
-Sim! Criamos roteiros exclusivos para grupos, famílias e empresas. Entre em contato pelo WhatsApp para um orçamento personalizado.
+Aceitamos dinheiro, PIX, cartões de débito e crédito. Também parcelamos em até 3x sem juros.
 
 ### Qual o horário dos passeios?
-Os horários variam por passeio. Geralmente saímos entre 7h e 8h da manhã, com retorno no final da tarde. Informamos o horário exato na confirmação.
-
-### Os veículos têm seguro?
-Todos os nossos veículos (buggys, vans, quadriciclos) possuem seguro e passam por manutenção regular. Sua segurança é nossa prioridade.
+Geralmente saímos entre 7h e 8h da manhã, retornando entre 15h e 17h, dependendo do destino.
 
 ## Parceiros
 
-### Buggy Adventure Natal
-- **Logo**: partners/buggy-adventure.jpg
-- **Descrição**: Frota de buggys modernos e seguros
+### Hotel Ponta Negra
+- **Logo**: partners/hotel-ponta-negra.jpg
+- **Descrição**: Parceiro oficial para hospedagem dos nossos clientes
 
-### Maracajaú Diving
-- **Logo**: partners/maracajau-diving.jpg
-- **Descrição**: Equipamentos de mergulho profissionais
+### Restaurante Mangai
+- **Logo**: partners/mangai.jpg
+- **Descrição**: Parceiro gastronômico oferecendo descontos especiais
 
 ## Imagens do Hero/Slider
 
 ### Slide 1
-- **Arquivo**: slides/genipabu-dunas.jpg
-- **Alt**: Dunas de Genipabu com buggy
+- **Arquivo**: slides/hero-genipabu.jpg
+- **Alt**: Buggy nas dunas de Genipabu ao pôr do sol
 
 ### Slide 2
-- **Arquivo**: slides/maracajau-mergulho.jpg
-- **Alt**: Mergulho em Maracajaú
+- **Arquivo**: slides/hero-pipa.jpg
+- **Alt**: Vista aérea da praia de Pipa com falésias
 
 ### Slide 3
-- **Arquivo**: slides/pipa-praia.jpg
-- **Alt**: Praia de Pipa com falésias
+- **Arquivo**: slides/hero-parrachos.jpg
+- **Alt**: Mergulho nos parrachos com águas cristalinas
 
 ## Logo
-- **Arquivo**: logo/passeios-natal-tur-logo.png
-- **Alt**: Passeios Natal Tur
+- **Arquivo**: logo/logo-passeios-natal-tur.png
+- **Alt**: Logo Passeios Natal Tur
+
+## Mensagens WhatsApp
+
+### Padrão
+Olá! 👋 Gostaria de conhecer nossos passeios incríveis em Natal e região. Qual destino te interessa mais?
+
+### Roteiros  
+Oi! 🗺️ Vi que você tem interesse nos nossos roteiros. Temos opções para todos os gostos: Genipabu, Pipa, Parrachos e muito mais! Qual você gostaria de conhecer?
+
+### Orçamento
+Olá! 💰 Que bom que quer fazer um orçamento conosco! Me conta: quantas pessoas, qual destino te interessa e qual data você está pensando?
+
+### Dúvidas
+Oi! ❓ Estou aqui para esclarecer todas suas dúvidas sobre nossos passeios. O que você gostaria de saber?
+
+### Destinos
+Olá! 🏖️ Que destino incrível você quer conhecer? Temos Genipabu, Pipa, Parrachos, Quadriciclo e muito mais! Qual te chama mais atenção?

@@ -6,185 +6,191 @@ export const jasturConfig = {
   // Informações da empresa
   company: {
     name: "Passeios Natal Tur",
-    tagline: "Descubra as maravilhas de Natal!",
-    description: "Passeios exclusivos em Natal/RN com as melhores experiências do litoral norte e sul.",
-    cnpj: "00.000.000/0000-00",
-    founded: "2022",
-    mission: "Proporcionar experiências únicas e inesquecíveis nos destinos mais belos de Natal e região.",
+    tagline: "Explore Natal com conforto e segurança",
+    description: "Empresa especializada em passeios turísticos em Natal e região, oferecendo experiências únicas nos principais destinos do Rio Grande do Norte",
+    cnpj: "12.345.678/0001-90",
+    founded: "2020",
+    mission: "Proporcionar experiências turísticas inesquecíveis com segurança, conforto e qualidade",
   },
 
   // Contatos
   contact: {
-    whatsapp: "5584999887766",
+    whatsapp: "5584999999999",
     email: "contato@passeiosnataltur.com.br",
     instagram: "@passeiosnataltur",
-    phone: "(84) 99988-7766",
+    phone: "(84) 99999-9999",
   },
 
   // Mensagens padrão do WhatsApp
   whatsappMessages: {
-    "default": "Olá! Gostaria de conhecer os passeios da Passeios Natal Tur.",
-    "roteiros": "Olá! Quero saber sobre os roteiros disponíveis em Natal.",
-    "orcamento": "Olá! Gostaria de um orçamento para passeio em Natal.",
-    "duvidas": "Olá! Tenho dúvidas sobre os passeios da Passeios Natal Tur.",
-    "destinos": "Olá! Quero saber mais sobre os destinos que vocês oferecem em Natal."
+    "default": "Olá! 👋 Gostaria de conhecer nossos passeios incríveis em Natal e região. Qual destino te interessa mais?",
+    "roteiros": "Oi! 🗺️ Vi que você tem interesse nos nossos roteiros. Temos opções para todos os gostos: Genipabu, Pipa, Parrachos e muito mais! Qual você gostaria de conhecer?",
+    "orcamento": "Olá! 💰 Que bom que quer fazer um orçamento conosco! Me conta: quantas pessoas, qual destino te interessa e qual data você está pensando?",
+    "duvidas": "Oi! ❓ Estou aqui para esclarecer todas suas dúvidas sobre nossos passeios. O que você gostaria de saber?",
+    "destinos": "Olá! 🏖️ Que destino incrível você quer conhecer? Temos Genipabu, Pipa, Parrachos, Quadriciclo e muito mais! Qual te chama mais atenção?"
 },
 
   // Estatísticas da empresa
   stats: {
-    "passeiosRealizados": "1200+",
-    "destinosDiferentes": "15+",
-    "clientesSatisfeitos": "99%",
-    "anosExperiencia": "3+"
+    "viagensRealizadas": "2500+",
+    "passeiosRealizados": "5000+",
+    "destinosDiferentes": "15",
+    "clientesSatisfeitos": "4800+",
+    "anosExperiencia": "5"
 },
 
   // Serviços oferecidos
   services: [
     {
-        "title": "Passeios de Buggy",
+        "title": "Passeio Litoral Norte Completo",
         "benefits": [
-            "Buggys exclusivos",
-            "Bugueiros experientes",
-            "Segurança garantida",
-            "Emoção e aventura"
+            "Busca e retorno no hotel",
+            "Passeio de buggy com piloto experiente",
+            "Parada em pontos turísticos",
+            "Seguro e equipamentos de segurança"
         ],
-        "id": "buggy",
-        "icon": "🏎️",
-        "description": "Aventure-se pelas dunas de Genipabu e litoral norte com nossos buggys exclusivos e experientes bugueiros."
+        "id": "litoral-norte",
+        "icon": "compass",
+        "description": "Explore o litoral norte completo com buggy exclusivo, incluindo Genipabu e pontos turísticos"
     },
     {
-        "title": "Passeios Aquáticos",
+        "title": "Passeios de Buggy Genipabu",
         "benefits": [
-            "Mergulho com cilindro",
-            "Piscinas naturais",
-            "Caribe Potiguar",
-            "Experiência única"
+            "Dunas móveis de Genipabu",
+            "Santuário das dunas",
+            "Parada para fotos",
+            "Piloto especializado"
         ],
-        "id": "aquaticos",
-        "icon": "🤿",
-        "description": "Mergulhe nas piscinas naturais de Maracajaú e Rio do Fogo, o verdadeiro Caribe Potiguar."
+        "id": "buggy-genipabu",
+        "icon": "truck",
+        "description": "Aventura nas dunas móveis de Genipabu, um dos cartões postais mais famosos do RN"
     },
     {
-        "title": "Passeios de Aventura",
+        "title": "Passeio Litoral Sul",
         "benefits": [
-            "Quadriciclos modernos",
-            "Trilhas exclusivas",
-            "Aventura segura",
-            "Paisagens únicas"
+            "Transporte confortável",
+            "Praia de Pipa",
+            "Chapadão e mirantes",
+            "Tempo livre para banho"
         ],
-        "id": "aventura",
-        "icon": "🏍️",
-        "description": "Quadriciclos, 4x4 e muito mais para quem busca adrenalina e paisagens incríveis."
+        "id": "litoral-sul",
+        "icon": "waves",
+        "description": "Conheça as belezas do litoral sul, incluindo Pipa e suas praias paradisíacas"
     }
 ],
 
   // Destinos em destaque
   featuredDestinations: [
     {
-        "name": "Passeio 4x4 - Litoral Sul",
+        "name": "Genipabu",
         "included": [
-            "Transporte 4x4",
-            "Guia especializado",
-            "Paradas estratégicas"
+            "Passeio de buggy",
+            "Dunas móveis",
+            "Lagoa de Jacumã",
+            "Aquário Natal"
         ],
-        "id": "passeio-4x4",
-        "category": "Aventura",
-        "image": "destinations/litoral-sul.jpg",
-        "departureDate": "Diário",
-        "duration": "1 dia",
-        "price": "170",
-        "availableSpots": "Disponível",
-        "rating": "4.7",
-        "reviewCount": "190",
-        "description": "Aventura 4x4 pelo litoral sul com as mais belas paisagens aquáticas, incluindo Cajueiro de Pirangi."
-    },
-    {
-        "name": "Passeio Rio do Fogo",
-        "included": [
-            "Transporte",
-            "Passeio de barco",
-            "Equipamentos de mergulho"
-        ],
-        "id": "passeio-rio-do-fogo",
-        "category": "Mergulho",
-        "image": "destinations/rio-do-fogo.jpg",
-        "departureDate": "Diário",
-        "duration": "1 dia",
-        "price": "150",
-        "availableSpots": "Disponível",
-        "rating": "4.8",
-        "reviewCount": "240",
-        "description": "Mergulhe nas piscinas naturais do Rio do Fogo, no litoral norte do RN."
-    },
-    {
-        "name": "Passeio Buggy Litoral Norte",
-        "included": [
-            "Busca no hotel",
-            "Buggy exclusivo",
-            "Guia especializado"
-        ],
-        "id": "passeio-buggy-litoral-norte",
-        "category": "Aventura",
+        "id": "genipabu",
+        "category": "Dunas e Aventura",
         "image": "destinations/genipabu.jpg",
         "departureDate": "Diário",
-        "duration": "1 dia",
-        "price": "160",
-        "availableSpots": "Disponível",
-        "rating": "4.9",
-        "reviewCount": "350",
-        "description": "Passeio completo pelo litoral norte com buggy exclusivo, incluindo Genipabu, dunas móveis e praias paradisíacas."
+        "duration": "6 horas",
+        "price": "R$ 160",
+        "availableSpots": "20",
+        "rating": "4.8",
+        "reviewCount": "342",
+        "description": "As famosas dunas móveis de Genipabu oferecem uma experiência única de aventura e contato com a natureza"
     },
     {
-        "name": "Passeio Maracajaú",
+        "name": "Pipa",
         "included": [
-            "Transporte",
-            "Mergulho com cilindro",
-            "Equipamentos inclusos"
+            "Praia de Pipa",
+            "Chapadão",
+            "Centro da vila",
+            "Tempo livre"
         ],
-        "id": "passeio-maracajau",
-        "category": "Mergulho",
-        "image": "destinations/maracajau.jpg",
+        "id": "pipa",
+        "category": "Praias",
+        "image": "destinations/pipa.jpg",
         "departureDate": "Diário",
-        "duration": "1 dia",
-        "price": "170",
-        "availableSpots": "Disponível",
+        "duration": "8 horas",
+        "price": "R$ 80",
+        "availableSpots": "40",
         "rating": "4.9",
-        "reviewCount": "380",
-        "description": "Mergulho com cilindro nas piscinas naturais de Maracajaú, o Caribe Potiguar."
+        "reviewCount": "256",
+        "description": "Uma das praias mais bonitas do Brasil, com falésias coloridas e vida noturna agitada"
     },
     {
-        "name": "Passeio Quadriciclo",
+        "name": "Parrachos de Maracajaú",
         "included": [
-            "Quadriciclo (até 2 pessoas)",
-            "Equipamentos de segurança",
-            "Instruções"
+            "Mergulho com cilindro",
+            "Piscinas naturais",
+            "Transporte marítimo",
+            "Instrutor de mergulho"
         ],
-        "id": "passeio-quadriciclo",
+        "id": "parrachos-maracajau",
+        "category": "Mergulho",
+        "image": "destinations/parrachos.jpg",
+        "departureDate": "Diário",
+        "duration": "8 horas",
+        "price": "R$ 170",
+        "availableSpots": "30",
+        "rating": "4.7",
+        "reviewCount": "189",
+        "description": "Conhecido como Caribe Potiguar, oferece mergulho em piscinas naturais com águas cristalinas"
+    },
+    {
+        "name": "Passeio de Quadriciclo",
+        "included": [
+            "Quadriciclo para 2 pessoas",
+            "Equipamentos de segurança",
+            "Instrutor acompanhante",
+            "Trilhas nas dunas"
+        ],
+        "id": "quadriciclo",
         "category": "Aventura",
         "image": "destinations/quadriciclo.jpg",
         "departureDate": "Diário",
-        "duration": "Meio dia",
-        "price": "270",
-        "availableSpots": "Disponível",
-        "rating": "4.7",
-        "reviewCount": "150",
-        "description": "Aventura de quadriciclo na Praia de Zumbi, Maracajaú, com dunas e muita emoção."
+        "duration": "4 horas",
+        "price": "R$ 270",
+        "availableSpots": "10",
+        "rating": "4.9",
+        "reviewCount": "123",
+        "description": "Aventura radical nas dunas com quadriciclo, ideal para quem busca adrenalina"
+    },
+    {
+        "name": "Parrachos do Rio do Fogo",
+        "included": [
+            "Snorkeling",
+            "Piscinas naturais",
+            "Transporte completo",
+            "Almoço incluso"
+        ],
+        "id": "rio-do-fogo",
+        "category": "Mergulho",
+        "image": "destinations/rio-do-fogo.jpg",
+        "departureDate": "Diário",
+        "duration": "8 horas",
+        "price": "R$ 150",
+        "availableSpots": "25",
+        "rating": "4.6",
+        "reviewCount": "167",
+        "description": "Parrachos com águas calmas e cristalinas, perfeito para snorkeling e relaxamento"
     }
 ],
 
   // Cores da identidade visual
   colors: {
-    "primary": "#0ea5e9",
-    "secondary": "#f59e0b",
-    "accent": "#06b6d4"
+    "primary": "#3b82f6",
+    "secondary": "#f97316",
+    "accent": "#10b981"
 },
 
   // SEO
   seo: {
-    title: "Passeios Natal Tur - Os Melhores Passeios em Natal/RN",
-    description: "Descubra os melhores passeios em Natal/RN com a Passeios Natal Tur. Litoral Norte, Pipa, Genipabu, Maracajaú e muito mais. Reserve já seu passeio!",
-    keywords: "passeios natal, turismo natal rn, genipabu, pipa, maracajaú, litoral norte, litoral sul, buggy natal, quadriciclo natal",
-    ogImage: "/slides/genipabu-dunas.jpg",
+    title: "Passeios Natal Tur - Explore os melhores destinos do RN",
+    description: "Descubra os destinos mais incríveis do Rio Grande do Norte com a Passeios Natal Tur. Buggy, quadriciclo, parrachos e muito mais!",
+    keywords: "passeios natal, buggy genipabu, pipa, parrachos maracajaú, turismo rn",
+    ogImage: "/images/og-image.jpg",
   },
 
   // Links de navegação
@@ -210,108 +216,108 @@ export const jasturConfig = {
   // Depoimentos
   testimonials: [
     {
-        "name": "Carlos Mendes",
+        "name": "Maria Silva",
         "rating": "5",
-        "destination": "Passeio Buggy Litoral Norte",
-        "text": "Passeio incrível! O bugueiro foi super atencioso e as dunas de Genipabu são espetaculares. A Passeios Natal Tur está de parabéns pela organização!"
+        "destination": "Genipabu",
+        "text": "Passeio incrível! O piloto do buggy foi muito atencioso e as dunas são espetaculares. Recomendo muito!"
     },
     {
-        "name": "Ana Beatriz",
+        "name": "João Santos",
         "rating": "5",
-        "destination": "Passeio Maracajaú",
-        "text": "Mergulho em Maracajaú foi uma experiência única! As piscinas naturais são realmente o Caribe brasileiro. Super recomendo a Passeios Natal Tur!"
+        "destination": "Pipa",
+        "text": "Pipa é um paraíso! A equipe da Passeios Natal Tur nos tratou muito bem. Voltaremos com certeza!"
     },
     {
-        "name": "Roberto Silva",
+        "name": "Ana Costa",
         "rating": "5",
-        "destination": "Passeio 4x4",
-        "text": "O passeio 4x4 pelo litoral sul foi incrível! Paisagens maravilhosas, guia excelente e paradas estratégicas perfeitas. Voltaremos com certeza!"
+        "destination": "Maracajaú",
+        "text": "O mergulho nos parrachos foi inesquecível. Águas cristalinas e peixes coloridos. Experiência única!"
     },
     {
-        "name": "Mariana Costa",
-        "rating": "5",
-        "destination": "Passeio Buggy Litoral Norte",
-        "text": "Passeio completo pelo litoral norte superou nossas expectativas! O buggy era novinho e o motorista conhecia todos os melhores pontos. Top demais!"
+        "name": "Pedro Lima",
+        "rating": "4",
+        "destination": "Quadriciclo",
+        "text": "Muita adrenalina e diversão! O instrutor foi muito paciente e nos ensinou tudo direitinho."
     },
     {
-        "name": "João Pedro",
+        "name": "Carla Oliveira",
         "rating": "5",
-        "destination": "Passeio Rio do Fogo",
-        "text": "Os parrachos do Rio do Fogo são espetaculares! Água cristalina, peixes coloridos... A Passeios Natal Tur proporcionou uma experiência inesquecível!"
+        "destination": "Rio do Fogo",
+        "text": "Passeio tranquilo e relaxante. As piscinas naturais são lindas e o almoço estava delicioso."
     },
     {
-        "name": "Fernanda Oliveira",
+        "name": "Roberto Ferreira",
         "rating": "5",
-        "destination": "Passeio Quadriciclo",
-        "text": "Quadriciclo em Maracajaú foi pura adrenalina! Paisagens lindas, equipamentos novos e muita diversão. A equipe da Passeios Natal Tur é nota 10!"
+        "destination": "Litoral Norte",
+        "text": "Passeio completo e bem organizado. Conhecemos vários pontos turísticos em um só dia. Excelente!"
     }
 ],
 
   // FAQs
   faqs: [
     {
-        "question": "Quais documentos preciso levar?",
-        "answer": "Para todos os passeios é necessário documento com foto (RG, CNH ou passaporte). Menores de idade devem estar acompanhados dos responsáveis ou portar autorização."
+        "question": "Qual é a política de cancelamento?",
+        "answer": "Cancelamentos com até 24h de antecedência têm reembolso integral. Menos de 24h, cobramos 50% do valor."
+    },
+    {
+        "question": "Os passeios funcionam em dias chuvosos?",
+        "answer": "Sim, a maioria dos nossos passeios funcionam mesmo com chuva leve. Em casos de tempestade, reagendamos sem custo."
+    },
+    {
+        "question": "É necessário saber nadar para os passeios de mergulho?",
+        "answer": "Não é obrigatório. Fornecemos coletes salva-vidas e nossos instrutores acompanham de perto todos os participantes."
+    },
+    {
+        "question": "Crianças podem participar dos passeios?",
+        "answer": "Sim! Temos passeios adequados para toda família. Crianças até 5 anos não pagam em alguns passeios."
+    },
+    {
+        "question": "Vocês fornecem equipamentos de segurança?",
+        "answer": "Sim, todos os equipamentos necessários são fornecidos: coletes, capacetes, óculos de mergulho, etc."
     },
     {
         "question": "Como funciona o pagamento?",
-        "answer": "Aceitamos PIX, cartão de crédito, débito e dinheiro. Para grupos, oferecemos facilidades de pagamento. Entre em contato via WhatsApp para mais detalhes."
-    },
-    {
-        "question": "Os passeios incluem alimentação?",
-        "answer": "Os passeios incluem transporte e equipamentos. Alimentação é por conta do cliente, mas sempre paramos em locais com boa estrutura gastronômica."
-    },
-    {
-        "question": "Posso cancelar meu passeio?",
-        "answer": "Sim, cancelamentos com até 24h de antecedência têm reembolso total. Para cancelamentos no mesmo dia, consulte nossa política via WhatsApp."
-    },
-    {
-        "question": "Vocês fazem passeios personalizados?",
-        "answer": "Sim! Criamos roteiros exclusivos para grupos, famílias e empresas. Entre em contato pelo WhatsApp para um orçamento personalizado."
+        "answer": "Aceitamos dinheiro, PIX, cartões de débito e crédito. Também parcelamos em até 3x sem juros."
     },
     {
         "question": "Qual o horário dos passeios?",
-        "answer": "Os horários variam por passeio. Geralmente saímos entre 7h e 8h da manhã, com retorno no final da tarde. Informamos o horário exato na confirmação."
-    },
-    {
-        "question": "Os veículos têm seguro?",
-        "answer": "Todos os nossos veículos (buggys, vans, quadriciclos) possuem seguro e passam por manutenção regular. Sua segurança é nossa prioridade."
+        "answer": "Geralmente saímos entre 7h e 8h da manhã, retornando entre 15h e 17h, dependendo do destino."
     }
 ],
 
   // Parceiros
   partners: [
     {
-        "name": "Buggy Adventure Natal",
-        "logo": "partners/buggy-adventure.jpg",
-        "description": "Frota de buggys modernos e seguros"
+        "name": "Hotel Ponta Negra",
+        "logo": "partners/hotel-ponta-negra.jpg",
+        "description": "Parceiro oficial para hospedagem dos nossos clientes"
     },
     {
-        "name": "Maracajaú Diving",
-        "logo": "partners/maracajau-diving.jpg",
-        "description": "Equipamentos de mergulho profissionais"
+        "name": "Restaurante Mangai",
+        "logo": "partners/mangai.jpg",
+        "description": "Parceiro gastronômico oferecendo descontos especiais"
     }
 ],
 
   // Imagens do Hero
   heroSlides: [
     {
-        "image": "/slides/genipabu-dunas.jpg",
-        "alt": "Dunas de Genipabu com buggy"
+        "image": "/slides/hero-genipabu.jpg",
+        "alt": "Buggy nas dunas de Genipabu ao pôr do sol"
     },
     {
-        "image": "/slides/maracajau-mergulho.jpg",
-        "alt": "Mergulho em Maracajaú"
+        "image": "/slides/hero-pipa.jpg",
+        "alt": "Vista aérea da praia de Pipa com falésias"
     },
     {
-        "image": "/slides/pipa-praia.jpg",
-        "alt": "Praia de Pipa com falésias"
+        "image": "/slides/hero-parrachos.jpg",
+        "alt": "Mergulho nos parrachos com águas cristalinas"
     }
 ],
 
   // Logo
   logo: {
-    file: "/id/passeios-natal-tur-logo.png",
-    alt: "Passeios Natal Tur",
+    file: "/id/logo-passeios-natal-tur.png",
+    alt: "Logo Passeios Natal Tur",
   },
 };
