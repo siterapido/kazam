@@ -47,14 +47,14 @@ const ServicesSection: React.FC = () => {
           className="text-white"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
           {jasturConfig.services.map((service, index) => (
             <Card
               key={service.id}
               delay={index * 0.2}
               className="group hover:shadow-2xl transition-all duration-500 bg-white/95 backdrop-blur-sm border-0"
             >
-              <CardBody className="text-center p-8">
+              <CardBody className="text-center p-4 sm:p-6 md:p-8">
                 {/* Ícone do serviço com mais destaque */}
                 <motion.div
                   className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-cta-500 to-cta-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg"

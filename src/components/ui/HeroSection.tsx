@@ -16,7 +16,7 @@ export function HeroSection() {
           
           {/* Conteúdo principal */}
           <div className="relative z-10 w-full py-24 md:pb-32 lg:pb-36 lg:pt-32">
-            <div className="mx-auto max-w-7xl px-6 lg:px-12">
+            <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-12">
               <div className="mx-auto max-w-4xl text-center">
                 
                 {/* Badge de destaque */}
@@ -181,9 +181,9 @@ const HeroHeader = () => {
 
   const getCTAButtonClasses = () => {
     if (scrolled && isOverWhiteSection) {
-      return '!bg-transparent !border-primary-500 !text-gray-900 hover:!bg-transparent hover:!border-primary-600 hover:!text-gray-900 !shadow-none';
+      return '!bg-primary-600 !border-primary-600 !text-white hover:!bg-primary-700 hover:!border-primary-700 hover:!text-white !shadow-md';
     }
-    return '!bg-transparent !border-primary-500 !text-white hover:!bg-transparent hover:!border-primary-400 hover:!text-white !shadow-none';
+    return '!bg-primary-600 !border-primary-600 !text-white hover:!bg-primary-700 hover:!border-primary-700 hover:!text-white !shadow-md';
   };
 
   return (
@@ -192,7 +192,7 @@ const HeroHeader = () => {
         data-state={menuState && 'active'}
         className="group fixed z-50 w-full pt-2 overflow-x-hidden"
       >
-        <div className={`mx-auto max-w-7xl rounded-3xl px-6 transition-all duration-300 lg:px-12 overflow-x-hidden ${getMenuClasses()}`}>
+        <div className={`mx-auto max-w-7xl rounded-3xl px-4 md:px-6 transition-all duration-300 lg:px-12 overflow-x-hidden ${getMenuClasses()}`}>
           <motion.div
             className={`relative flex flex-wrap items-center justify-between gap-6 py-3 duration-200 lg:gap-0 lg:py-6 overflow-x-hidden ${
               scrolled ? 'lg:py-4' : ''
@@ -239,7 +239,7 @@ const HeroHeader = () => {
                     <li key={index}>
                       <button
                         onClick={() => handleMenuClick(item.href)}
-                        className="inline-flex items-center justify-center rounded-md h-10 px-4 text-base font-medium bg-transparent text-gray-700 border border-gray-300/60 hover:bg-gray-100/10 hover:border-gray-400 transition-all duration-200 w-full"
+                        className="inline-flex items-center justify-center rounded-md h-10 px-4 text-base font-medium bg-white text-gray-900 border border-gray-300 hover:bg-gray-50 hover:border-gray-400 shadow-sm transition-all duration-200 w-full"
                       >
                         <span>{item.name}</span>
                       </button>

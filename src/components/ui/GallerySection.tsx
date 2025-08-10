@@ -68,42 +68,35 @@ const DestinationsSection: React.FC = () => {
   // Função para obter as imagens de cada destino
   const getDestinationImages = (destinationId: string): string[] => {
     const imageMap: Record<string, string[]> = {
-      'litoral-norte': [
-        '/destinations/litoral-norte/WhatsApp Image 2025-08-09 at 15.57.05 (1).jpeg',
-        '/destinations/litoral-norte/WhatsApp Image 2025-08-09 at 15.57.05.jpeg',
-        '/destinations/litoral-norte/WhatsApp Image 2025-08-09 at 15.57.06.jpeg',
-        '/destinations/litoral-norte/WhatsApp Image 2025-08-09 at 15.57.07 (1).jpeg',
-        '/destinations/litoral-norte/WhatsApp Image 2025-08-09 at 15.57.07.jpeg'
+      'passeio-4x4': [
+        '/destinations/passeio-4x4/WhatsApp Image 2025-08-09 at 15.53.28.jpeg',
+        '/destinations/passeio-4x4/WhatsApp Image 2025-08-09 at 15.53.30.jpeg',
+        '/destinations/passeio-4x4/WhatsApp Image 2025-08-09 at 15.53.31.jpeg',
+        '/destinations/passeio-4x4/cajuerio.jpeg'
       ],
-      'genipabu': [
-        '/destinations/genipabu/dunas doradas.jpeg',
-        '/destinations/genipabu/WhatsApp Image 2025-08-09 at 15.57.08.jpeg',
-        '/destinations/genipabu/WhatsApp Image 2025-08-09 at 15.57.07 (2).jpeg',
-        '/destinations/genipabu/WhatsApp Image 2025-08-09 at 15.57.08 (1).jpeg'
+      'passeio-rio-do-fogo': [
+        '/destinations/passeio-rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.16.jpeg',
+        '/destinations/passeio-rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.17.jpeg',
+        '/destinations/passeio-rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.17 (1).jpeg',
+        '/destinations/passeio-rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.18.jpeg'
       ],
-      'litoral-sul-4x4': [
-        '/destinations/litoral-sul/WhatsApp Image 2025-08-09 at 15.53.28.jpeg',
-        '/destinations/litoral-sul/WhatsApp Image 2025-08-09 at 15.53.30.jpeg',
-        '/destinations/litoral-sul/WhatsApp Image 2025-08-09 at 15.53.31.jpeg',
-        '/destinations/litoral-sul/cajuerio.jpeg'
+      'passeio-buggy-litoral-norte': [
+        '/destinations/passeio-buggy-litoral-norte/WhatsApp Image 2025-08-09 at 15.57.05.jpeg',
+        '/destinations/passeio-buggy-litoral-norte/WhatsApp Image 2025-08-09 at 15.57.06.jpeg',
+        '/destinations/passeio-buggy-litoral-norte/WhatsApp Image 2025-08-09 at 15.57.07.jpeg',
+        '/destinations/passeio-buggy-litoral-norte/dunas doradas.jpeg'
       ],
-      'rio-do-fogo': [
-        '/destinations/rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.16.jpeg',
-        '/destinations/rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.17.jpeg',
-        '/destinations/rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.17 (1).jpeg',
-        '/destinations/rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.18.jpeg'
+      'passeio-maracajau': [
+        '/destinations/passeio-maracajau/WhatsApp Image 2025-08-09 at 15.58.31.jpeg',
+        '/destinations/passeio-maracajau/WhatsApp Image 2025-08-09 at 15.58.32.jpeg',
+        '/destinations/passeio-maracajau/WhatsApp Image 2025-08-09 at 15.58.34.jpeg',
+        '/destinations/passeio-maracajau/WhatsApp Image 2025-08-09 at 15.58.35.jpeg'
       ],
-      'maracajau': [
-        '/destinations/maracajau/WhatsApp Image 2025-08-09 at 15.58.31.jpeg',
-        '/destinations/maracajau/WhatsApp Image 2025-08-09 at 15.58.32.jpeg',
-        '/destinations/maracajau/WhatsApp Image 2025-08-09 at 15.58.34.jpeg',
-        '/destinations/maracajau/WhatsApp Image 2025-08-09 at 15.58.35.jpeg'
-      ],
-      'quadriciclo': [
-        '/destinations/quadriciclo/WhatsApp Image 2025-08-09 at 15.58.33.jpeg',
-        '/destinations/quadriciclo/WhatsApp Image 2025-08-09 at 15.58.34 (1).jpeg',
-        '/destinations/quadriciclo/WhatsApp Image 2025-08-09 at 15.58.34 (2).jpeg',
-        '/destinations/quadriciclo/WhatsApp Image 2025-08-09 at 15.58.34 (3).jpeg'
+      'passeio-quadriciclo': [
+        '/destinations/passeio-quadriciclo/WhatsApp Image 2025-08-09 at 15.58.33.jpeg',
+        '/destinations/passeio-quadriciclo/WhatsApp Image 2025-08-09 at 15.58.34 (1).jpeg',
+        '/destinations/passeio-quadriciclo/WhatsApp Image 2025-08-09 at 15.58.34 (2).jpeg',
+        '/destinations/passeio-quadriciclo/WhatsApp Image 2025-08-09 at 15.58.34 (3).jpeg'
       ]
     };
 
@@ -134,7 +127,7 @@ const DestinationsSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
           {jasturConfig.featuredDestinations.map((destination, index) => (
             <Card
               key={destination.id}
@@ -149,10 +142,10 @@ const DestinationsSection: React.FC = () => {
                     alt={destination.name}
                     className="w-full h-full group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
                   
                   {/* Badge de destaque */}
-                  <div className="absolute top-4 left-4 bg-cta-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <div className="absolute top-4 left-4 bg-cta-500 text-white px-3 py-1 rounded-full text-sm font-medium pointer-events-none">
                     {destination.category}
                   </div>
                   
@@ -160,7 +153,7 @@ const DestinationsSection: React.FC = () => {
                 </div>
 
                 {/* Conteúdo do card */}
-                <div className="p-6">
+                <div className="p-4 sm:p-6">
                   <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">
                     {destination.name}
                   </h4>

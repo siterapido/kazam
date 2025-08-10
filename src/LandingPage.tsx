@@ -3,7 +3,6 @@ import { HeroSection } from "./components/ui/HeroSection";
 import ServicesSection from "./components/ui/BenefitsSection";
 import DestinationsSection from "./components/ui/GallerySection";
 import TestimonialsSection from "./components/ui/TestimonialsSection";
-import PartnersSection from "./components/ui/PartnersSection";
 import FAQSection from "./components/ui/FAQSection";
 import FooterSection from "./components/ui/FooterSection";
 import { WhatsAppButton } from "./components/ui/WhatsAppButton";
@@ -17,7 +16,6 @@ const LandingPage: React.FC = () => {
       <DestinationsSection />
       <ServicesSection />
       <TestimonialsSection />
-      <PartnersSection />
       <FAQSection />
       <FooterSection />
       

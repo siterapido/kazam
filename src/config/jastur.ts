@@ -81,49 +81,13 @@ export const jasturConfig = {
   // Destinos em destaque
   featuredDestinations: [
     {
-        "name": "Litoral Norte Completo",
-        "included": [
-            "Busca no hotel",
-            "Buggy exclusivo",
-            "Guia especializado"
-        ],
-        "id": "litoral-norte",
-        "category": "Aventura",
-        "image": "destinations/litoral-norte.jpg",
-        "departureDate": "Diário",
-        "duration": "1 dia",
-        "price": "160",
-        "availableSpots": "Disponível",
-        "rating": "4.9",
-        "reviewCount": "350",
-        "description": "Passeio completo pelo litoral norte com buggy exclusivo, incluindo busca no hotel."
-    },
-    {
-        "name": "Genipabu de Buggy",
-        "included": [
-            "Buggy (até 4 pessoas)",
-            "Dunas móveis",
-            "Santuário das dunas"
-        ],
-        "id": "genipabu",
-        "category": "Aventura",
-        "image": "destinations/genipabu.jpg",
-        "departureDate": "Diário",
-        "duration": "Meio dia",
-        "price": "370",
-        "availableSpots": "Disponível",
-        "rating": "4.8",
-        "reviewCount": "280",
-        "description": "Explore as famosas dunas móveis de Genipabu e o Santuário das dunas."
-    },
-    {
-        "name": "Litoral Sul 4x4 (Passeio das Águas)",
+        "name": "Passeio 4x4 - Litoral Sul",
         "included": [
             "Transporte 4x4",
             "Guia especializado",
             "Paradas estratégicas"
         ],
-        "id": "litoral-sul-4x4",
+        "id": "passeio-4x4",
         "category": "Aventura",
         "image": "destinations/litoral-sul.jpg",
         "departureDate": "Diário",
@@ -132,34 +96,16 @@ export const jasturConfig = {
         "availableSpots": "Disponível",
         "rating": "4.7",
         "reviewCount": "190",
-        "description": "Aventura 4x4 pelo litoral sul com as mais belas paisagens aquáticas."
+        "description": "Aventura 4x4 pelo litoral sul com as mais belas paisagens aquáticas, incluindo Cajueiro de Pirangi."
     },
     {
-        "name": "Pipa - Litoral Sul",
-        "included": [
-            "Transporte van/ônibus",
-            "Dia completo",
-            "Tempo livre na praia"
-        ],
-        "id": "pipa",
-        "category": "Praia",
-        "image": "destinations/pipa.jpg",
-        "departureDate": "Diário",
-        "duration": "1 dia",
-        "price": "80",
-        "availableSpots": "Disponível",
-        "rating": "4.6",
-        "reviewCount": "420",
-        "description": "Conheça a famosa Pipa, suas praias paradisíacas e falésias coloridas."
-    },
-    {
-        "name": "Parrachos do Rio do Fogo",
+        "name": "Passeio Rio do Fogo",
         "included": [
             "Transporte",
             "Passeio de barco",
             "Equipamentos de mergulho"
         ],
-        "id": "rio-do-fogo",
+        "id": "passeio-rio-do-fogo",
         "category": "Mergulho",
         "image": "destinations/rio-do-fogo.jpg",
         "departureDate": "Diário",
@@ -171,13 +117,31 @@ export const jasturConfig = {
         "description": "Mergulhe nas piscinas naturais do Rio do Fogo, no litoral norte do RN."
     },
     {
-        "name": "Parrachos de Maracajaú",
+        "name": "Passeio Buggy Litoral Norte",
+        "included": [
+            "Busca no hotel",
+            "Buggy exclusivo",
+            "Guia especializado"
+        ],
+        "id": "passeio-buggy-litoral-norte",
+        "category": "Aventura",
+        "image": "destinations/genipabu.jpg",
+        "departureDate": "Diário",
+        "duration": "1 dia",
+        "price": "160",
+        "availableSpots": "Disponível",
+        "rating": "4.9",
+        "reviewCount": "350",
+        "description": "Passeio completo pelo litoral norte com buggy exclusivo, incluindo Genipabu, dunas móveis e praias paradisíacas."
+    },
+    {
+        "name": "Passeio Maracajaú",
         "included": [
             "Transporte",
             "Mergulho com cilindro",
             "Equipamentos inclusos"
         ],
-        "id": "maracajau",
+        "id": "passeio-maracajau",
         "category": "Mergulho",
         "image": "destinations/maracajau.jpg",
         "departureDate": "Diário",
@@ -189,13 +153,13 @@ export const jasturConfig = {
         "description": "Mergulho com cilindro nas piscinas naturais de Maracajaú, o Caribe Potiguar."
     },
     {
-        "name": "Quadriciclo em Maracajaú",
+        "name": "Passeio Quadriciclo",
         "included": [
             "Quadriciclo (até 2 pessoas)",
             "Equipamentos de segurança",
             "Instruções"
         ],
-        "id": "quadriciclo",
+        "id": "passeio-quadriciclo",
         "category": "Aventura",
         "image": "destinations/quadriciclo.jpg",
         "departureDate": "Diário",
@@ -248,37 +212,37 @@ export const jasturConfig = {
     {
         "name": "Carlos Mendes",
         "rating": "5",
-        "destination": "Genipabu",
+        "destination": "Passeio Buggy Litoral Norte",
         "text": "Passeio incrível! O bugueiro foi super atencioso e as dunas de Genipabu são espetaculares. A Passeios Natal Tur está de parabéns pela organização!"
     },
     {
         "name": "Ana Beatriz",
         "rating": "5",
-        "destination": "Maracajaú",
+        "destination": "Passeio Maracajaú",
         "text": "Mergulho em Maracajaú foi uma experiência única! As piscinas naturais são realmente o Caribe brasileiro. Super recomendo a Passeios Natal Tur!"
     },
     {
         "name": "Roberto Silva",
         "rating": "5",
-        "destination": "Pipa",
-        "text": "Pipa é um paraíso! A van estava confortável, o guia foi excelente e tivemos tempo suficiente para aproveitar cada cantinho. Voltaremos com certeza!"
+        "destination": "Passeio 4x4",
+        "text": "O passeio 4x4 pelo litoral sul foi incrível! Paisagens maravilhosas, guia excelente e paradas estratégicas perfeitas. Voltaremos com certeza!"
     },
     {
         "name": "Mariana Costa",
         "rating": "5",
-        "destination": "Litoral Norte",
+        "destination": "Passeio Buggy Litoral Norte",
         "text": "Passeio completo pelo litoral norte superou nossas expectativas! O buggy era novinho e o motorista conhecia todos os melhores pontos. Top demais!"
     },
     {
         "name": "João Pedro",
         "rating": "5",
-        "destination": "Rio do Fogo",
+        "destination": "Passeio Rio do Fogo",
         "text": "Os parrachos do Rio do Fogo são espetaculares! Água cristalina, peixes coloridos... A Passeios Natal Tur proporcionou uma experiência inesquecível!"
     },
     {
         "name": "Fernanda Oliveira",
         "rating": "5",
-        "destination": "Quadriciclo",
+        "destination": "Passeio Quadriciclo",
         "text": "Quadriciclo em Maracajaú foi pura adrenalina! Paisagens lindas, equipamentos novos e muita diversão. A equipe da Passeios Natal Tur é nota 10!"
     }
 ],

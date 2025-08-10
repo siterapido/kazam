@@ -23,18 +23,14 @@ export function DestinationImageSlider({ images, alt, className = '' }: Destinat
     return () => clearInterval(interval);
   }, [images.length, isPaused]);
 
-  const goToPrevious = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault();
+  const goToPrevious = () => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
     // Pausa por 10 segundos após interação manual
     setIsPaused(true);
     setTimeout(() => setIsPaused(false), 10000);
   };
 
-  const goToNext = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    e.preventDefault();
+  const goToNext = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
     // Pausa por 10 segundos após interação manual
     setIsPaused(true);
@@ -60,17 +56,28 @@ export function DestinationImageSlider({ images, alt, className = '' }: Destinat
   }
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
-      <AnimatePresence mode="wait">
+    <div className={`relative overflow-hidden bg-gray-100 ${className}`}>
+      {/* Imagem de fundo sempre visível */}
+      <img
+        src={images[(currentIndex - 1 + images.length) % images.length]}
+        alt=""
+        className="w-full h-full object-cover absolute inset-0"
+        aria-hidden="true"
+      />
+      
+      <AnimatePresence mode="sync">
         <motion.img
           key={currentIndex}
           src={images[currentIndex]}
           alt={`${alt} - Foto ${currentIndex + 1}`}
-          className="w-full h-full object-cover"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
+          className="w-full h-full object-cover absolute inset-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ 
+            duration: 0.8,
+            ease: "easeInOut"
+          }}
         />
       </AnimatePresence>
 
@@ -79,38 +86,42 @@ export function DestinationImageSlider({ images, alt, className = '' }: Destinat
         <>
           <button
             onClick={goToPrevious}
-            className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg opacity-75 hover:opacity-100 transition-all duration-300 z-20 backdrop-blur-sm"
+            className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 z-30 backdrop-blur-sm cursor-pointer hover:scale-110 active:scale-95"
             title="Imagem anterior"
+            type="button"
+            aria-label="Imagem anterior"
           >
-            <ChevronLeft className="w-4 h-4 text-gray-800" />
+            <ChevronLeft className="w-4 h-4 text-gray-700" />
           </button>
           
           <button
             onClick={goToNext}
-            className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-lg opacity-75 hover:opacity-100 transition-all duration-300 z-20 backdrop-blur-sm"
+            className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-white/90 hover:bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 z-30 backdrop-blur-sm cursor-pointer hover:scale-110 active:scale-95"
             title="Próxima imagem"
+            type="button"
+            aria-label="Próxima imagem"
           >
-            <ChevronRight className="w-4 h-4 text-gray-800" />
+            <ChevronRight className="w-4 h-4 text-gray-700" />
           </button>
 
           {/* Indicadores */}
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-20">
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 z-30 bg-black/20 backdrop-blur-sm px-3 py-1.5 rounded-full">
             {images.map((_, index) => (
               <button
                 key={index}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  e.preventDefault();
+                onClick={() => {
                   setCurrentIndex(index);
                   // Pausa por 10 segundos após interação manual
                   setIsPaused(true);
                   setTimeout(() => setIsPaused(false), 10000);
                 }}
-                className={`w-2 h-2 rounded-full transition-all duration-300 shadow-sm ${
+                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 cursor-pointer ${
                   index === currentIndex 
                     ? 'bg-white scale-125 shadow-md' 
                     : 'bg-white/60 hover:bg-white/80 hover:scale-110'
                 }`}
+                type="button"
+                aria-label={`Ir para imagem ${index + 1}`}
                 title={`Ir para imagem ${index + 1}`}
               />
             ))}

@@ -86,40 +86,8 @@ Olá! Quero saber mais sobre os destinos que vocês oferecem em Natal.
 
 ## Destinos
 
-### Litoral Norte Completo
-- **ID**: litoral-norte
-- **Categoria**: Aventura
-- **Imagem**: destinations/litoral-norte.jpg
-- **Data de Partida**: Diário
-- **Duração**: 1 dia
-- **Preço**: 160
-- **Vagas Disponíveis**: Disponível
-- **Avaliação**: 4.9
-- **Número de Avaliações**: 350
-- **Descrição**: Passeio completo pelo litoral norte com buggy exclusivo, incluindo busca no hotel.
-- **Incluído**:
-  - Busca no hotel
-  - Buggy exclusivo
-  - Guia especializado
-
-### Genipabu de Buggy
-- **ID**: genipabu
-- **Categoria**: Aventura
-- **Imagem**: destinations/genipabu.jpg
-- **Data de Partida**: Diário
-- **Duração**: Meio dia
-- **Preço**: 370
-- **Vagas Disponíveis**: Disponível
-- **Avaliação**: 4.8
-- **Número de Avaliações**: 280
-- **Descrição**: Explore as famosas dunas móveis de Genipabu e o Santuário das dunas.
-- **Incluído**:
-  - Buggy (até 4 pessoas)
-  - Dunas móveis
-  - Santuário das dunas
-
-### Litoral Sul 4x4 (Passeio das Águas)
-- **ID**: litoral-sul-4x4
+### Passeio 4x4 - Litoral Sul
+- **ID**: passeio-4x4
 - **Categoria**: Aventura
 - **Imagem**: destinations/litoral-sul.jpg
 - **Data de Partida**: Diário
@@ -128,30 +96,14 @@ Olá! Quero saber mais sobre os destinos que vocês oferecem em Natal.
 - **Vagas Disponíveis**: Disponível
 - **Avaliação**: 4.7
 - **Número de Avaliações**: 190
-- **Descrição**: Aventura 4x4 pelo litoral sul com as mais belas paisagens aquáticas.
+- **Descrição**: Aventura 4x4 pelo litoral sul com as mais belas paisagens aquáticas, incluindo Cajueiro de Pirangi.
 - **Incluído**:
   - Transporte 4x4
   - Guia especializado
   - Paradas estratégicas
 
-### Pipa - Litoral Sul
-- **ID**: pipa
-- **Categoria**: Praia
-- **Imagem**: destinations/pipa.jpg
-- **Data de Partida**: Diário
-- **Duração**: 1 dia
-- **Preço**: 80
-- **Vagas Disponíveis**: Disponível
-- **Avaliação**: 4.6
-- **Número de Avaliações**: 420
-- **Descrição**: Conheça a famosa Pipa, suas praias paradisíacas e falésias coloridas.
-- **Incluído**:
-  - Transporte van/ônibus
-  - Dia completo
-  - Tempo livre na praia
-
-### Parrachos do Rio do Fogo
-- **ID**: rio-do-fogo
+### Passeio Rio do Fogo
+- **ID**: passeio-rio-do-fogo
 - **Categoria**: Mergulho
 - **Imagem**: destinations/rio-do-fogo.jpg
 - **Data de Partida**: Diário
@@ -166,8 +118,24 @@ Olá! Quero saber mais sobre os destinos que vocês oferecem em Natal.
   - Passeio de barco
   - Equipamentos de mergulho
 
-### Parrachos de Maracajaú
-- **ID**: maracajau
+### Passeio Buggy Litoral Norte
+- **ID**: passeio-buggy-litoral-norte
+- **Categoria**: Aventura
+- **Imagem**: destinations/genipabu.jpg
+- **Data de Partida**: Diário
+- **Duração**: 1 dia
+- **Preço**: 160
+- **Vagas Disponíveis**: Disponível
+- **Avaliação**: 4.9
+- **Número de Avaliações**: 350
+- **Descrição**: Passeio completo pelo litoral norte com buggy exclusivo, incluindo Genipabu, dunas móveis e praias paradisíacas.
+- **Incluído**:
+  - Busca no hotel
+  - Buggy exclusivo
+  - Guia especializado
+
+### Passeio Maracajaú
+- **ID**: passeio-maracajau
 - **Categoria**: Mergulho
 - **Imagem**: destinations/maracajau.jpg
 - **Data de Partida**: Diário
@@ -182,8 +150,8 @@ Olá! Quero saber mais sobre os destinos que vocês oferecem em Natal.
   - Mergulho com cilindro
   - Equipamentos inclusos
 
-### Quadriciclo em Maracajaú
-- **ID**: quadriciclo
+### Passeio Quadriciclo
+- **ID**: passeio-quadriciclo
 - **Categoria**: Aventura
 - **Imagem**: destinations/quadriciclo.jpg
 - **Data de Partida**: Diário
@@ -202,32 +170,32 @@ Olá! Quero saber mais sobre os destinos que vocês oferecem em Natal.
 
 ### Carlos Mendes
 - **Avaliação**: 5
-- **Destino**: Genipabu
+- **Destino**: Passeio Buggy Litoral Norte
 - **Texto**: Passeio incrível! O bugueiro foi super atencioso e as dunas de Genipabu são espetaculares. A Passeios Natal Tur está de parabéns pela organização!
 
 ### Ana Beatriz
 - **Avaliação**: 5
-- **Destino**: Maracajaú
+- **Destino**: Passeio Maracajaú
 - **Texto**: Mergulho em Maracajaú foi uma experiência única! As piscinas naturais são realmente o Caribe brasileiro. Super recomendo a Passeios Natal Tur!
 
 ### Roberto Silva
 - **Avaliação**: 5
-- **Destino**: Pipa
-- **Texto**: Pipa é um paraíso! A van estava confortável, o guia foi excelente e tivemos tempo suficiente para aproveitar cada cantinho. Voltaremos com certeza!
+- **Destino**: Passeio 4x4
+- **Texto**: O passeio 4x4 pelo litoral sul foi incrível! Paisagens maravilhosas, guia excelente e paradas estratégicas perfeitas. Voltaremos com certeza!
 
 ### Mariana Costa
 - **Avaliação**: 5
-- **Destino**: Litoral Norte
+- **Destino**: Passeio Buggy Litoral Norte
 - **Texto**: Passeio completo pelo litoral norte superou nossas expectativas! O buggy era novinho e o motorista conhecia todos os melhores pontos. Top demais!
 
 ### João Pedro
 - **Avaliação**: 5
-- **Destino**: Rio do Fogo
+- **Destino**: Passeio Rio do Fogo
 - **Texto**: Os parrachos do Rio do Fogo são espetaculares! Água cristalina, peixes coloridos... A Passeios Natal Tur proporcionou uma experiência inesquecível!
 
 ### Fernanda Oliveira
 - **Avaliação**: 5
-- **Destino**: Quadriciclo
+- **Destino**: Passeio Quadriciclo
 - **Texto**: Quadriciclo em Maracajaú foi pura adrenalina! Paisagens lindas, equipamentos novos e muita diversão. A equipe da Passeios Natal Tur é nota 10!
 
 ## Perguntas Frequentes
