@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { ChevronRight, MessageCircle } from 'lucide-react';
+import { ChevronRight, MessageCircle, Phone, Eye } from 'lucide-react';
 import { openWhatsApp } from '../../lib/utils';
 
 interface CTAButtonProps {
@@ -9,7 +9,7 @@ interface CTAButtonProps {
   href?: string;
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
-  icon?: 'arrow' | 'whatsapp' | 'none';
+  icon?: 'arrow' | 'whatsapp' | 'none' | 'phone' | 'eye';
   className?: string;
   whatsappNumber?: string;
   whatsappMessage?: string;
@@ -55,6 +55,14 @@ export function CTAButton({
     
     if (icon === 'whatsapp') {
       return <MessageCircle className={`ml-1 sm:ml-2 ${iconClass}`} />;
+    }
+    
+    if (icon === 'phone') {
+      return <Phone className={`ml-1 sm:ml-2 ${iconClass}`} />;
+    }
+    
+    if (icon === 'eye') {
+      return <Eye className={`ml-1 sm:ml-2 ${iconClass}`} />;
     }
     
     return <ChevronRight className={`ml-1 sm:ml-2 ${iconClass}`} />;

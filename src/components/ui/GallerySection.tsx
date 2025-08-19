@@ -102,7 +102,7 @@ const DestinationsSection: React.FC = () => {
       ]
     };
 
-    return imageMap[destinationId] || [destination.image];
+    return imageMap[destinationId] || [];
   };
 
   return (
