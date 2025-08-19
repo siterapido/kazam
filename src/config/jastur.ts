@@ -15,10 +15,10 @@ export const jasturConfig = {
 
   // Contatos
   contact: {
-    whatsapp: "5584999999999",
+    whatsapp: "5584994558857",
     email: "contato@passeiosnataltur.com.br",
     instagram: "@passeiosnataltur",
-    phone: "(84) 99999-9999",
+    phone: "(84) 99455-8857",
   },
 
   // Mensagens padrão do WhatsApp
