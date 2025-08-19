@@ -202,7 +202,7 @@ export const jasturConfig = {
         "image": "images/tours/aventura-maracajau/maracajau-1.png",
         "departureDate": "Diário",
         "duration": "4 horas",
-        "price": "220",
+        "price": "170",
         "availableSpots": "15",
         "rating": "4.9",
         "reviewCount": "98",

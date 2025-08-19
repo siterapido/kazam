@@ -161,7 +161,7 @@
 - **Imagem**: images/tours/aventura-maracajau/maracajau-1.png
 - **Data de Partida**: Diário
 - **Duração**: 4 horas
-- **Preço**: 220
+- **Preço**: 170
 - **Vagas Disponíveis**: 15
 - **Avaliação**: 4.9
 - **Número de Avaliações**: 98
