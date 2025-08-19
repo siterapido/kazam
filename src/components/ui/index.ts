@@ -5,6 +5,7 @@ export { WhatsAppButton } from './WhatsAppButton';
 export { Card, CardHeader, CardBody, CardFooter } from './Card';
 export { Section, SectionHeader } from './Section';
 export { ServiceIcon } from './ServiceIcon';
+export { ImageCarousel } from './ImageCarousel';
 
 // Componentes existentes
 export { BackgroundSlider } from './BackgroundSlider';

@@ -42,139 +42,171 @@ export const jasturConfig = {
   // Serviços oferecidos
   services: [
     {
-        "title": "Passeio Litoral Norte Completo",
+        "title": "Buggy Litoral Norte",
         "benefits": [
-            "Busca e retorno no hotel",
-            "Passeio de buggy com piloto experiente",
-            "Parada em pontos turísticos",
-            "Seguro e equipamentos de segurança"
+            "Transporte",
+            "Bugueiro credenciado",
+            "Paradas para fotos",
+            "Travessia de balsa",
+            "Atividades opcionais (aerobunda, esquibunda etc.)",
+            "Visual guiado pelas principais praias e lagoas do norte"
         ],
-        "id": "litoral-norte",
-        "icon": "compass",
-        "description": "Explore o litoral norte completo com buggy exclusivo, incluindo Genipabu e pontos turísticos"
-    },
-    {
-        "title": "Passeios de Buggy Genipabu",
-        "benefits": [
-            "Dunas móveis de Genipabu",
-            "Santuário das dunas",
-            "Parada para fotos",
-            "Piloto especializado"
-        ],
-        "id": "buggy-genipabu",
+        "id": "buggy-litoral-norte",
         "icon": "truck",
-        "description": "Aventura nas dunas móveis de Genipabu, um dos cartões postais mais famosos do RN"
+        "description": "Explore o melhor do litoral norte com emoção e cenários incríveis! Saída do hotel com visual pela Via Costeira, Praia do Meio e Ponte Newton."
     },
     {
-        "title": "Passeio Litoral Sul",
+        "title": "Passeio 4X4 Litoral Sul",
         "benefits": [
-            "Transporte confortável",
-            "Praia de Pipa",
-            "Chapadão e mirantes",
-            "Tempo livre para banho"
+            "Transporte em 4x4",
+            "Motorista experiente",
+            "Paradas para banho e fotos",
+            "Visitas a praias, lagoas e mirantes",
+            "Pôr do sol nas dunas"
         ],
-        "id": "litoral-sul",
+        "id": "4x4-litoral-sul",
+        "icon": "truck",
+        "description": "Conheça o Litoral Sul do RN em um passeio cheio de paisagens incríveis! O roteiro inclui a Barreira do Inferno, o maior cajueiro do mundo e lagoas como Alcaçuz, Carcará e Arituba."
+    },
+    {
+        "title": "Passeio pelas Praias de Pipa",
+        "benefits": [
+            "Transporte",
+            "Paradas para banho",
+            "Visitas guiadas",
+            "Tempo para fotos e descanso"
+        ],
+        "id": "praias-pipa",
         "icon": "waves",
-        "description": "Conheça as belezas do litoral sul, incluindo Pipa e suas praias paradisíacas"
+        "description": "Conheça as praias mais famosas de Pipa em um passeio cheio de beleza e natureza. Visite a Praia do Madeiro, Cacimbinha, Chapadão, Amor e a Lagoa de Guaraíras."
+    },
+    {
+        "title": "Parrachos de Rio do Fogo + Rio Punaú",
+        "benefits": [
+            "Transporte",
+            "Passeio de lancha ou catamarã",
+            "Parada para banho nos parrachos",
+            "Visita ao Rio Punaú",
+            "Guia acompanhante"
+        ],
+        "id": "parrachos-rio-fogo",
+        "icon": "anchor",
+        "description": "Um passeio completo que combina mar cristalino e natureza exuberante! Começamos nos Parrachos de Rio do Fogo, com suas águas rasas e transparentes ideais para mergulho com snorkel."
+    },
+    {
+        "title": "Aventura em Maracajaú",
+        "benefits": [
+            "Quadriciclo",
+            "Instrutor e equipamentos de segurança",
+            "Passeio pelas dunas e beira-mar",
+            "Paradas para fotos"
+        ],
+        "id": "aventura-maracajau",
+        "icon": "compass",
+        "description": "Viva a emoção de pilotar um quadriciclo pelas dunas de Maracajaú, com vistas incríveis do mar ao seu lado. O passeio combina adrenalina e contato com a natureza."
     }
 ],
 
   // Destinos em destaque
   featuredDestinations: [
     {
-        "name": "Genipabu",
+        "name": "Buggy Litoral Norte",
         "included": [
-            "Passeio de buggy",
-            "Dunas móveis",
-            "Lagoa de Jacumã",
-            "Aquário Natal"
+            "Transporte",
+            "Bugueiro credenciado",
+            "Paradas para fotos",
+            "Travessia de balsa",
+            "Atividades opcionais (aerobunda, esquibunda etc.)",
+            "Visual guiado pelas principais praias e lagoas do norte"
         ],
-        "id": "genipabu",
+        "id": "buggy-litoral-norte",
         "category": "Dunas e Aventura",
-        "image": "destinations/genipabu.jpg",
+        "image": "tours/buggy-litoral-norte/buggy-1.png",
         "departureDate": "Diário",
         "duration": "6 horas",
-        "price": "R$ 160",
+        "price": "180",
         "availableSpots": "20",
-        "rating": "4.8",
-        "reviewCount": "342",
-        "description": "As famosas dunas móveis de Genipabu oferecem uma experiência única de aventura e contato com a natureza"
-    },
-    {
-        "name": "Pipa",
-        "included": [
-            "Praia de Pipa",
-            "Chapadão",
-            "Centro da vila",
-            "Tempo livre"
-        ],
-        "id": "pipa",
-        "category": "Praias",
-        "image": "destinations/pipa.jpg",
-        "departureDate": "Diário",
-        "duration": "8 horas",
-        "price": "R$ 80",
-        "availableSpots": "40",
         "rating": "4.9",
-        "reviewCount": "256",
-        "description": "Uma das praias mais bonitas do Brasil, com falésias coloridas e vida noturna agitada"
+        "reviewCount": "324",
+        "description": "Explore o melhor do litoral norte com emoção e cenários incríveis! Saída do hotel com visual pela Via Costeira, Praia do Meio e Ponte Newton. Paradas nas dunas e lagoas de Genipabu, Pitangui e Jacumã."
     },
     {
-        "name": "Parrachos de Maracajaú",
+        "name": "Passeio 4X4 Litoral Sul",
         "included": [
-            "Mergulho com cilindro",
-            "Piscinas naturais",
-            "Transporte marítimo",
-            "Instrutor de mergulho"
+            "Transporte em 4x4",
+            "Motorista experiente",
+            "Paradas para banho e fotos",
+            "Visitas a praias, lagoas e mirantes",
+            "Pôr do sol nas dunas"
         ],
-        "id": "parrachos-maracajau",
-        "category": "Mergulho",
-        "image": "destinations/parrachos.jpg",
+        "id": "4x4-litoral-sul",
+        "category": "Paisagens e Natureza",
+        "image": "tours/4x4-litoral-sul/4x4-1.png",
         "departureDate": "Diário",
         "duration": "8 horas",
-        "price": "R$ 170",
-        "availableSpots": "30",
-        "rating": "4.7",
-        "reviewCount": "189",
-        "description": "Conhecido como Caribe Potiguar, oferece mergulho em piscinas naturais com águas cristalinas"
+        "price": "160",
+        "availableSpots": "25",
+        "rating": "4.8",
+        "reviewCount": "267",
+        "description": "Conheça o Litoral Sul do RN em um passeio cheio de paisagens incríveis! O roteiro inclui a Barreira do Inferno, o maior cajueiro do mundo e lagoas como Alcaçuz, Carcará e Arituba."
     },
     {
-        "name": "Passeio de Quadriciclo",
+        "name": "Passeio pelas Praias de Pipa",
         "included": [
-            "Quadriciclo para 2 pessoas",
-            "Equipamentos de segurança",
-            "Instrutor acompanhante",
-            "Trilhas nas dunas"
+            "Transporte",
+            "Paradas para banho",
+            "Visitas guiadas",
+            "Tempo para fotos e descanso"
         ],
-        "id": "quadriciclo",
+        "id": "praias-pipa",
+        "category": "Praias",
+        "image": "tours/praias-pipa/pipa-1.png",
+        "departureDate": "Diário",
+        "duration": "8 horas",
+        "price": "140",
+        "availableSpots": "30",
+        "rating": "4.9",
+        "reviewCount": "189",
+        "description": "Conheça as praias mais famosas de Pipa em um passeio cheio de beleza e natureza. Visite a Praia do Madeiro, Cacimbinha, Chapadão, Amor e a Lagoa de Guaraíras."
+    },
+    {
+        "name": "Parrachos de Rio do Fogo + Rio Punaú",
+        "included": [
+            "Transporte",
+            "Passeio de lancha ou catamarã",
+            "Parada para banho nos parrachos",
+            "Visita ao Rio Punaú",
+            "Guia acompanhante"
+        ],
+        "id": "parrachos-rio-fogo",
+        "category": "Mergulho",
+        "image": "images/tours/parrachos-rio-fogo/riodofogo-1.png",
+        "departureDate": "Diário",
+        "duration": "8 horas",
+        "price": "170",
+        "availableSpots": "25",
+        "rating": "4.7",
+        "reviewCount": "145",
+        "description": "Um passeio completo que combina mar cristalino e natureza exuberante! Começamos nos Parrachos de Rio do Fogo, com suas águas rasas e transparentes ideais para mergulho com snorkel."
+    },
+    {
+        "name": "Aventura em Maracajaú",
+        "included": [
+            "Quadriciclo",
+            "Instrutor e equipamentos de segurança",
+            "Passeio pelas dunas e beira-mar",
+            "Paradas para fotos"
+        ],
+        "id": "aventura-maracajau",
         "category": "Aventura",
-        "image": "destinations/quadriciclo.jpg",
+        "image": "images/tours/aventura-maracajau/maracajau-1.png",
         "departureDate": "Diário",
         "duration": "4 horas",
-        "price": "R$ 270",
-        "availableSpots": "10",
+        "price": "220",
+        "availableSpots": "15",
         "rating": "4.9",
-        "reviewCount": "123",
-        "description": "Aventura radical nas dunas com quadriciclo, ideal para quem busca adrenalina"
-    },
-    {
-        "name": "Parrachos do Rio do Fogo",
-        "included": [
-            "Snorkeling",
-            "Piscinas naturais",
-            "Transporte completo",
-            "Almoço incluso"
-        ],
-        "id": "rio-do-fogo",
-        "category": "Mergulho",
-        "image": "destinations/rio-do-fogo.jpg",
-        "departureDate": "Diário",
-        "duration": "8 horas",
-        "price": "R$ 150",
-        "availableSpots": "25",
-        "rating": "4.6",
-        "reviewCount": "167",
-        "description": "Parrachos com águas calmas e cristalinas, perfeito para snorkeling e relaxamento"
+        "reviewCount": "98",
+        "description": "Viva a emoção de pilotar um quadriciclo pelas dunas de Maracajaú, com vistas incríveis do mar ao seu lado. O passeio combina adrenalina e contato com a natureza."
     }
 ],
 

@@ -14,6 +14,9 @@ npm run preview      # Preview production build locally
 
 # Code Quality
 npm run lint         # ESLint with TypeScript support
+
+# Configuration Management
+npm run config:update # Generate TypeScript config from SITE_CONFIG.md
 ```
 
 ## Project Architecture
@@ -48,7 +51,13 @@ src/components/ui/
 - Consistent spacing, typography (Inter font), and animation patterns
 - Responsive-first approach (mobile → tablet → desktop)
 
-**4. Landing Page Structure**
+**4. Configuration-Driven Content Management**
+- Business data managed via `SITE_CONFIG.md` (Markdown format for easy editing)
+- Automatic TypeScript config generation via `npm run config:update`
+- Generated config at `src/config/jastur.ts` (DO NOT edit directly)
+- Image processing: assets copied from `assets/` to `public/` during config generation
+
+**5. Landing Page Structure**
 The main page (`LandingPage.tsx`) follows a conversion-optimized flow:
 1. **HeroSection** - Background slider with company stats and main CTA
 2. **DestinationsSection** (GallerySection) - Featured destinations with booking CTAs  
@@ -79,3 +88,11 @@ The main page (`LandingPage.tsx`) follows a conversion-optimized flow:
 - PostCSS + Autoprefixer for CSS processing
 - All components use modern React patterns (functional components, hooks, TypeScript interfaces)
 - Semantic HTML and accessibility considerations throughout
+
+### Content Management Workflow
+
+**Important**: To modify business content (services, destinations, testimonials, etc.):
+1. Edit `SITE_CONFIG.md` (not the TypeScript config directly)
+2. Run `npm run config:update` to regenerate the TypeScript config
+3. Images should be placed in `assets/` folder structure before running config update
+4. Dev server automatically runs config update, but build requires explicit execution

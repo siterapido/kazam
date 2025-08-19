@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Calendar, Star, Clock, DollarSign } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Section, SectionHeader } from './Section';
 import { Card, CardBody } from './Card';
 import { CTAButton } from './CTAButton';
@@ -10,10 +11,16 @@ import { jasturConfig } from '../../config/jastur';
 import { openWhatsApp } from '../../lib/utils';
 
 const DestinationsSection: React.FC = () => {
+  const navigate = useNavigate();
+
   const handleDestinationClick = (destinationId: string) => {
     const destination = jasturConfig.featuredDestinations.find(d => d.id === destinationId);
     const message = `Olá! Gostaria de saber mais sobre ${destination?.name} da Passeios Natal Tur. ${destination?.description}`;
     openWhatsApp(jasturConfig.contact.whatsapp, message);
+  };
+
+  const handleViewDetails = (destinationId: string) => {
+    navigate(`/passeio/${destinationId}`);
   };
 
   // Função para obter características específicas de cada destino
@@ -68,39 +75,34 @@ const DestinationsSection: React.FC = () => {
   // Função para obter as imagens de cada destino
   const getDestinationImages = (destinationId: string): string[] => {
     const imageMap: Record<string, string[]> = {
-      'passeio-4x4': [
-        '/destinations/passeio-4x4/WhatsApp Image 2025-08-09 at 15.53.28.jpeg',
-        '/destinations/passeio-4x4/WhatsApp Image 2025-08-09 at 15.53.30.jpeg',
-        '/destinations/passeio-4x4/WhatsApp Image 2025-08-09 at 15.53.31.jpeg',
-        '/destinations/passeio-4x4/cajuerio.jpeg'
+      'buggy-litoral-norte': [
+        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-1.png',
+        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-2.png',
+        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-3.png'
       ],
-      'passeio-rio-do-fogo': [
-        '/destinations/passeio-rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.16.jpeg',
-        '/destinations/passeio-rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.17.jpeg',
-        '/destinations/passeio-rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.17 (1).jpeg',
-        '/destinations/passeio-rio-do-fogo/WhatsApp Image 2025-08-09 at 15.52.18.jpeg'
+      '4x4-litoral-sul': [
+        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-1.png',
+        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-2.png',
+        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-3.png'
       ],
-      'passeio-buggy-litoral-norte': [
-        '/destinations/passeio-buggy-litoral-norte/WhatsApp Image 2025-08-09 at 15.57.05.jpeg',
-        '/destinations/passeio-buggy-litoral-norte/WhatsApp Image 2025-08-09 at 15.57.06.jpeg',
-        '/destinations/passeio-buggy-litoral-norte/WhatsApp Image 2025-08-09 at 15.57.07.jpeg',
-        '/destinations/passeio-buggy-litoral-norte/dunas doradas.jpeg'
+      'praias-pipa': [
+        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-1.png',
+        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-2.png',
+        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-3.png'
       ],
-      'passeio-maracajau': [
-        '/destinations/passeio-maracajau/WhatsApp Image 2025-08-09 at 15.58.31.jpeg',
-        '/destinations/passeio-maracajau/WhatsApp Image 2025-08-09 at 15.58.32.jpeg',
-        '/destinations/passeio-maracajau/WhatsApp Image 2025-08-09 at 15.58.34.jpeg',
-        '/destinations/passeio-maracajau/WhatsApp Image 2025-08-09 at 15.58.35.jpeg'
+      'parrachos-rio-fogo': [
+        '/images/tours/parrachos-rio-fogo/riodofogo-1.png',
+        '/images/tours/parrachos-rio-fogo/riodofogo-2.png',
+        '/images/tours/parrachos-rio-fogo/riodofogo-3.png'
       ],
-      'passeio-quadriciclo': [
-        '/destinations/passeio-quadriciclo/WhatsApp Image 2025-08-09 at 15.58.33.jpeg',
-        '/destinations/passeio-quadriciclo/WhatsApp Image 2025-08-09 at 15.58.34 (1).jpeg',
-        '/destinations/passeio-quadriciclo/WhatsApp Image 2025-08-09 at 15.58.34 (2).jpeg',
-        '/destinations/passeio-quadriciclo/WhatsApp Image 2025-08-09 at 15.58.34 (3).jpeg'
+      'aventura-maracajau': [
+        '/images/tours/aventura-maracajau/maracajau-1.png',
+        '/images/tours/aventura-maracajau/maracajau-2.png',
+        '/images/tours/aventura-maracajau/maracajau-3.png'
       ]
     };
 
-    return imageMap[destinationId] || ['/destinations/' + destinationId + '.jpg'];
+    return imageMap[destinationId] || [destination.image];
   };
 
   return (
@@ -182,16 +184,27 @@ const DestinationsSection: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* CTA específico */}
-                  <CTAButton
-                    size="md"
-                    variant="primary"
-                    icon="whatsapp"
-                    onClick={() => handleDestinationClick(destination.id)}
-                    className="w-full group-hover:scale-105 transition-transform duration-300"
-                  >
-                    Quero Ir
-                  </CTAButton>
+                  {/* CTAs */}
+                  <div className="flex gap-2">
+                    <CTAButton
+                      size="md"
+                      variant="outline"
+                      icon="eye"
+                      onClick={() => handleViewDetails(destination.id)}
+                      className="flex-1 group-hover:scale-105 transition-transform duration-300"
+                    >
+                      Ver Detalhes
+                    </CTAButton>
+                    <CTAButton
+                      size="md"
+                      variant="primary"
+                      icon="whatsapp"
+                      onClick={() => handleDestinationClick(destination.id)}
+                      className="flex-1 group-hover:scale-105 transition-transform duration-300"
+                    >
+                      Reservar
+                    </CTAButton>
+                  </div>
                 </div>
               </CardBody>
             </Card>
