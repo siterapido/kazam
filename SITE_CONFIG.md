@@ -93,7 +93,7 @@
 - **Imagem**: tours/buggy-litoral-norte/buggy-1.png
 - **Data de Partida**: Diário
 - **Duração**: 6 horas
-- **Preço**: 180
+- **Preço**: 170
 - **Vagas Disponíveis**: 20
 - **Avaliação**: 4.9
 - **Número de Avaliações**: 324
@@ -111,7 +111,7 @@
 - **Imagem**: tours/4x4-litoral-sul/4x4-1.png
 - **Data de Partida**: Diário
 - **Duração**: 8 horas
-- **Preço**: 160
+- **Preço**: 85
 - **Vagas Disponíveis**: 25
 - **Avaliação**: 4.8
 - **Número de Avaliações**: 267
@@ -128,7 +128,7 @@
 - **Imagem**: tours/praias-pipa/pipa-1.png
 - **Data de Partida**: Diário
 - **Duração**: 8 horas
-- **Preço**: 140
+- **Preço**: 85
 - **Vagas Disponíveis**: 30
 - **Avaliação**: 4.9
 - **Número de Avaliações**: 189
@@ -144,7 +144,7 @@
 - **Imagem**: images/tours/parrachos-rio-fogo/riodofogo-1.png
 - **Data de Partida**: Diário
 - **Duração**: 8 horas
-- **Preço**: 170
+- **Preço**: 150
 - **Vagas Disponíveis**: 25
 - **Avaliação**: 4.7
 - **Número de Avaliações**: 145
