@@ -11,7 +11,7 @@ const TestimonialsSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Dados dos depoimentos - Focados no novo posicionamento da Kazam
+  // Dados dos depoimentos - Focados no novo posicionamento da Kazan
   const testimonials = [
     {
       id: 1,

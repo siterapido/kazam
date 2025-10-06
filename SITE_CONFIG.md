@@ -332,7 +332,7 @@ Geralmente saímos entre 7h e 8h da manhã, retornando entre 15h e 17h, dependen
 - **Alt**: Mergulho nos parrachos com águas cristalinas
 
 ## Logo
-- **Arquivo**: logo/logo.png
+- **Arquivo**: logo/logo kazan.png
 - **Alt**: Logo Kazan Adventure
 
 ## Mensagens WhatsApp
