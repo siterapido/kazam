@@ -453,7 +453,7 @@ export const jasturConfig = {
 
   // Logo
   logo: {
-    file: "/id/logo kazan.png",
+    file: "/id/logo-kazan-atualizada.png",
     alt: "Logo Kazan Adventure",
   },
 };

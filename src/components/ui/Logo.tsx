@@ -10,9 +10,9 @@ interface LogoProps {
 
 export function Logo({ className = '', size = 'md', variant = 'full' }: LogoProps) {
   const sizeClasses = {
-    sm: 'h-8 w-8',
-    md: 'h-10 w-10',
-    lg: 'h-12 w-12'
+    sm: 'h-8',
+    md: 'h-10',
+    lg: 'h-12'
   };
 
   const textSizeClasses = {
@@ -27,7 +27,7 @@ export function Logo({ className = '', size = 'md', variant = 'full' }: LogoProp
     <motion.img
       src={jasturConfig.logo?.file || '/logo.png'}
       alt={jasturConfig.logo?.alt || jasturConfig.company?.name || 'Logo'}
-      className={`${sizeClasses[size]} object-contain`}
+      className={`${sizeClasses[size]} w-auto object-contain`}
       whileHover={{ scale: 1.05 }}
       transition={{ duration: 0.2 }}
     />
