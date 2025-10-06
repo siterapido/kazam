@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { MapPin, Phone, Mail, Instagram, Facebook, Youtube, ArrowUp } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, ArrowUp } from 'lucide-react';
 import { CTAButton } from './CTAButton';
 import { Logo } from './Logo';
 import { jasturConfig } from '../../config/jastur';
@@ -11,7 +11,7 @@ const FooterSection: React.FC = () => {
   };
 
   return (
-    <footer id="contato" className="w-full bg-gray-900 text-gray-300">
+    <footer id="contato" className="w-full text-gray-300" style={{ backgroundColor: '#2E3D2C' }}>
       {/* Seção principal do rodapé */}
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -25,7 +25,7 @@ const FooterSection: React.FC = () => {
             >
               <div className="flex items-center gap-3 mb-4">
                 <Logo size="lg" variant="icon" className="text-white" />
-                <h3 className="text-2xl font-bold text-white">Passeios Natal Tur</h3>
+                <h3 className="text-2xl font-bold text-white">{jasturConfig.company.name}</h3>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed">
                 {jasturConfig.company.description} Conectamos pessoas a experiências inesquecíveis 
@@ -34,12 +34,12 @@ const FooterSection: React.FC = () => {
               
               {/* Estatísticas da empresa */}
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center p-4 bg-gray-800 rounded-lg">
-                  <div className="text-2xl font-bold text-primary-400">{jasturConfig.stats.passeiosRealizados}</div>
+                <div className="text-center p-4 rounded-lg" style={{ backgroundColor: '#1e2920' }}>
+                  <div className="text-2xl font-bold text-accent-500">{jasturConfig.stats.passeiosRealizados}</div>
                   <div className="text-sm text-gray-400">Passeios Realizados</div>
                 </div>
-                <div className="text-center p-4 bg-gray-800 rounded-lg">
-                  <div className="text-2xl font-bold text-primary-400">{jasturConfig.stats.clientesSatisfeitos}</div>
+                <div className="text-center p-4 rounded-lg" style={{ backgroundColor: '#1e2920' }}>
+                  <div className="text-2xl font-bold text-accent-500">{jasturConfig.stats.clientesSatisfeitos}</div>
                   <div className="text-sm text-gray-400">Satisfação</div>
                 </div>
               </div>
@@ -57,7 +57,7 @@ const FooterSection: React.FC = () => {
               <li>
                 <a 
                   href="#servicos" 
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                  className="text-gray-400 hover:text-secondary-500 transition-colors duration-300"
                   onClick={(e) => {
                     e.preventDefault();
                     document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' });
@@ -69,7 +69,7 @@ const FooterSection: React.FC = () => {
               <li>
                 <a 
                   href="#destinos" 
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                  className="text-gray-400 hover:text-secondary-500 transition-colors duration-300"
                   onClick={(e) => {
                     e.preventDefault();
                     document.getElementById('destinos')?.scrollIntoView({ behavior: 'smooth' });
@@ -81,7 +81,7 @@ const FooterSection: React.FC = () => {
               <li>
                 <a 
                   href="#depoimentos" 
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                  className="text-gray-400 hover:text-secondary-500 transition-colors duration-300"
                   onClick={(e) => {
                     e.preventDefault();
                     document.getElementById('depoimentos')?.scrollIntoView({ behavior: 'smooth' });
@@ -92,11 +92,23 @@ const FooterSection: React.FC = () => {
               </li>
               <li>
                 <a 
-                  href="#cta-final" 
-                  className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
+                  href="#faq" 
+                  className="text-gray-400 hover:text-secondary-500 transition-colors duration-300"
                   onClick={(e) => {
                     e.preventDefault();
-                    document.getElementById('cta-final')?.scrollIntoView({ behavior: 'smooth' });
+                    document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="#contato" 
+                  className="text-gray-400 hover:text-secondary-500 transition-colors duration-300"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
                   Fale Conosco
@@ -114,7 +126,7 @@ const FooterSection: React.FC = () => {
             <h4 className="text-lg font-semibold text-white mb-4">Contato</h4>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-secondary-400" />
+                <Phone className="w-5 h-5 text-secondary-500" />
                 <div>
                   <div className="text-white font-medium">{jasturConfig.contact.phone}</div>
                   <div className="text-sm text-gray-400">Telefone</div>
@@ -122,7 +134,7 @@ const FooterSection: React.FC = () => {
               </div>
               
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-secondary-400" />
+                <Mail className="w-5 h-5 text-secondary-500" />
                 <div>
                   <div className="text-white font-medium">{jasturConfig.contact.email}</div>
                   <div className="text-sm text-gray-400">Email</div>
@@ -130,9 +142,9 @@ const FooterSection: React.FC = () => {
               </div>
               
               <div className="flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-secondary-400" />
+                <MapPin className="w-5 h-5 text-secondary-500" />
                 <div>
-                  <div className="text-white font-medium">Pernambuco, Brasil</div>
+                  <div className="text-white font-medium">{jasturConfig.contact.address || 'Localização não informada'}</div>
                   <div className="text-sm text-gray-400">Localização</div>
                 </div>
               </div>
@@ -157,21 +169,9 @@ const FooterSection: React.FC = () => {
                   href={`https://instagram.com/${jasturConfig.contact.instagram.replace('@', '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors duration-300"
+                  className="w-10 h-10 bg-kazan-primary rounded-full flex items-center justify-center hover:bg-kazan-secondary transition-colors duration-300"
                 >
                   <Instagram className="w-5 h-5 text-white" />
-                </a>
-                <a 
-                  href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors duration-300"
-                >
-                  <Facebook className="w-5 h-5 text-white" />
-                </a>
-                <a 
-                  href="#"
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors duration-300"
-                >
-                  <Youtube className="w-5 h-5 text-white" />
                 </a>
               </div>
             </div>
@@ -189,7 +189,7 @@ const FooterSection: React.FC = () => {
               </CTAButton>
               <button
                 onClick={scrollToTop}
-                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-500 transition-colors duration-300"
+                className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-secondary-500 transition-colors duration-300"
                 title="Voltar ao topo"
               >
                 <ArrowUp className="w-5 h-5 text-white" />
@@ -216,16 +216,16 @@ const FooterSection: React.FC = () => {
 
             {/* Links legais */}
             <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+              <a href="#" className="text-gray-400 hover:text-secondary-500 transition-colors duration-300">
                 Política de Privacidade
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+              <a href="#" className="text-gray-400 hover:text-secondary-500 transition-colors duration-300">
                 Termos de Uso
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+              <a href="#" className="text-gray-400 hover:text-secondary-500 transition-colors duration-300">
                 Política de Cancelamento
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition-colors duration-300">
+              <a href="#" className="text-gray-400 hover:text-secondary-500 transition-colors duration-300">
                 FAQ
               </a>
             </div>
@@ -238,7 +238,7 @@ const FooterSection: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col gap-4 md:flex-row md:justify-center md:items-center text-center">
             <div className="flex items-center justify-center gap-2">
-              <div className="w-3 h-3 bg-primary-500 rounded-full"></div>
+              <div className="w-3 h-3 bg-accent-500 rounded-full"></div>
               <span className="text-gray-400 text-sm">Empresa Certificada</span>
             </div>
             <div className="flex items-center justify-center gap-2">
@@ -256,4 +256,4 @@ const FooterSection: React.FC = () => {
   );
 };
 
-export default FooterSection; 
+export default FooterSection;

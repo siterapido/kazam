@@ -1,147 +1,228 @@
-# Configuração do Site - Passeios Natal Tur
+# Configuração do Site - Kazan Adventure
 
 ## Informações da Empresa
 
 ### Dados Básicos
-- **Nome**: Passeios Natal Tur
-- **Slogan**: Explore Natal com conforto e segurança
-- **Descrição**: Empresa especializada em passeios turísticos em Natal e região, oferecendo experiências únicas nos principais destinos do Rio Grande do Norte
-- **CNPJ**: 12.345.678/0001-90
-- **Ano de Fundação**: 2020
-- **Missão**: Proporcionar experiências turísticas inesquecíveis com segurança, conforto e qualidade
+- **Nome**: Kazan Adventure
+- **Slogan**: Lazer, saúde e bem-estar com atendimento de qualidade e experiências inesquecíveis
+- **Descrição**: A Kazan Adventure é uma agência de turismo especializada em ecoturismo, turismo sol e mar e turismo de aventura. Formada por jovens empreendedores potiguares, a empresa nasceu com o propósito de transformar o turismo local através de experiências acessíveis, seguras e que promovem saúde, bem-estar e conexão entre pessoas.
+- **CNPJ**: Sim (possui CNPJ)
+- **Ano de Fundação**: 2024
+- **Missão**: A Kazan acredita em atendimento humanizado, acessibilidade financeira e comunidade, conectando parceiros locais e clientes em uma rede de benefícios e experiências memoráveis.
 
 ### Contato
-- **WhatsApp**: 5584994558857
-- **Telefone Formatado**: (84) 99455-8857
-- **Email**: contato@passeiosnataltur.com.br
-- **Instagram**: @passeiosnataltur
+- **Endereço**: Av. Dr. João Medeiros Filho, 7880 C — Redinha, Natal/RN
+- **WhatsApp**: 558486445442
+- **Telefone Formatado**: (84) 86445-442
+- **Email**: kazan.adventure@gmail.com
+- **Instagram**: @kazan.adventure
 
 ### Estatísticas
-- **Viagens Realizadas**: 2500+
-- **Passeios Realizados**: 5000+
+- **Viagens Realizadas**: 150+
+- **Passeios Realizados**: 300+
 - **Destinos Diferentes**: 15
-- **Clientes Satisfeitos**: 4800+
-- **Anos de Experiência**: 5
+- **Clientes Satisfeitos**: 280+
+- **Meses de Experiência**: 4
 
 ## Cores da Marca
-- **Primária**: #3b82f6
-- **Secundária**: #f97316
-- **Accent**: #10b981
+- **Primária**: #0D9488
+- **Secundária**: #1E3A8A
+- **Accent**: #F59E0B
 
 ## SEO
-- **Título**: Passeios Natal Tur - Explore os melhores destinos do RN
-- **Descrição**: Descubra os destinos mais incríveis do Rio Grande do Norte com a Passeios Natal Tur. Buggy, quadriciclo, parrachos e muito mais!
-- **Palavras-chave**: passeios natal, buggy genipabu, pipa, parrachos maracajaú, turismo rn
+- **Título**: Kazan Adventure - Turismo acessível, saúde e bem-estar em Natal/RN
+- **Descrição**: Turismo financeiramente inclusivo em Natal/RN. Ecoturismo, aventura, sol e mar com atendimento humanizado e experiências acessíveis. Buggy, quadriciclo, mergulho, trilhas e muito mais!
+- **Palavras-chave**: turismo acessível natal, ecoturismo rn, turismo financeiramente inclusivo, buggy natal, quadriciclo, mergulho, trilhas, caiaque, catamarã, day use, turismo aventura
 - **Imagem OG**: images/og-image.jpg
 
 ## Serviços
 
-### Buggy Litoral Norte
-- **ID**: buggy-litoral-norte
+### Passeio de Buggy
+- **ID**: passeio-buggy
 - **Ícone**: truck
-- **Descrição**: Explore o melhor do litoral norte com emoção e cenários incríveis! Saída do hotel com visual pela Via Costeira, Praia do Meio e Ponte Newton.
-- Transporte
+- **Descrição**: Aventura clássica pelas dunas e praias do RN! Explore Genipabu, Pitangui e outras belezas naturais com segurança e diversão garantida.
+- Transporte incluído
 - Bugueiro credenciado
-- Paradas para fotos
-- Travessia de balsa
-- Atividades opcionais (aerobunda, esquibunda etc.)
-- Visual guiado pelas principais praias e lagoas do norte
+- Equipamentos de segurança
+- Paradas para fotos e banho
+- Atividades opcionais (aerobunda, esquibunda)
 
-### Passeio 4X4 Litoral Sul
-- **ID**: 4x4-litoral-sul
-- **Ícone**: truck
-- **Descrição**: Conheça o Litoral Sul do RN em um passeio cheio de paisagens incríveis! O roteiro inclui a Barreira do Inferno, o maior cajueiro do mundo e lagoas como Alcaçuz, Carcará e Arituba.
-- Transporte em 4x4
-- Motorista experiente
-- Paradas para banho e fotos
-- Visitas a praias, lagoas e mirantes
-- Pôr do sol nas dunas
+### Roteiros Personalizados
+- **ID**: roteiros-personalizados
+- **Ícone**: map
+- **Descrição**: Crie sua própria aventura! Desenvolvemos roteiros sob medida para seu grupo, combinando seus destinos favoritos com experiências únicas.
+- Planejamento personalizado
+- Guia especializado
+- Flexibilidade de horários
+- Atendimento exclusivo
+- Roteiro adaptado ao seu perfil
 
-### Passeio pelas Praias de Pipa
-- **ID**: praias-pipa
+### Trilhas Ecológicas
+- **ID**: trilhas-ecologicas
+- **Ícone**: mountain
+- **Descrição**: Conecte-se com a natureza em trilhas deslumbrantes! Explore mata atlântica, cachoeiras e mirantes com guias especializados.
+- Guia de trilha experiente
+- Equipamentos de segurança
+- Lanche e hidratação
+- Paradas para contemplação
+- Grupos pequenos para preservação
+
+### Passeio de Caiaque
+- **ID**: passeio-caiaque
 - **Ícone**: waves
-- **Descrição**: Conheça as praias mais famosas de Pipa em um passeio cheio de beleza e natureza. Visite a Praia do Madeiro, Cacimbinha, Chapadão, Amor e a Lagoa de Guaraíras.
-- Transporte
-- Paradas para banho
-- Visitas guiadas
-- Tempo para fotos e descanso
-
-### Parrachos de Rio do Fogo + Rio Punaú
-- **ID**: parrachos-rio-fogo
-- **Ícone**: anchor
-- **Descrição**: Um passeio completo que combina mar cristalino e natureza exuberante! Começamos nos Parrachos de Rio do Fogo, com suas águas rasas e transparentes ideais para mergulho com snorkel.
-- Transporte
-- Passeio de lancha ou catamarã
-- Parada para banho nos parrachos
-- Visita ao Rio Punaú
+- **Descrição**: Reme pelas águas calmas de rios e lagoas em uma experiência relaxante e revigorante, ideal para toda a família.
+- Caiaques duplos e individuais
+- Coletes salva-vidas
+- Instruções básicas
 - Guia acompanhante
+- Paradas para banho
 
-### Aventura em Maracajaú
-- **ID**: aventura-maracajau
+### Passeio de Catamarã
+- **ID**: passeio-catamara
+- **Ícone**: anchor
+- **Descrição**: Navegue com conforto e estilo! Desfrute de vistas panorâmicas do litoral em embarcação segura e confortável.
+- Embarcação com estrutura completa
+- Tripulação experiente
+- Paradas para mergulho
+- Música ambiente
+- Serviço de bordo opcional
+
+### Day Use
+- **ID**: day-use
+- **Ícone**: sun
+- **Descrição**: Relaxe em resorts e pousadas parceiras! Aproveite piscinas, restaurantes e estrutura completa por um dia inteiro.
+- Acesso a piscinas e áreas de lazer
+- Almoço incluso
+- Transporte opcional
+- Atividades recreativas
+- Ambiente familiar
+
+### Aluguel de Carro
+- **ID**: aluguel-carro
+- **Ícone**: car
+- **Descrição**: Liberdade total para explorar! Carros em excelente estado com preços acessíveis e atendimento diferenciado.
+- Frota diversificada
+- Seguro incluso
+- Quilometragem livre
+- Entrega no local
+- Suporte 24h
+
+### Passeio de Lancha
+- **ID**: passeio-lancha
+- **Ícone**: anchor
+- **Descrição**: Velocidade e emoção no mar! Explore praias paradisíacas e piscinas naturais com o conforto de uma lancha moderna.
+- Lancha com capacidade para grupos
+- Piloto experiente
+- Equipamentos de segurança
+- Paradas estratégicas
+- Cooler com bebidas
+
+### Passeio 4x4
+- **ID**: passeio-4x4
+- **Ícone**: truck
+- **Descrição**: Aventura off-road pelas paisagens mais selvagens! Acesse locais únicos com veículos preparados e motoristas especializados.
+- Veículos 4x4 equipados
+- Motorista especializado
+- Roteiros exclusivos
+- Paradas panorâmicas
+- Grupos pequenos
+
+### Voo de Helicóptero
+- **ID**: voo-helicoptero
+- **Ícone**: helicopter
+- **Descrição**: Veja Natal de uma perspectiva única! Sobrevoe as principais atrações da cidade em uma experiência inesquecível.
+- Helicóptero certificado
+- Piloto experiente
+- Rotas panorâmicas
+- Duração flexível
+- Fotos aéreas inclusas
+
+### Passeio de Quadriciclo
+- **ID**: passeio-quadriciclo
 - **Ícone**: compass
-- **Descrição**: Viva a emoção de pilotar um quadriciclo pelas dunas de Maracajaú, com vistas incríveis do mar ao seu lado. O passeio combina adrenalina e contato com a natureza.
-- Quadriciclo
-- Instrutor e equipamentos de segurança
-- Passeio pelas dunas e beira-mar
-- Paradas para fotos
+- **Descrição**: Adrenalina pura nas dunas e trilhas! Pilote seu próprio quadriciclo em aventuras emocionantes e seguras.
+- Quadriciclos automáticos
+- Equipamentos de proteção
+- Instruções de segurança
+- Trilhas demarcadas
+- Acompanhamento profissional
+
+### Arvorismo
+- **ID**: arvorismo
+- **Ícone**: tree-pine
+- **Descrição**: Desafie seus limites nas alturas! Circuitos de arvorismo com diferentes níveis de dificuldade em meio à natureza.
+- Equipamentos certificados
+- Instrutores qualificados
+- Circuitos variados
+- Briefing de segurança
+- Certificado de participação
+
+### Rapel
+- **ID**: rapel
+- **Ícone**: mountain
+- **Descrição**: Descida vertical emocionante! Pratique rapel em paredões naturais com total segurança e acompanhamento profissional.
+- Equipamentos profissionais
+- Instrutores certificados
+- Locais seguros e testados
+- Diferentes alturas
+- Fotos da experiência
+
+### Bate-volta Praias e Lagoas
+- **ID**: bate-volta-praias
+- **Ícone**: van
+- **Descrição**: Conheça múltiplos destinos em um só dia! Roteiros otimizados para aproveitar o máximo das belezas nordestinas.
+- Múltiplos destinos
+- Transporte confortável
+- Guia acompanhante
+- Tempo otimizado
+- Paradas estratégicas
+
+### Transfers
+- **ID**: transfers
+- **Ícone**: car
+- **Descrição**: Chegue e saia com tranquilidade! Serviço de transfer aeroporto-hotel-praias com pontualidade e conforto.
+- Veículos climatizados
+- Motoristas pontuais
+- Atendimento personalizado
+- Preços fixos
+- Disponibilidade 24h
+
+### Mergulho
+- **ID**: mergulho
+- **Ícone**: diving-mask
+- **Descrição**: Explore o mundo subaquático! Mergulhos em recifes e naufrágios com instrutores certificados e equipamentos completos.
+- Equipamentos completos
+- Instrutores certificados
+- Locais paradisíacas
+- Diferentes níveis
+- Certificação opcional
+
+### Guia de Turismo
+- **ID**: guia-turismo
+- **Ícone**: user
+- **Descrição**: Conheça a história e cultura local! Guias especializados para tornar sua experiência ainda mais rica e educativa.
+- Guias credenciados
+- Conhecimento local
+- Roteiros culturais
+- Flexibilidade de horários
+- Atendimento personalizado
+
+### Planejamento de Férias "Minhas Férias, Minha Vida"
+- **ID**: planejamento-ferias
+- **Ícone**: calendar
+- **Descrição**: Realize o sonho das férias perfeitas! Pagamento antecipado via boleto, sem cartão, com planejamento completo e personalizado.
+- Pagamento parcelado via boleto
+- Sem uso de cartão
+- Planejamento completo
+- Acompanhamento personalizado
+- Flexibilidade de datas
 
 ## Destinos
-
-### Buggy Litoral Norte
-- **ID**: buggy-litoral-norte
-- **Categoria**: Dunas e Aventura
-- **Imagem**: tours/buggy-litoral-norte/buggy-1.png
-- **Data de Partida**: Diário
-- **Duração**: 6 horas
-- **Preço**: 170
-- **Vagas Disponíveis**: 20
-- **Avaliação**: 4.9
-- **Número de Avaliações**: 324
-- **Descrição**: Explore o melhor do litoral norte com emoção e cenários incríveis! Saída do hotel com visual pela Via Costeira, Praia do Meio e Ponte Newton. Paradas nas dunas e lagoas de Genipabu, Pitangui e Jacumã.
-- Transporte
-- Bugueiro credenciado
-- Paradas para fotos
-- Travessia de balsa
-- Atividades opcionais (aerobunda, esquibunda etc.)
-- Visual guiado pelas principais praias e lagoas do norte
-
-### Passeio 4X4 Litoral Sul
-- **ID**: 4x4-litoral-sul
-- **Categoria**: Paisagens e Natureza
-- **Imagem**: tours/4x4-litoral-sul/4x4-1.png
-- **Data de Partida**: Diário
-- **Duração**: 8 horas
-- **Preço**: 85
-- **Vagas Disponíveis**: 25
-- **Avaliação**: 4.8
-- **Número de Avaliações**: 267
-- **Descrição**: Conheça o Litoral Sul do RN em um passeio cheio de paisagens incríveis! O roteiro inclui a Barreira do Inferno, o maior cajueiro do mundo e lagoas como Alcaçuz, Carcará e Arituba.
-- Transporte em 4x4
-- Motorista experiente
-- Paradas para banho e fotos
-- Visitas a praias, lagoas e mirantes
-- Pôr do sol nas dunas
-
-### Passeio pelas Praias de Pipa
-- **ID**: praias-pipa
-- **Categoria**: Praias
-- **Imagem**: tours/praias-pipa/pipa-1.png
-- **Data de Partida**: Diário
-- **Duração**: 8 horas
-- **Preço**: 85
-- **Vagas Disponíveis**: 30
-- **Avaliação**: 4.9
-- **Número de Avaliações**: 189
-- **Descrição**: Conheça as praias mais famosas de Pipa em um passeio cheio de beleza e natureza. Visite a Praia do Madeiro, Cacimbinha, Chapadão, Amor e a Lagoa de Guaraíras.
-- Transporte
-- Paradas para banho
-- Visitas guiadas
-- Tempo para fotos e descanso
 
 ### Parrachos de Rio do Fogo + Rio Punaú
 - **ID**: parrachos-rio-fogo
 - **Categoria**: Mergulho
-- **Imagem**: images/tours/parrachos-rio-fogo/riodofogo-1.png
+- **Imagem**: /destinations/rio-do-fogo.jpg
 - **Data de Partida**: Diário
 - **Duração**: 8 horas
 - **Preço**: 150
@@ -158,7 +239,7 @@
 ### Aventura em Maracajaú
 - **ID**: aventura-maracajau
 - **Categoria**: Aventura
-- **Imagem**: images/tours/aventura-maracajau/maracajau-1.png
+- **Imagem**: /destinations/maracajau.jpg
 - **Data de Partida**: Diário
 - **Duração**: 4 horas
 - **Preço**: 170
@@ -181,7 +262,7 @@
 ### João Santos
 - **Avaliação**: 5
 - **Destino**: Pipa
-- **Texto**: Pipa é um paraíso! A equipe da Passeios Natal Tur nos tratou muito bem. Voltaremos com certeza!
+- **Texto**: Pipa é um paraíso! A equipe da Kazan Adventure nos tratou muito bem. Voltaremos com certeza!
 
 ### Ana Costa
 - **Avaliação**: 5
@@ -228,13 +309,13 @@ Geralmente saímos entre 7h e 8h da manhã, retornando entre 15h e 17h, dependen
 
 ## Parceiros
 
-### Hotel Ponta Negra
-- **Logo**: partners/hotel-ponta-negra.jpg
-- **Descrição**: Parceiro oficial para hospedagem dos nossos clientes
+### Renascer Vans
+- **Logo**: /partners/renascer-vans.jpg
+- **Descrição**: Especializada em transporte executivo e turístico com frota moderna e confortável
 
-### Restaurante Mangai
-- **Logo**: partners/mangai.jpg
-- **Descrição**: Parceiro gastronômico oferecendo descontos especiais
+### Parvi Transporte
+- **Logo**: /partners/parvi-transporte.jpg
+- **Descrição**: Líder em fretamento e turismo com opções de semi-leito e leito para viagens de longa distância
 
 ## Imagens do Hero/Slider
 
@@ -251,22 +332,61 @@ Geralmente saímos entre 7h e 8h da manhã, retornando entre 15h e 17h, dependen
 - **Alt**: Mergulho nos parrachos com águas cristalinas
 
 ## Logo
-- **Arquivo**: logo/logo-passeios-natal-tur.png
-- **Alt**: Logo Passeios Natal Tur
+- **Arquivo**: logo/logo.png
+- **Alt**: Logo Kazan Adventure
 
 ## Mensagens WhatsApp
 
 ### Padrão
-Olá! 👋 Gostaria de conhecer nossos passeios incríveis em Natal e região. Qual destino te interessa mais?
+Olá! 👋 Bem-vindo à Kazan Adventure! Somos especialistas em turismo acessível e experiências inesquecíveis em Natal/RN. Bora viver essa aventura? Qual passeio te interessa mais?
 
-### Roteiros  
-Oi! 🗺️ Vi que você tem interesse nos nossos roteiros. Temos opções para todos os gostos: Genipabu, Pipa, Parrachos e muito mais! Qual você gostaria de conhecer?
+### Buggy
+Oi! 🚗 Que tal uma aventura clássica pelas dunas de Genipabu? Nosso passeio de buggy é pura emoção com segurança garantida! Quando você gostaria de ir?
+
+### Quadriciclo
+E aí, aventureiro! 🏍️ Pronto para sentir a adrenalina pilotando um quadriciclo pelas dunas? Temos equipamentos de segurança e instrutores experientes. Garanta seu lugar!
+
+### Mergulho
+Olá! 🤿 Que tal explorar o mundo subaquático dos nossos recifes? Mergulho com instrutores certificados e equipamentos completos. Vamos descobrir esse paraíso?
+
+### Trilhas
+Oi! 🥾 Conecte-se com a natureza nas nossas trilhas ecológicas! Cachoeiras, mata atlântica e vistas incríveis te aguardam. Bora respirar ar puro?
+
+### Caiaque
+Olá! 🛶 Que tal remar pelas águas calmas dos nossos rios e lagoas? Experiência relaxante e revigorante para toda família. Quando podemos agendar?
+
+### Catamarã
+Oi! ⛵ Navegue com conforto e estilo pelo nosso litoral! Vista panorâmica incrível e paradas para mergulho. Embarque nessa experiência única!
+
+### Lancha
+E aí! 🚤 Velocidade e emoção no mar te aguardam! Explore praias paradisíacas e piscinas naturais com todo conforto. Vamos acelerar?
+
+### 4x4
+Olá! 🚙 Aventura off-road pelas paisagens mais selvagens! Acesse locais únicos que só o 4x4 consegue chegar. Pronto para essa expedição?
+
+### Helicoptero
+Oi! 🚁 Veja Natal de uma perspectiva única! Sobrevoe as principais atrações em um voo inesquecível. Garante essa experiência exclusiva!
+
+### Arvorismo
+E aí, corajoso! 🌲 Desafie seus limites nas alturas com nossos circuitos de arvorismo! Diferentes níveis de dificuldade em meio à natureza. Bora subir?
+
+### Rapel
+Olá! 🧗 Descida vertical emocionante te espera! Pratique rapel em paredões naturais com total segurança. Quando você quer sentir essa adrenalina?
+
+### Transfers
+Oi! 🚗 Chegue e saia com tranquilidade! Nosso transfer é pontual, confortável e com preços fixos. Precisa de transporte para quando?
+
+### Day Use
+Olá! 🏖️ Relaxe em resorts parceiros com piscinas, restaurantes e estrutura completa! Um dia inteiro de lazer te aguarda. Vamos agendar?
+
+### Roteiros Personalizados
+Oi! 🗺️ Crie sua própria aventura! Desenvolvemos roteiros sob medida para seu grupo. Me conta seus sonhos que a gente realiza!
+
+### Planejamento Férias
+Olá! 📅 Realize o sonho das férias perfeitas! Nosso projeto "Minhas Férias, Minha Vida" permite pagamento parcelado via boleto. Vamos planejar juntos?
 
 ### Orçamento
-Olá! 💰 Que bom que quer fazer um orçamento conosco! Me conta: quantas pessoas, qual destino te interessa e qual data você está pensando?
+Olá! 💰 Que bom que quer fazer um orçamento conosco! Temos condições acessíveis e facilidade na negociação. Me conta: quantas pessoas, qual passeio e quando?
 
 ### Dúvidas
-Oi! ❓ Estou aqui para esclarecer todas suas dúvidas sobre nossos passeios. O que você gostaria de saber?
-
-### Destinos
-Olá! 🏖️ Que destino incrível você quer conhecer? Temos Genipabu, Pipa, Parrachos, Quadriciclo e muito mais! Qual te chama mais atenção?
+Oi! ❓ Estou aqui para esclarecer todas suas dúvidas! Somos uma empresa jovem, com atendimento humanizado e foco na sua satisfação. O que você gostaria de saber?

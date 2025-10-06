@@ -1,9 +1,9 @@
 
 import { motion } from 'motion/react';
-import { Bus, Plane, Car, MapPin, Users, Calendar, Star, CheckCircle } from 'lucide-react';
+import { Bus, Plane, Car, MapPin, Users, Calendar, Star, CheckCircle, Truck, TreePine, Mountain, Waves, PlaneTakeoff } from 'lucide-react';
 
 interface ServiceIconProps {
-  type: 'bus' | 'plane' | 'car' | 'map' | 'users' | 'calendar' | 'star' | 'check';
+  type: 'bus' | 'plane' | 'car' | 'map' | 'users' | 'calendar' | 'star' | 'check' | 'helicopter' | 'van' | 'diving-mask' | 'tree-pine' | 'mountain';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   animated?: boolean;
@@ -18,6 +18,11 @@ const iconMap = {
   calendar: Calendar,
   star: Star,
   check: CheckCircle,
+  helicopter: PlaneTakeoff, // Using plane-takeoff as helicopter alternative
+  van: Truck,
+  'diving-mask': Waves, // Using waves as diving alternative
+  'tree-pine': TreePine,
+  mountain: Mountain,
 };
 
 const sizeMap = {
@@ -48,4 +53,4 @@ export function ServiceIcon({
   }
 
   return <IconComponent className={`${sizeClass} ${className}`} />;
-} 
+}

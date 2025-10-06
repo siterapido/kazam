@@ -123,7 +123,7 @@ Landing page moderna e responsiva para a JasTur Turismo, desenvolvida com React,
 ```
 src/
 ├── components/ui/
-│   ├── Logo.tsx              # Logo da JasTur
+│   ├── Logo.tsx              # Logo da Kazam
 │   ├── CTAButton.tsx         # Botões de CTA
 │   ├── WhatsAppButton.tsx    # Botão flutuante WhatsApp
 │   ├── Card.tsx              # Sistema de cards

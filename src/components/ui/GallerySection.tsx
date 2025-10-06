@@ -15,7 +15,7 @@ const DestinationsSection: React.FC = () => {
 
   const handleDestinationClick = (destinationId: string) => {
     const destination = jasturConfig.featuredDestinations.find(d => d.id === destinationId);
-    const message = `Olá! Gostaria de saber mais sobre ${destination?.name} da Passeios Natal Tur. ${destination?.description}`;
+ const message = `Olá! Gostaria de saber mais sobre ${destination?.name} da ${jasturConfig.company.name}. ${destination?.description}`;
     openWhatsApp(jasturConfig.contact.whatsapp, message);
   };
 
@@ -72,37 +72,12 @@ const DestinationsSection: React.FC = () => {
     };
   };
 
-  // Função para obter as imagens de cada destino
+  // Função para obter as imagens de cada destino usando a imagem principal do config
   const getDestinationImages = (destinationId: string): string[] => {
-    const imageMap: Record<string, string[]> = {
-      'buggy-litoral-norte': [
-        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-1.png',
-        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-2.png',
-        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-3.png'
-      ],
-      '4x4-litoral-sul': [
-        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-1.png',
-        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-2.png',
-        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-3.png'
-      ],
-      'praias-pipa': [
-        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-1.png',
-        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-2.png',
-        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-3.png'
-      ],
-      'parrachos-rio-fogo': [
-        '/images/tours/parrachos-rio-fogo/riodofogo-1.png',
-        '/images/tours/parrachos-rio-fogo/riodofogo-2.png',
-        '/images/tours/parrachos-rio-fogo/riodofogo-3.png'
-      ],
-      'aventura-maracajau': [
-        '/images/tours/aventura-maracajau/maracajau-1.png',
-        '/images/tours/aventura-maracajau/maracajau-2.png',
-        '/images/tours/aventura-maracajau/maracajau-3.png'
-      ]
-    };
-
-    return imageMap[destinationId] || [];
+    const dest = jasturConfig.featuredDestinations.find(d => d.id === destinationId);
+    if (!dest || !dest.image) return [];
+    // Exibir a imagem principal por enquanto; futuras versões podem incluir sliders múltiplos via assets
+    return [dest.image];
   };
 
   return (
@@ -129,87 +104,117 @@ const DestinationsSection: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
-          {jasturConfig.featuredDestinations.map((destination, index) => (
-            <Card
-              key={destination.id}
-              delay={index * 0.2}
-              className="group hover:shadow-2xl transition-all duration-500 overflow-hidden"
-            >
-              <CardBody className="p-0">
-                {/* Imagem do destino */}
-                <div className="relative h-48 overflow-hidden">
-                  <DestinationImageSlider
-                    images={getDestinationImages(destination.id)}
-                    alt={destination.name}
-                    className="w-full h-full group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
-                  
-                  {/* Badge de destaque */}
-                  <div className="absolute top-4 left-4 bg-cta-500 text-white px-3 py-1 rounded-full text-sm font-medium pointer-events-none">
-                    {destination.category}
+        {/* Verificar se há destinos disponíveis */}
+        {jasturConfig.featuredDestinations.length === 0 ? (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center py-16"
+          >
+            <div className="bg-gray-50 rounded-2xl p-8 md:p-12 max-w-2xl mx-auto">
+              <div className="text-6xl mb-6">🚧</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Passeios Temporariamente Indisponíveis
+              </h3>
+              <p className="text-lg text-gray-600 mb-8">
+                Estamos trabalhando para trazer novos destinos incríveis para você. 
+                Entre em contato conosco para mais informações sobre futuros passeios.
+              </p>
+              <CTAButton
+                size="lg"
+                variant="primary"
+                icon="whatsapp"
+                whatsappNumber={jasturConfig.contact.whatsapp}
+                whatsappMessage={jasturConfig.whatsappMessages.duvidas}
+              >
+                Falar Conosco
+              </CTAButton>
+            </div>
+          </motion.div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
+            {jasturConfig.featuredDestinations.map((destination, index) => (
+              <Card
+                key={destination.id}
+                delay={index * 0.2}
+                className="group hover:shadow-2xl transition-all duration-500 overflow-hidden"
+              >
+                <CardBody className="p-0">
+                  {/* Imagem do destino */}
+                  <div className="relative h-48 overflow-hidden">
+                    <DestinationImageSlider
+                      images={getDestinationImages(destination.id)}
+                      alt={destination.name}
+                      className="w-full h-full group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                    
+                    {/* Badge de destaque */}
+                    <div className="absolute top-4 left-4 bg-cta-500 text-white px-3 py-1 rounded-full text-sm font-medium pointer-events-none">
+                      {destination.category}
+                    </div>
+                    
+                    {/* Removido o bloco de preço */}
                   </div>
-                  
-                  {/* Removido o bloco de preço */}
-                </div>
 
-                {/* Conteúdo do card */}
-                <div className="p-4 sm:p-6">
-                  <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">
-                    {destination.name}
-                  </h4>
-                  
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {destination.description}
-                  </p>
+                  {/* Conteúdo do card */}
+                  <div className="p-4 sm:p-6">
+                    <h4 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors duration-300">
+                      {destination.name}
+                    </h4>
+                    
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      {destination.description}
+                    </p>
 
-                  {/* Informações do roteiro */}
-                  <div className="space-y-3 mb-6">
-                    <div className="flex items-center gap-3 text-sm text-gray-700">
-                      <Calendar className="w-4 h-4 text-secondary-500" />
-                      <span><strong>Clima:</strong> {getDestinationFeatures(destination).clima}</span>
+                    {/* Informações do roteiro */}
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-3 text-sm text-gray-700">
+                        <Calendar className="w-4 h-4 text-secondary-500" />
+                        <span><strong>Clima:</strong> {getDestinationFeatures(destination).clima}</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-sm text-gray-700">
+                        <Clock className="w-4 h-4 text-secondary-500" />
+                        <span><strong>Melhor época:</strong> {getDestinationFeatures(destination).melhorEpoca}</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-sm text-gray-700">
+                        <DollarSign className="w-4 h-4 text-primary-500" />
+                        <span><strong>Preço:</strong> R$ {destination.price}</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-sm text-gray-700">
+                        <Star className="w-4 h-4 text-accent-500" />
+                        <span><strong>Destaque:</strong> {getDestinationFeatures(destination).destaque}</span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3 text-sm text-gray-700">
-                      <Clock className="w-4 h-4 text-secondary-500" />
-                      <span><strong>Melhor época:</strong> {getDestinationFeatures(destination).melhorEpoca}</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-sm text-gray-700">
-                      <DollarSign className="w-4 h-4 text-primary-500" />
-                      <span><strong>Preço:</strong> R$ {destination.price}</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-sm text-gray-700">
-                      <Star className="w-4 h-4 text-accent-500" />
-                      <span><strong>Destaque:</strong> {getDestinationFeatures(destination).destaque}</span>
+
+                    {/* CTAs */}
+                    <div className="flex gap-2">
+                      <CTAButton
+                        size="md"
+                        variant="outline"
+                        icon="eye"
+                        onClick={() => handleViewDetails(destination.id)}
+                        className="flex-1 group-hover:scale-105 transition-transform duration-300"
+                      >
+                        Ver Detalhes
+                      </CTAButton>
+                      <CTAButton
+                        size="md"
+                        variant="primary"
+                        icon="whatsapp"
+                        onClick={() => handleDestinationClick(destination.id)}
+                        className="flex-1 group-hover:scale-105 transition-transform duration-300"
+                      >
+                        Reservar
+                      </CTAButton>
                     </div>
                   </div>
-
-                  {/* CTAs */}
-                  <div className="flex gap-2">
-                    <CTAButton
-                      size="md"
-                      variant="outline"
-                      icon="eye"
-                      onClick={() => handleViewDetails(destination.id)}
-                      className="flex-1 group-hover:scale-105 transition-transform duration-300"
-                    >
-                      Ver Detalhes
-                    </CTAButton>
-                    <CTAButton
-                      size="md"
-                      variant="primary"
-                      icon="whatsapp"
-                      onClick={() => handleDestinationClick(destination.id)}
-                      className="flex-1 group-hover:scale-105 transition-transform duration-300"
-                    >
-                      Reservar
-                    </CTAButton>
-                  </div>
-                </div>
-              </CardBody>
-            </Card>
-          ))}
-        </div>
+                </CardBody>
+              </Card>
+            ))}
+          </div>
+        )}
       </div>
 
 
@@ -233,7 +238,7 @@ const DestinationsSection: React.FC = () => {
               variant="secondary"
               icon="whatsapp"
               whatsappNumber={jasturConfig.contact.whatsapp}
-              whatsappMessage={jasturConfig.whatsappMessages.roteiros}
+              whatsappMessage={jasturConfig.whatsappMessages.default}
             >
               Roteiro Personalizado
             </CTAButton>
@@ -253,4 +258,4 @@ const DestinationsSection: React.FC = () => {
   );
 };
 
-export default DestinationsSection; 
+export default DestinationsSection;

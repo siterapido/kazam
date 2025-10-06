@@ -43,64 +43,11 @@ const TourDetailsPage: React.FC = () => {
     );
   }
 
-  // Função para obter imagens específicas de cada passeio
+  // Imagens do passeio: usar a imagem principal definida no config
   const getTourImages = (tourId: string): string[] => {
-    const imageMap: Record<string, string[]> = {
-      'buggy-litoral-norte': [
-        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-1.png',
-        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-2.png',
-        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-3.png',
-        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-4.png',
-        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-5.png',
-        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-6.png',
-        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-7.png',
-        '/Novos Passeios/🏖️ BUGGY LITORAL NORTE/buggy-8.png'
-      ],
-      '4x4-litoral-sul': [
-        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-1.png',
-        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-2.png',
-        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-3.png',
-        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-4.png',
-        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-5.png',
-        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-6.png',
-        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-7.png',
-        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-8.png',
-        '/Novos Passeios/🚙 PASSEIO 4X4 LITORAL SUL/4x4-9.png'
-      ],
-      'praias-pipa': [
-        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-1.png',
-        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-2.png',
-        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-3.png',
-        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-4.png',
-        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-5.png',
-        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-6.png',
-        '/Novos Passeios/🌊 PASSEIO PELAS PRAIAS DE PIPA/pipa-8.png'
-      ],
-      'parrachos-rio-fogo': [
-        '/images/tours/parrachos-rio-fogo/riodofogo-1.png',
-        '/images/tours/parrachos-rio-fogo/riodofogo-2.png',
-        '/images/tours/parrachos-rio-fogo/riodofogo-3.png',
-        '/images/tours/parrachos-rio-fogo/riodofogo-4.png',
-        '/images/tours/parrachos-rio-fogo/riodofogo-5.png',
-        '/images/tours/parrachos-rio-fogo/riodofogo-6.png',
-        '/images/tours/parrachos-rio-fogo/riodofogo-7.png',
-        '/images/tours/parrachos-rio-fogo/riodofogo-8.png',
-        '/images/tours/parrachos-rio-fogo/riodofogo-9.png'
-      ],
-      'aventura-maracajau': [
-        '/images/tours/aventura-maracajau/maracajau-1.png',
-        '/images/tours/aventura-maracajau/maracajau-2.png',
-        '/images/tours/aventura-maracajau/maracajau-3.png',
-        '/images/tours/aventura-maracajau/maracajau-4.png',
-        '/images/tours/aventura-maracajau/maracajau-6.png',
-        '/images/tours/aventura-maracajau/maracajau-7.png',
-        '/images/tours/aventura-maracajau/maracajau-8.png',
-        '/images/tours/aventura-maracajau/maracajau-9.png',
-        '/images/tours/aventura-maracajau/maracajau-10.png'
-      ]
-    };
-
-    return imageMap[tourId] || [tour.image];
+    const dest = jasturConfig.featuredDestinations.find(d => d.id === tourId);
+    if (!dest || !dest.image) return [];
+    return [dest.image];
   };
 
   const handleWhatsAppContact = () => {

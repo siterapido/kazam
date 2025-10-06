@@ -2,9 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 
 // Array com as imagens existentes na pasta slides
 const slides = [
-  'genipabu-dunas.jpg',
-  'maracajau-mergulho.jpg',
-  'pipa-praia.jpg',
+  '01.jpeg',
+  '02.jpeg',
+  '03.jpeg',
+  '04.jpeg',
+  '05.jpg',
 ];
 
 const images = slides.map((img) => `/slides/${img}`);
@@ -81,4 +83,4 @@ export function BackgroundSlider() {
       </div>
     </div>
   );
-} 
+}

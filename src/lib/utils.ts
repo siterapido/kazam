@@ -13,14 +13,17 @@ export function cn(...classes: (string | undefined | null | false)[]): string {
  * @param message - Mensagem personalizada (opcional)
  * @returns URL do WhatsApp
  */
-export function generateWhatsAppLink(phoneNumber: string, message?: string): string {
-  const baseUrl = `https://wa.me/${phoneNumber}`;
-  
+export function generateWhatsAppLink(phoneNumber?: string, message?: string): string {
+  // Se não houver número, usar o endpoint genérico com mensagem
+  const hasNumber = Boolean(phoneNumber && phoneNumber.trim());
+  const baseUrl = hasNumber ? `https://wa.me/${phoneNumber}` : `https://wa.me/`;
+
   if (message) {
     const encodedMessage = encodeURIComponent(message);
-    return `${baseUrl}?text=${encodedMessage}`;
+    // Quando não há número, WhatsApp aceita apenas o parâmetro text
+    return hasNumber ? `${baseUrl}?text=${encodedMessage}` : `${baseUrl}?text=${encodedMessage}`;
   }
-  
+
   return baseUrl;
 }
 
@@ -29,7 +32,7 @@ export function generateWhatsAppLink(phoneNumber: string, message?: string): str
  * @param phoneNumber - Número do WhatsApp
  * @param message - Mensagem personalizada (opcional)
  */
-export function openWhatsApp(phoneNumber: string, message?: string): void {
+export function openWhatsApp(phoneNumber?: string, message?: string): void {
   const whatsappUrl = generateWhatsAppLink(phoneNumber, message);
   window.open(whatsappUrl, '_blank');
-} 
+}

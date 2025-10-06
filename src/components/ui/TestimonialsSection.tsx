@@ -11,85 +11,85 @@ const TestimonialsSection: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  // Dados dos depoimentos - Estilo Google com brasileiros reais
+  // Dados dos depoimentos - Focados no novo posicionamento da Kazam
   const testimonials = [
     {
       id: 1,
-      name: "Carlos Eduardo Silva",
-      location: "São Paulo, SP",
+      name: "Thiago Oliveira",
+      location: "Natal, RN",
       rating: 5,
-      destination: "Maragogi/AL",
-      date: "há 2 semanas",
+      destination: "Passeio de Buggy - Genipabu",
+      date: "há 1 semana",
       image: "https://img.freepik.com/fotos-gratis/homem-barbudo-expressivo-vestindo-camisa_273609-5894.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Excelente experiência! A Passeios Natal Tur superou todas as expectativas. Maragogi é um paraíso e a equipe cuidou de tudo nos mínimos detalhes. Recomendo muito!",
-      highlights: ["Superou expectativas", "Equipe atenciosa", "Paraíso"],
+      text: `Cara, que experiência incrível! A ${jasturConfig.company.name} conseguiu fazer um passeio que cabia no meu orçamento e ainda foi melhor que eu esperava. O pessoal é jovem como eu e entende o que a gente quer. Saí renovado!`,
+      highlights: ["Cabia no orçamento", "Pessoal jovem", "Saí renovado"],
       verified: true,
-      helpful: 12
+      helpful: 18
     },
     {
       id: 2,
-      name: "Ana Beatriz Costa",
-      location: "Rio de Janeiro, RJ",
+      name: "Camila Santos",
+      location: "Parnamirim, RN",
       rating: 5,
-      destination: "Gramado/RS",
-      date: "há 1 mês",
+      destination: "Trilha Ecológica - Mata da Pipa",
+      date: "há 2 semanas",
       image: "https://img.freepik.com/fotos-gratis/ainda-bem-que-mulher-bonita-com-rabo-de-cavalo-encaracolado-tem-sorriso-charmoso-usa-sueter-listrado-poses_273609-8851.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Viagem incrível! Gramado é encantador e a organização da Passeios Natal Tur fez toda diferença. Voltarei a viajar com eles!",
-      highlights: ["Organização", "Destino encantador", "Voltarei"],
-      verified: true,
-      helpful: 9
-    },
-    {
-      id: 3,
-      name: "João Pedro Almeida",
-      location: "Belo Horizonte, MG",
-      rating: 4,
-      destination: "Galinhos/RN",
-      date: "há 3 semanas",
-      image: "https://img.freepik.com/fotos-gratis/jovem-bonito-posando-com-chapeu_23-2148884336.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Gostei muito do roteiro e do suporte. Galinhos é um lugar único! Só achei o transfer um pouco demorado, mas valeu a pena.",
-      highlights: ["Roteiro ótimo", "Lugar único", "Bom suporte"],
-      verified: true,
-      helpful: 7
-    },
-    {
-      id: 4,
-      name: "Mariana Oliveira",
-      location: "Curitiba, PR",
-      rating: 5,
-      destination: "Natal/RN",
-      date: "há 2 meses",
-      image: "https://img.freepik.com/fotos-gratis/retrato-de-uma-jovem-mulher-roxa_273609-11669.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Amei cada momento! O grupo era animado e a equipe da Passeios Natal Tur foi sensacional. Recomendo para quem quer viajar sem preocupações.",
-      highlights: ["Grupo animado", "Equipe sensacional", "Sem preocupações"],
-      verified: true,
-      helpful: 11
-    },
-    {
-      id: 5,
-      name: "Roberto Santos",
-      location: "Salvador, BA",
-      rating: 5,
-      destination: "Bonito/MS",
-      date: "há 1 semana",
-      image: "https://img.freepik.com/fotos-gratis/homem-maduro-com-barba-e-cabelo-grisalho_23-2148884340.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Experiência única! Bonito é deslumbrante e a Passeios Natal Tur organizou tudo perfeitamente. Os passeios foram incríveis e a equipe muito profissional.",
-      highlights: ["Experiência única", "Organização perfeita", "Equipe profissional"],
+      text: `Finalmente uma empresa que entende que nem todo mundo pode pagar uma fortuna pra se divertir! A trilha foi perfeita, me conectei com a natureza e ainda fiz novos amigos. A ${jasturConfig.company.name} é diferente mesmo!`,
+      highlights: ["Preço acessível", "Conexão com natureza", "Novos amigos"],
       verified: true,
       helpful: 15
     },
     {
-      id: 6,
-      name: "Fernanda Lima",
-      location: "Brasília, DF",
+      id: 3,
+      name: "Rafael Costa",
+      location: "Mossoró, RN",
       rating: 5,
-      destination: "Porto Seguro/BA",
-      date: "há 3 dias",
-      image: "https://img.freepik.com/fotos-gratis/mulher-jovem-e-atraente-com-cabelo-longo-e-escuro_23-2148884345.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Viagem dos sonhos! Porto Seguro é mágico e a Passeios Natal Tur transformou nossa experiência em algo inesquecível. Já estou planejando a próxima!",
-      highlights: ["Viagem dos sonhos", "Destino mágico", "Inesquecível"],
+      destination: "Passeio de Quadriciclo",
+      date: "há 3 semanas",
+      image: "https://img.freepik.com/fotos-gratis/jovem-bonito-posando-com-chapeu_23-2148884336.jpg?w=200&h=200&fit=facearea&facepad=2",
+      text: "Mano, que adrenalina! Trabalho a semana toda e precisava de algo assim. O atendimento foi super humano, parcelaram pra mim e ainda ganhei desconto por ser da comunidade. Voltando com certeza!",
+      highlights: ["Adrenalina", "Atendimento humano", "Parcelaram"],
       verified: true,
-      helpful: 8
+      helpful: 12
+    },
+    {
+      id: 4,
+      name: "Jéssica Almeida",
+      location: "Ceará-Mirim, RN",
+      rating: 5,
+      destination: "Day Use - Praia de Pipa",
+      date: "há 1 mês",
+      image: "https://img.freepik.com/fotos-gratis/retrato-de-uma-jovem-mulher-roxa_273609-11669.jpg?w=200&h=200&fit=facearea&facepad=2",
+      text: `Que dia maravilhoso! Estava precisando relaxar e a ${jasturConfig.company.name} organizou tudo pensando no meu bem-estar. Preço justo, pessoas incríveis e saí de lá com a energia renovada. Recomendo demais!`,
+      highlights: ["Bem-estar", "Preço justo", "Energia renovada"],
+      verified: true,
+      helpful: 20
+    },
+    {
+      id: 5,
+      name: "Anderson Silva",
+      location: "Macaíba, RN",
+      rating: 5,
+      destination: "Mergulho - Maracajaú",
+      date: "há 2 dias",
+      image: "https://img.freepik.com/fotos-gratis/homem-maduro-com-barba-e-cabelo-grisalho_23-2148884340.jpg?w=200&h=200&fit=facearea&facepad=2",
+      text: `Experiência transformadora! Nunca pensei que conseguiria fazer mergulho com meu salário, mas a ${jasturConfig.company.name} tornou isso possível. O projeto "Minhas Férias, Minha Vida" é genial - paguei parcelado e realizei um sonho!`,
+      highlights: ["Transformadora", "Tornou possível", "Sonho realizado"],
+      verified: true,
+      helpful: 25
+    },
+    {
+      id: 6,
+      name: "Larissa Medeiros",
+      location: "São Gonçalo do Amarante, RN",
+      rating: 5,
+      destination: "Passeio de Catamarã",
+      date: "há 5 dias",
+      image: "https://img.freepik.com/fotos-gratis/mulher-jovem-e-atraente-com-cabelo-longo-e-escuro_23-2148884345.jpg?w=200&h=200&fit=facearea&facepad=2",
+      text: `Que empresa incrível! Além do passeio ser lindo, eles realmente se importam com a gente. Atendimento personalizado, preços honestos e ainda fazem parte de uma comunidade que me dá descontos em outros lugares. Virei fã!`,
+      highlights: ["Se importam", "Preços honestos", "Comunidade"],
+      verified: true,
+      helpful: 16
     }
   ];
 
@@ -130,49 +130,49 @@ const TestimonialsSection: React.FC = () => {
     ));
   };
 
-  // Para depoimentos rápidos (quick testimonials), use imagens diferentes:
+  // Para depoimentos rápidos (quick testimonials) - Focados no novo posicionamento:
   const quickTestimonials = [
     {
       id: 1,
-      name: "Lucas Ferreira",
-      initials: "LF",
+      name: "Bruno Medeiros",
+      initials: "BM",
       image: "https://img.freepik.com/fotos-gratis/retrato-de-um-homem-em-estilo-de-desenho-animado_23-2151134275.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Equipe muito prestativa!", destination: "Natal/RN"
+      text: "Preço que cabe no bolso!", destination: "Buggy - Genipabu"
     },
     {
       id: 2,
-      name: "Patrícia Souza",
-      initials: "PS",
+      name: "Carla Freitas",
+      initials: "CF",
       image: "https://img.freepik.com/fotos-gratis/mulher-de-desenho-animado-com-oculos_23-2151136901.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Viagem perfeita!", destination: "Maragogi/AL"
+      text: "Atendimento humanizado!", destination: "Trilha - Pipa"
     },
     {
       id: 3,
-      name: "Rafael Lima",
-      initials: "RL",
+      name: "Marcos Souza",
+      initials: "MS",
       image: "https://img.freepik.com/fotos-gratis/personagem-de-desenho-animado-em-3d_23-2151033951.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Recomendo demais!", destination: "Galinhos/RN"
+      text: "Parcelaram pra mim!", destination: "Quadriciclo"
     },
     {
       id: 4,
-      name: "Juliana Martins",
-      initials: "JM",
+      name: "Priscila Lima",
+      initials: "PL",
       image: "https://img.freepik.com/fotos-gratis/close-de-uma-garota-elegante-e-atraente-com-um-hairbun-sorrindo-e-parecendo-esperancosa_176420-25550.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Tudo impecável!", destination: "Gramado/RS"
+      text: "Renovei as energias!", destination: "Day Use - Pipa"
     },
     {
       id: 5,
-      name: "Diego Costa",
-      initials: "DC",
+      name: "Gustavo Rocha",
+      initials: "GR",
       image: "https://img.freepik.com/fotos-gratis/homem-jovem-e-atraente-com-cabelo-curto-e-escuro_23-2148884342.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Experiência incrível!", destination: "Bonito/MS"
+      text: "Comunidade incrível!", destination: "Mergulho - Maracajaú"
     },
     {
       id: 6,
-      name: "Camila Silva",
-      initials: "CS",
+      name: "Fernanda Gomes",
+      initials: "FG",
       image: "https://img.freepik.com/fotos-gratis/mulher-jovem-e-atraente-com-cabelo-longo-e-escuro_23-2148884346.jpg?w=200&h=200&fit=facearea&facepad=2",
-      text: "Superou expectativas!", destination: "Porto Seguro/BA"
+      text: "Realizei meu sonho!", destination: "Catamarã"
     }
   ];
 
@@ -180,7 +180,7 @@ const TestimonialsSection: React.FC = () => {
     <Section id="depoimentos" background="white" padding="xl">
       <SectionHeader
         title="Avaliações dos nossos clientes"
-        subtitle="Veja o que nossos clientes estão dizendo sobre suas experiências com a Passeios Natal Tur"
+        subtitle={`Veja o que nossos clientes estão dizendo sobre suas experiências com a ${jasturConfig.company.name}`}
         align="center"
       />
 
@@ -385,7 +385,7 @@ const TestimonialsSection: React.FC = () => {
             Junte-se aos nossos clientes satisfeitos!
           </h3>
           <p className="text-lg mb-8 text-white/90 max-w-2xl mx-auto">
-            Faça parte das mais de 1.200 avaliações positivas e descubra por que a Passeios Natal Tur é a escolha certa para seus passeios.
+            Faça parte das mais de 1.200 avaliações positivas e descubra por que a ${jasturConfig.company.name} é a escolha certa para seus passeios.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:gap-4 justify-center">
             <CTAButton
@@ -417,7 +417,7 @@ const TestimonialsSection: React.FC = () => {
         transition={{ duration: 0.8, delay: 0.6 }}
         className="mt-16"
       >
-        <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-3xl p-8 md:p-12 text-white text-center">
+        <div className="bg-gradient-to-r from-kazan-secondary to-kazan-accent rounded-3xl p-8 md:p-12 text-white text-center">
           <h3 className="text-2xl md:text-3xl font-bold mb-4">
             Siga-nos no Instagram
           </h3>
@@ -439,4 +439,4 @@ const TestimonialsSection: React.FC = () => {
   );
 };
 
-export default TestimonialsSection; 
+export default TestimonialsSection;

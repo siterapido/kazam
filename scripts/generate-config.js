@@ -37,8 +37,7 @@ function parseMarkdown(content) {
     heroSlides: [],
     logo: {},
     navigation: [
-      { name: 'Serviços', href: '#servicos' },
-      { name: 'Destinos', href: '#destinos' },
+      { name: 'Explore', href: '#explore' },
       { name: 'Depoimentos', href: '#depoimentos' },
       { name: 'Contato', href: '#contato' },
     ]
@@ -108,7 +107,8 @@ function parseMarkdown(content) {
               'WhatsApp': 'whatsapp',
               'Telefone Formatado': 'phone',
               'Email': 'email',
-              'Instagram': 'instagram'
+              'Instagram': 'instagram',
+              'Endereço': 'address'
             };
             if (keyMap[key]) config.contact[keyMap[key]] = value;
           } else if (currentSubSection === 'Estatísticas') {
@@ -342,6 +342,7 @@ export const jasturConfig = {
     email: "${config.contact.email || ''}",
     instagram: "${config.contact.instagram || ''}",
     phone: "${config.contact.phone || ''}",
+    address: "${config.contact.address || ''}",
   },
 
   // Mensagens padrão do WhatsApp

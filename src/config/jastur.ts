@@ -1,174 +1,282 @@
-// Configurações da Passeios Natal Tur - Gerado automaticamente
+// Configurações da Kazan Adventure - Gerado automaticamente
 // NÃO EDITE ESTE ARQUIVO DIRETAMENTE! 
 // Use SITE_CONFIG.md e execute: npm run config:update
 
 export const jasturConfig = {
   // Informações da empresa
   company: {
-    name: "Passeios Natal Tur",
-    tagline: "Explore Natal com conforto e segurança",
-    description: "Empresa especializada em passeios turísticos em Natal e região, oferecendo experiências únicas nos principais destinos do Rio Grande do Norte",
-    cnpj: "12.345.678/0001-90",
-    founded: "2020",
-    mission: "Proporcionar experiências turísticas inesquecíveis com segurança, conforto e qualidade",
+    name: "Kazan Adventure",
+    tagline: "Lazer, saúde e bem-estar com atendimento de qualidade e experiências inesquecíveis",
+    description: "A Kazan Adventure é uma agência de turismo especializada em ecoturismo, turismo sol e mar e turismo de aventura. Formada por jovens empreendedores potiguares, a empresa nasceu com o propósito de transformar o turismo local através de experiências acessíveis, seguras e que promovem saúde, bem-estar e conexão entre pessoas.",
+    cnpj: "Sim (possui CNPJ)",
+    founded: "2024",
+    mission: "A Kazan acredita em atendimento humanizado, acessibilidade financeira e comunidade, conectando parceiros locais e clientes em uma rede de benefícios e experiências memoráveis.",
   },
 
   // Contatos
   contact: {
-    whatsapp: "5584994558857",
-    email: "contato@passeiosnataltur.com.br",
-    instagram: "@passeiosnataltur",
-    phone: "(84) 99455-8857",
+    whatsapp: "558486445442",
+    email: "kazan.adventure@gmail.com",
+    instagram: "@kazan.adventure",
+    phone: "(84) 86445-442",
+    address: "Av. Dr. João Medeiros Filho, 7880 C — Redinha, Natal/RN",
   },
 
   // Mensagens padrão do WhatsApp
   whatsappMessages: {
-    "default": "Olá! 👋 Gostaria de conhecer nossos passeios incríveis em Natal e região. Qual destino te interessa mais?",
-    "roteiros": "Oi! 🗺️ Vi que você tem interesse nos nossos roteiros. Temos opções para todos os gostos: Genipabu, Pipa, Parrachos e muito mais! Qual você gostaria de conhecer?",
-    "orcamento": "Olá! 💰 Que bom que quer fazer um orçamento conosco! Me conta: quantas pessoas, qual destino te interessa e qual data você está pensando?",
-    "duvidas": "Oi! ❓ Estou aqui para esclarecer todas suas dúvidas sobre nossos passeios. O que você gostaria de saber?",
-    "destinos": "Olá! 🏖️ Que destino incrível você quer conhecer? Temos Genipabu, Pipa, Parrachos, Quadriciclo e muito mais! Qual te chama mais atenção?"
+    "default": "Olá! 👋 Bem-vindo à Kazan Adventure! Somos especialistas em turismo acessível e experiências inesquecíveis em Natal/RN. Bora viver essa aventura? Qual passeio te interessa mais?",
+    "orcamento": "Olá! 💰 Que bom que quer fazer um orçamento conosco! Temos condições acessíveis e facilidade na negociação. Me conta: quantas pessoas, qual passeio e quando?",
+    "duvidas": "Oi! ❓ Estou aqui para esclarecer todas suas dúvidas! Somos uma empresa jovem, com atendimento humanizado e foco na sua satisfação. O que você gostaria de saber?"
 },
 
   // Estatísticas da empresa
   stats: {
-    "viagensRealizadas": "2500+",
-    "passeiosRealizados": "5000+",
+    "viagensRealizadas": "150+",
+    "passeiosRealizados": "300+",
     "destinosDiferentes": "15",
-    "clientesSatisfeitos": "4800+",
-    "anosExperiencia": "5"
+    "clientesSatisfeitos": "280+"
 },
 
   // Serviços oferecidos
   services: [
     {
-        "title": "Buggy Litoral Norte",
+        "title": "Passeio de Buggy",
         "benefits": [
-            "Transporte",
+            "Transporte incluído",
             "Bugueiro credenciado",
-            "Paradas para fotos",
-            "Travessia de balsa",
-            "Atividades opcionais (aerobunda, esquibunda etc.)",
-            "Visual guiado pelas principais praias e lagoas do norte"
+            "Equipamentos de segurança",
+            "Paradas para fotos e banho",
+            "Atividades opcionais (aerobunda, esquibunda)"
         ],
-        "id": "buggy-litoral-norte",
+        "id": "passeio-buggy",
         "icon": "truck",
-        "description": "Explore o melhor do litoral norte com emoção e cenários incríveis! Saída do hotel com visual pela Via Costeira, Praia do Meio e Ponte Newton."
+        "description": "Aventura clássica pelas dunas e praias do RN! Explore Genipabu, Pitangui e outras belezas naturais com segurança e diversão garantida."
     },
     {
-        "title": "Passeio 4X4 Litoral Sul",
+        "title": "Roteiros Personalizados",
         "benefits": [
-            "Transporte em 4x4",
-            "Motorista experiente",
-            "Paradas para banho e fotos",
-            "Visitas a praias, lagoas e mirantes",
-            "Pôr do sol nas dunas"
+            "Planejamento personalizado",
+            "Guia especializado",
+            "Flexibilidade de horários",
+            "Atendimento exclusivo",
+            "Roteiro adaptado ao seu perfil"
         ],
-        "id": "4x4-litoral-sul",
-        "icon": "truck",
-        "description": "Conheça o Litoral Sul do RN em um passeio cheio de paisagens incríveis! O roteiro inclui a Barreira do Inferno, o maior cajueiro do mundo e lagoas como Alcaçuz, Carcará e Arituba."
+        "id": "roteiros-personalizados",
+        "icon": "map",
+        "description": "Crie sua própria aventura! Desenvolvemos roteiros sob medida para seu grupo, combinando seus destinos favoritos com experiências únicas."
     },
     {
-        "title": "Passeio pelas Praias de Pipa",
+        "title": "Trilhas Ecológicas",
         "benefits": [
-            "Transporte",
-            "Paradas para banho",
-            "Visitas guiadas",
-            "Tempo para fotos e descanso"
+            "Guia de trilha experiente",
+            "Equipamentos de segurança",
+            "Lanche e hidratação",
+            "Paradas para contemplação",
+            "Grupos pequenos para preservação"
         ],
-        "id": "praias-pipa",
+        "id": "trilhas-ecologicas",
+        "icon": "mountain",
+        "description": "Conecte-se com a natureza em trilhas deslumbrantes! Explore mata atlântica, cachoeiras e mirantes com guias especializados."
+    },
+    {
+        "title": "Passeio de Caiaque",
+        "benefits": [
+            "Caiaques duplos e individuais",
+            "Coletes salva-vidas",
+            "Instruções básicas",
+            "Guia acompanhante",
+            "Paradas para banho"
+        ],
+        "id": "passeio-caiaque",
         "icon": "waves",
-        "description": "Conheça as praias mais famosas de Pipa em um passeio cheio de beleza e natureza. Visite a Praia do Madeiro, Cacimbinha, Chapadão, Amor e a Lagoa de Guaraíras."
+        "description": "Reme pelas águas calmas de rios e lagoas em uma experiência relaxante e revigorante, ideal para toda a família."
     },
     {
-        "title": "Parrachos de Rio do Fogo + Rio Punaú",
+        "title": "Passeio de Catamarã",
         "benefits": [
-            "Transporte",
-            "Passeio de lancha ou catamarã",
-            "Parada para banho nos parrachos",
-            "Visita ao Rio Punaú",
-            "Guia acompanhante"
+            "Embarcação com estrutura completa",
+            "Tripulação experiente",
+            "Paradas para mergulho",
+            "Música ambiente",
+            "Serviço de bordo opcional"
         ],
-        "id": "parrachos-rio-fogo",
+        "id": "passeio-catamara",
         "icon": "anchor",
-        "description": "Um passeio completo que combina mar cristalino e natureza exuberante! Começamos nos Parrachos de Rio do Fogo, com suas águas rasas e transparentes ideais para mergulho com snorkel."
+        "description": "Navegue com conforto e estilo! Desfrute de vistas panorâmicas do litoral em embarcação segura e confortável."
     },
     {
-        "title": "Aventura em Maracajaú",
+        "title": "Day Use",
         "benefits": [
-            "Quadriciclo",
-            "Instrutor e equipamentos de segurança",
-            "Passeio pelas dunas e beira-mar",
-            "Paradas para fotos"
+            "Acesso a piscinas e áreas de lazer",
+            "Almoço incluso",
+            "Transporte opcional",
+            "Atividades recreativas",
+            "Ambiente familiar"
         ],
-        "id": "aventura-maracajau",
+        "id": "day-use",
+        "icon": "sun",
+        "description": "Relaxe em resorts e pousadas parceiras! Aproveite piscinas, restaurantes e estrutura completa por um dia inteiro."
+    },
+    {
+        "title": "Aluguel de Carro",
+        "benefits": [
+            "Frota diversificada",
+            "Seguro incluso",
+            "Quilometragem livre",
+            "Entrega no local",
+            "Suporte 24h"
+        ],
+        "id": "aluguel-carro",
+        "icon": "car",
+        "description": "Liberdade total para explorar! Carros em excelente estado com preços acessíveis e atendimento diferenciado."
+    },
+    {
+        "title": "Passeio de Lancha",
+        "benefits": [
+            "Lancha com capacidade para grupos",
+            "Piloto experiente",
+            "Equipamentos de segurança",
+            "Paradas estratégicas",
+            "Cooler com bebidas"
+        ],
+        "id": "passeio-lancha",
+        "icon": "anchor",
+        "description": "Velocidade e emoção no mar! Explore praias paradisíacas e piscinas naturais com o conforto de uma lancha moderna."
+    },
+    {
+        "title": "Passeio 4x4",
+        "benefits": [
+            "Veículos 4x4 equipados",
+            "Motorista especializado",
+            "Roteiros exclusivos",
+            "Paradas panorâmicas",
+            "Grupos pequenos"
+        ],
+        "id": "passeio-4x4",
+        "icon": "truck",
+        "description": "Aventura off-road pelas paisagens mais selvagens! Acesse locais únicos com veículos preparados e motoristas especializados."
+    },
+    {
+        "title": "Voo de Helicóptero",
+        "benefits": [
+            "Helicóptero certificado",
+            "Piloto experiente",
+            "Rotas panorâmicas",
+            "Duração flexível",
+            "Fotos aéreas inclusas"
+        ],
+        "id": "voo-helicoptero",
+        "icon": "helicopter",
+        "description": "Veja Natal de uma perspectiva única! Sobrevoe as principais atrações da cidade em uma experiência inesquecível."
+    },
+    {
+        "title": "Passeio de Quadriciclo",
+        "benefits": [
+            "Quadriciclos automáticos",
+            "Equipamentos de proteção",
+            "Instruções de segurança",
+            "Trilhas demarcadas",
+            "Acompanhamento profissional"
+        ],
+        "id": "passeio-quadriciclo",
         "icon": "compass",
-        "description": "Viva a emoção de pilotar um quadriciclo pelas dunas de Maracajaú, com vistas incríveis do mar ao seu lado. O passeio combina adrenalina e contato com a natureza."
+        "description": "Adrenalina pura nas dunas e trilhas! Pilote seu próprio quadriciclo em aventuras emocionantes e seguras."
+    },
+    {
+        "title": "Arvorismo",
+        "benefits": [
+            "Equipamentos certificados",
+            "Instrutores qualificados",
+            "Circuitos variados",
+            "Briefing de segurança",
+            "Certificado de participação"
+        ],
+        "id": "arvorismo",
+        "icon": "tree-pine",
+        "description": "Desafie seus limites nas alturas! Circuitos de arvorismo com diferentes níveis de dificuldade em meio à natureza."
+    },
+    {
+        "title": "Rapel",
+        "benefits": [
+            "Equipamentos profissionais",
+            "Instrutores certificados",
+            "Locais seguros e testados",
+            "Diferentes alturas",
+            "Fotos da experiência"
+        ],
+        "id": "rapel",
+        "icon": "mountain",
+        "description": "Descida vertical emocionante! Pratique rapel em paredões naturais com total segurança e acompanhamento profissional."
+    },
+    {
+        "title": "Bate-volta Praias e Lagoas",
+        "benefits": [
+            "Múltiplos destinos",
+            "Transporte confortável",
+            "Guia acompanhante",
+            "Tempo otimizado",
+            "Paradas estratégicas"
+        ],
+        "id": "bate-volta-praias",
+        "icon": "van",
+        "description": "Conheça múltiplos destinos em um só dia! Roteiros otimizados para aproveitar o máximo das belezas nordestinas."
+    },
+    {
+        "title": "Transfers",
+        "benefits": [
+            "Veículos climatizados",
+            "Motoristas pontuais",
+            "Atendimento personalizado",
+            "Preços fixos",
+            "Disponibilidade 24h"
+        ],
+        "id": "transfers",
+        "icon": "car",
+        "description": "Chegue e saia com tranquilidade! Serviço de transfer aeroporto-hotel-praias com pontualidade e conforto."
+    },
+    {
+        "title": "Mergulho",
+        "benefits": [
+            "Equipamentos completos",
+            "Instrutores certificados",
+            "Locais paradisíacas",
+            "Diferentes níveis",
+            "Certificação opcional"
+        ],
+        "id": "mergulho",
+        "icon": "diving-mask",
+        "description": "Explore o mundo subaquático! Mergulhos em recifes e naufrágios com instrutores certificados e equipamentos completos."
+    },
+    {
+        "title": "Guia de Turismo",
+        "benefits": [
+            "Guias credenciados",
+            "Conhecimento local",
+            "Roteiros culturais",
+            "Flexibilidade de horários",
+            "Atendimento personalizado"
+        ],
+        "id": "guia-turismo",
+        "icon": "user",
+        "description": "Conheça a história e cultura local! Guias especializados para tornar sua experiência ainda mais rica e educativa."
+    },
+    {
+        "title": "Planejamento de Férias \"Minhas Férias, Minha Vida\"",
+        "benefits": [
+            "Pagamento parcelado via boleto",
+            "Sem uso de cartão",
+            "Planejamento completo",
+            "Acompanhamento personalizado",
+            "Flexibilidade de datas"
+        ],
+        "id": "planejamento-ferias",
+        "icon": "calendar",
+        "description": "Realize o sonho das férias perfeitas! Pagamento antecipado via boleto, sem cartão, com planejamento completo e personalizado."
     }
 ],
 
   // Destinos em destaque
   featuredDestinations: [
-    {
-        "name": "Buggy Litoral Norte",
-        "included": [
-            "Transporte",
-            "Bugueiro credenciado",
-            "Paradas para fotos",
-            "Travessia de balsa",
-            "Atividades opcionais (aerobunda, esquibunda etc.)",
-            "Visual guiado pelas principais praias e lagoas do norte"
-        ],
-        "id": "buggy-litoral-norte",
-        "category": "Dunas e Aventura",
-        "image": "tours/buggy-litoral-norte/buggy-1.png",
-        "departureDate": "Diário",
-        "duration": "6 horas",
-        "price": "170",
-        "availableSpots": "20",
-        "rating": "4.9",
-        "reviewCount": "324",
-        "description": "Explore o melhor do litoral norte com emoção e cenários incríveis! Saída do hotel com visual pela Via Costeira, Praia do Meio e Ponte Newton. Paradas nas dunas e lagoas de Genipabu, Pitangui e Jacumã."
-    },
-    {
-        "name": "Passeio 4X4 Litoral Sul",
-        "included": [
-            "Transporte em 4x4",
-            "Motorista experiente",
-            "Paradas para banho e fotos",
-            "Visitas a praias, lagoas e mirantes",
-            "Pôr do sol nas dunas"
-        ],
-        "id": "4x4-litoral-sul",
-        "category": "Paisagens e Natureza",
-        "image": "tours/4x4-litoral-sul/4x4-1.png",
-        "departureDate": "Diário",
-        "duration": "8 horas",
-        "price": "85",
-        "availableSpots": "25",
-        "rating": "4.8",
-        "reviewCount": "267",
-        "description": "Conheça o Litoral Sul do RN em um passeio cheio de paisagens incríveis! O roteiro inclui a Barreira do Inferno, o maior cajueiro do mundo e lagoas como Alcaçuz, Carcará e Arituba."
-    },
-    {
-        "name": "Passeio pelas Praias de Pipa",
-        "included": [
-            "Transporte",
-            "Paradas para banho",
-            "Visitas guiadas",
-            "Tempo para fotos e descanso"
-        ],
-        "id": "praias-pipa",
-        "category": "Praias",
-        "image": "tours/praias-pipa/pipa-1.png",
-        "departureDate": "Diário",
-        "duration": "8 horas",
-        "price": "85",
-        "availableSpots": "30",
-        "rating": "4.9",
-        "reviewCount": "189",
-        "description": "Conheça as praias mais famosas de Pipa em um passeio cheio de beleza e natureza. Visite a Praia do Madeiro, Cacimbinha, Chapadão, Amor e a Lagoa de Guaraíras."
-    },
     {
         "name": "Parrachos de Rio do Fogo + Rio Punaú",
         "included": [
@@ -180,7 +288,7 @@ export const jasturConfig = {
         ],
         "id": "parrachos-rio-fogo",
         "category": "Mergulho",
-        "image": "images/tours/parrachos-rio-fogo/riodofogo-1.png",
+        "image": "/destinations/rio-do-fogo.jpg",
         "departureDate": "Diário",
         "duration": "8 horas",
         "price": "150",
@@ -199,7 +307,7 @@ export const jasturConfig = {
         ],
         "id": "aventura-maracajau",
         "category": "Aventura",
-        "image": "images/tours/aventura-maracajau/maracajau-1.png",
+        "image": "/destinations/maracajau.jpg",
         "departureDate": "Diário",
         "duration": "4 horas",
         "price": "170",
@@ -212,28 +320,24 @@ export const jasturConfig = {
 
   // Cores da identidade visual
   colors: {
-    "primary": "#3b82f6",
-    "secondary": "#f97316",
-    "accent": "#10b981"
+    "primary": "#0D9488",
+    "secondary": "#1E3A8A",
+    "accent": "#F59E0B"
 },
 
   // SEO
   seo: {
-    title: "Passeios Natal Tur - Explore os melhores destinos do RN",
-    description: "Descubra os destinos mais incríveis do Rio Grande do Norte com a Passeios Natal Tur. Buggy, quadriciclo, parrachos e muito mais!",
-    keywords: "passeios natal, buggy genipabu, pipa, parrachos maracajaú, turismo rn",
+    title: "Kazan Adventure - Turismo acessível, saúde e bem-estar em Natal/RN",
+    description: "Turismo financeiramente inclusivo em Natal/RN. Ecoturismo, aventura, sol e mar com atendimento humanizado e experiências acessíveis. Buggy, quadriciclo, mergulho, trilhas e muito mais!",
+    keywords: "turismo acessível natal, ecoturismo rn, turismo financeiramente inclusivo, buggy natal, quadriciclo, mergulho, trilhas, caiaque, catamarã, day use, turismo aventura",
     ogImage: "/images/og-image.jpg",
   },
 
   // Links de navegação
   navigation: [
     {
-        "name": "Serviços",
-        "href": "#servicos"
-    },
-    {
-        "name": "Destinos",
-        "href": "#destinos"
+        "name": "Explore",
+        "href": "#explore"
     },
     {
         "name": "Depoimentos",
@@ -257,7 +361,7 @@ export const jasturConfig = {
         "name": "João Santos",
         "rating": "5",
         "destination": "Pipa",
-        "text": "Pipa é um paraíso! A equipe da Passeios Natal Tur nos tratou muito bem. Voltaremos com certeza!"
+        "text": "Pipa é um paraíso! A equipe da Kazan Adventure nos tratou muito bem. Voltaremos com certeza!"
     },
     {
         "name": "Ana Costa",
@@ -320,14 +424,14 @@ export const jasturConfig = {
   // Parceiros
   partners: [
     {
-        "name": "Hotel Ponta Negra",
-        "logo": "partners/hotel-ponta-negra.jpg",
-        "description": "Parceiro oficial para hospedagem dos nossos clientes"
+        "name": "Renascer Vans",
+        "logo": "/partners/renascer-vans.jpg",
+        "description": "Especializada em transporte executivo e turístico com frota moderna e confortável"
     },
     {
-        "name": "Restaurante Mangai",
-        "logo": "partners/mangai.jpg",
-        "description": "Parceiro gastronômico oferecendo descontos especiais"
+        "name": "Parvi Transporte",
+        "logo": "/partners/parvi-transporte.jpg",
+        "description": "Líder em fretamento e turismo com opções de semi-leito e leito para viagens de longa distância"
     }
 ],
 
@@ -349,7 +453,7 @@ export const jasturConfig = {
 
   // Logo
   logo: {
-    file: "/id/logo-passeios-natal-tur.png",
-    alt: "Logo Passeios Natal Tur",
+    file: "/id/logo.png",
+    alt: "Logo Kazan Adventure",
   },
 };

@@ -8,7 +8,9 @@ interface WhatsAppButtonProps {
   message?: string;
 }
 
-export function WhatsAppButton({ phoneNumber, message = "Olá! Gostaria de conhecer os passeios da Passeios Natal Tur." }: WhatsAppButtonProps) {
+import { jasturConfig } from '../../config/jastur';
+
+export function WhatsAppButton({ phoneNumber, message = `Olá! Gostaria de conhecer os passeios da ${jasturConfig.company.name}.` }: WhatsAppButtonProps) {
   const handleWhatsAppClick = () => {
     openWhatsApp(phoneNumber, message);
   };
@@ -17,7 +19,7 @@ export function WhatsAppButton({ phoneNumber, message = "Olá! Gostaria de conhe
     <div className="fixed bottom-6 right-6 z-50">
       <motion.button
         onClick={handleWhatsAppClick}
-        className="relative bg-primary-500 hover:bg-primary-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+        className="relative bg-accent-500 hover:bg-accent-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
         initial={{ opacity: 0, y: 20 }}
@@ -29,7 +31,7 @@ export function WhatsAppButton({ phoneNumber, message = "Olá! Gostaria de conhe
         
         {/* Animação pulsante simples */}
         <motion.div
-          className="absolute inset-0 bg-primary-400 rounded-full"
+          className="absolute inset-0 bg-accent-400 rounded-full"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.6, 0, 0.6],
@@ -49,4 +51,4 @@ export function WhatsAppButton({ phoneNumber, message = "Olá! Gostaria de conhe
       </motion.button>
     </div>
   );
-} 
+}

@@ -29,9 +29,9 @@ export function CTAButton({
   const baseClasses = "inline-flex items-center justify-center font-semibold rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 whitespace-nowrap";
   
   const variantClasses = {
-    primary: "bg-primary-500 hover:bg-primary-600 text-white shadow-lg hover:shadow-xl focus:ring-primary-500",
-    secondary: "bg-cta-500 hover:bg-cta-600 text-white shadow-lg hover:shadow-xl focus:ring-cta-500",
-    outline: "border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white focus:ring-primary-500"
+    primary: "bg-secondary-500 hover:bg-secondary-600 text-white shadow-lg hover:shadow-xl focus:ring-secondary-500",
+    secondary: "bg-accent-500 hover:bg-accent-600 text-white shadow-lg hover:shadow-xl focus:ring-accent-500",
+    outline: "border-2 border-secondary-500 text-secondary-500 hover:bg-secondary-500 hover:text-white focus:ring-secondary-500"
   };
 
   const sizeClasses = {
@@ -83,7 +83,7 @@ export function CTAButton({
       whileTap={{ scale: 0.98 }}
       onClick={handleClick}
     >
-      <span>{children}</span>
+      <span className="hover:text-green-500 transition-colors duration-300">{children}</span>
       {renderIcon()}
     </motion.div>
   );
@@ -97,4 +97,4 @@ export function CTAButton({
   }
 
   return content;
-} 
+}

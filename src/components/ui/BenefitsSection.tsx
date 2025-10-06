@@ -12,15 +12,30 @@ import { openWhatsApp } from '../../lib/utils';
 const ServicesSection: React.FC = () => {
   const handleServiceClick = (serviceId: string) => {
     const service = jasturConfig.services.find(s => s.id === serviceId);
-    const message = `Olá! Gostaria de saber mais sobre ${service?.title.toLowerCase()} da Passeios Natal Tur.`;
+    const message = `Olá! Gostaria de saber mais sobre ${service?.title.toLowerCase()} da ${jasturConfig.company.name}.`;
     openWhatsApp(jasturConfig.contact.whatsapp, message);
   };
 
   const getServiceIcon = (serviceId: string) => {
-    switch (serviceId) {
-      case 'excursoes': return 'bus';
-      case 'viagens': return 'plane';
-      case 'passeios': return 'car';
+    const service = jasturConfig.services.find(s => s.id === serviceId);
+    if (!service) return 'map';
+    
+    switch (service.icon) {
+      case 'truck': return 'bus';
+      case 'map': return 'map';
+      case 'mountain': return 'mountain';
+      case 'waves': return 'plane';
+      case 'anchor': return 'star';
+      case 'sun': return 'calendar';
+      case 'car': return 'car';
+      case 'plane': return 'plane';
+      case 'helicopter': return 'helicopter';
+      case 'van': return 'van';
+      case 'diving-mask': return 'diving-mask';
+      case 'tree-pine': return 'tree-pine';
+      case 'compass': return 'map';
+      case 'user': return 'users';
+      case 'calendar': return 'calendar';
       default: return 'map';
     }
   };
@@ -42,71 +57,102 @@ const ServicesSection: React.FC = () => {
       <div className="relative z-10">
         <SectionHeader
           title="Explore do seu jeito"
-          subtitle="Descubra os melhores passeios em Natal com a Passeios Natal Tur e escolha a experiência perfeita"
+          subtitle={`Descubra os melhores passeios em Natal com a ${jasturConfig.company.name} e escolha a experiência perfeita`}
           align="center"
           className="text-white"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
-          {jasturConfig.services.map((service, index) => (
-            <Card
-              key={service.id}
-              delay={index * 0.2}
-              className="group hover:shadow-2xl transition-all duration-500 bg-white/95 backdrop-blur-sm border-0"
-            >
-              <CardBody className="text-center p-4 sm:p-6 md:p-8">
-                {/* Ícone do serviço com mais destaque */}
-                <motion.div
-                  className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-cta-500 to-cta-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg"
-                  whileHover={{ rotate: 5, scale: 1.1 }}
-                >
-                  <ServiceIcon 
-                    type={getServiceIcon(service.id) as 'bus' | 'plane' | 'car'} 
-                    size="lg" 
-                    className="text-white"
-                  />
-                </motion.div>
+        {/* Verificar se há serviços disponíveis */}
+        {jasturConfig.services.length === 0 ? (
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center py-16"
+          >
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-12 max-w-2xl mx-auto shadow-2xl">
+              <div className="text-6xl mb-6">🚧</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Serviços Temporariamente Indisponíveis
+              </h3>
+              <p className="text-lg text-gray-600 mb-8">
+                Estamos trabalhando para trazer novos serviços incríveis para você. 
+                Entre em contato conosco para mais informações sobre futuros passeios.
+              </p>
+              <CTAButton
+                size="lg"
+                variant="primary"
+                icon="whatsapp"
+                whatsappNumber={jasturConfig.contact.whatsapp}
+                whatsappMessage={jasturConfig.whatsappMessages.duvidas}
+                className="bg-gradient-to-r from-cta-500 to-cta-600 hover:from-cta-600 hover:to-cta-700"
+              >
+                Falar Conosco
+              </CTAButton>
+            </div>
+          </motion.div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
+            {jasturConfig.services.map((service, index) => (
+              <Card
+                key={service.id}
+                delay={index * 0.2}
+                className="group hover:shadow-2xl transition-all duration-500 bg-white/95 backdrop-blur-sm border-0"
+              >
+                <CardBody className="text-center p-4 sm:p-6 md:p-8">
+                  {/* Ícone do serviço com mais destaque */}
+                  <motion.div
+                    className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-cta-500 to-cta-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg"
+                    whileHover={{ rotate: 5, scale: 1.1 }}
+                  >
+                    <ServiceIcon 
+                      type={getServiceIcon(service.id) as 'bus' | 'plane' | 'car'} 
+                      size="lg" 
+                      className="text-white"
+                    />
+                  </motion.div>
 
-                {/* Título do serviço */}
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-cta-600 transition-colors duration-300">
-                  {service.title}
-                </h3>
+                  {/* Título do serviço */}
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-cta-600 transition-colors duration-300">
+                    {service.title}
+                  </h3>
 
-                {/* Descrição */}
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
+                  {/* Descrição */}
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
 
-                {/* Benefícios com mais destaque */}
-                <div className="space-y-3 mb-8">
-                  {service.benefits.map((benefit, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.2 + idx * 0.1 }}
-                      className="flex items-center gap-3 text-sm text-gray-700 bg-cta-50 rounded-lg p-3 group-hover:bg-cta-100 transition-colors duration-300"
-                    >
-                      <ServiceIcon type="check" size="sm" className="text-cta-600 flex-shrink-0" />
-                      <span className="font-medium">{benefit}</span>
-                    </motion.div>
-                  ))}
-                </div>
+                  {/* Benefícios com mais destaque */}
+                  <div className="space-y-3 mb-8">
+                    {service.benefits.map((benefit, idx) => (
+                      <motion.div
+                        key={idx}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 + idx * 0.1 }}
+                        className="flex items-center gap-3 text-sm text-gray-700 bg-cta-50 rounded-lg p-3 group-hover:bg-cta-100 transition-colors duration-300"
+                      >
+                        <ServiceIcon type="check" size="sm" className="text-cta-600 flex-shrink-0" />
+                        <span className="font-medium">{benefit}</span>
+                      </motion.div>
+                    ))}
+                  </div>
 
-                {/* CTA específico para cada serviço */}
-                <CTAButton
-                  size="md"
-                  variant="primary"
-                  icon="whatsapp"
-                  onClick={() => handleServiceClick(service.id)}
-                  className="w-full group-hover:scale-105 transition-transform duration-300 bg-gradient-to-r from-cta-500 to-cta-600 hover:from-cta-600 hover:to-cta-700"
-                >
-                  Saber Mais
-                </CTAButton>
-              </CardBody>
-            </Card>
-          ))}
-        </div>
+                  {/* CTA específico para cada serviço */}
+                  <CTAButton
+                    size="md"
+                    variant="primary"
+                    icon="whatsapp"
+                    onClick={() => handleServiceClick(service.id)}
+                    className="w-full group-hover:scale-105 transition-transform duration-300 bg-gradient-to-r from-cta-500 to-cta-600 hover:from-cta-600 hover:to-cta-700"
+                  >
+                    Saber Mais
+                  </CTAButton>
+                </CardBody>
+              </Card>
+            ))}
+          </div>
+        )}
 
         {/* Seção de benefícios gerais com fundo branco */}
         <div className="mt-20 bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl">
@@ -117,7 +163,7 @@ const ServicesSection: React.FC = () => {
             className="text-center mb-12"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Por que escolher a <span className="text-primary-600">Passeios Natal Tur</span>?
+              Por que escolher a <span className="text-primary-600">{jasturConfig.company.name}</span>?
             </h3>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Nossa experiência e dedicação fazem a diferença em cada passeio
@@ -221,7 +267,7 @@ const ServicesSection: React.FC = () => {
                   href={`https://instagram.com/${jasturConfig.contact.instagram.replace('@', '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-full hover:from-pink-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-kazan-secondary to-kazan-accent text-white px-6 py-3 rounded-full hover:from-kazan-primary hover:to-kazan-secondary transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   <Instagram className="w-5 h-5" />
                   <span className="font-semibold">@{jasturConfig.contact.instagram.replace('@', '')}</span>
@@ -235,4 +281,4 @@ const ServicesSection: React.FC = () => {
   );
 };
 
-export default ServicesSection; 
+export default ServicesSection;

@@ -26,7 +26,7 @@ export function HeroSection() {
                   transition={{ duration: 0.6 }}
                   className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8"
                 >
-                  <MapPin className="w-4 h-4 text-accent-400" />
+                  <MapPin className="w-4 h-4 text-accent-500" />
                   <span className="text-white text-sm font-medium">Destinos incríveis em todo o Brasil</span>
                 </motion.div>
 
@@ -37,8 +37,8 @@ export function HeroSection() {
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
                 >
-                  <span className="text-primary-200">Passeios Natal Tur:</span>{' '}
-                  <span className="text-accent-400">descubra as maravilhas de Natal!</span>
+                  <span className="text-white">Vem se aventurar com a </span>
+                  <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent hover:from-green-300 hover:to-green-500 transition-all duration-300">{jasturConfig.company.name}</span>
                 </motion.h1>
 
                 {/* Subtítulo */}
@@ -63,7 +63,7 @@ export function HeroSection() {
                     variant="secondary"
                     icon="whatsapp"
                     whatsappNumber={jasturConfig.contact.whatsapp}
-                    whatsappMessage={jasturConfig.whatsappMessages.roteiros}
+                    whatsappMessage={jasturConfig.whatsappMessages.default}
                     className="w-full min-w-[320px] sm:w-auto px-2 py-1 text-sm"
                   >
                     Falar no WhatsApp
@@ -73,10 +73,10 @@ export function HeroSection() {
                     size="lg"
                     variant="outline"
                     icon="arrow"
-                    onClick={() => document.getElementById('destinos')?.scrollIntoView({ behavior: 'smooth' })}
+                    onClick={() => document.getElementById('servicos')?.scrollIntoView({ behavior: 'smooth' })}
                     className="w-full min-w-[320px] sm:w-auto px-2 py-1 text-sm border-white/30 text-white hover:bg-white hover:text-gray-900 hover:border-white"
                   >
-                    Destinos Populares
+                    Nossos Serviços
                   </CTAButton>
                 </motion.div>
 
@@ -114,6 +114,7 @@ const menuItems = [
   { name: 'Serviços', href: '#servicos' },
   { name: 'Destinos', href: '#destinos' },
   { name: 'Depoimentos', href: '#depoimentos' },
+  { name: 'FAQ', href: '#faq' },
   { name: 'Contato', href: '#contato' },
 ];
 
@@ -181,9 +182,9 @@ const HeroHeader = () => {
 
   const getCTAButtonClasses = () => {
     if (scrolled && isOverWhiteSection) {
-      return '!bg-primary-600 !border-primary-600 !text-white hover:!bg-primary-700 hover:!border-primary-700 hover:!text-white !shadow-md';
+      return '!bg-secondary-600 !border-secondary-600 !text-white hover:!bg-secondary-700 hover:!border-secondary-700 hover:!text-white !shadow-md';
     }
-    return '!bg-primary-600 !border-primary-600 !text-white hover:!bg-primary-700 hover:!border-primary-700 hover:!text-white !shadow-md';
+    return '!bg-accent-600 !border-accent-600 !text-white hover:!bg-accent-700 hover:!border-accent-700 hover:!text-white !shadow-md';
   };
 
   return (
@@ -265,4 +266,4 @@ const HeroHeader = () => {
       </nav>
     </header>
   );
-}; 
+};

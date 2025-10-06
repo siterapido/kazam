@@ -4,36 +4,21 @@ import { Handshake, Star, Users, Shield } from 'lucide-react';
 
 import { Section, SectionHeader } from './Section';
 import { Card, CardBody } from './Card';
+import { jasturConfig } from '../../config/jastur';
 
 const PartnersSection: React.FC = () => {
-  const partners = [
-    {
-      id: 'renascer-vans',
-      name: 'Renascer Vans',
-      description: 'Especializada em transporte executivo e turístico com frota moderna e confortável',
-      image: '/partners/renascer-vans.jpg',
-      features: [
-        'Frota moderna e bem conservada',
-        'Motoristas experientes e certificados',
-        'Conforto e segurança garantidos',
-        'Atendimento personalizado'
-      ],
-      contact: '0800 081 1818'
-    },
-    {
-      id: 'parvi',
-      name: 'Parvi Transporte',
-      description: 'Líder em fretamento e turismo com opções de semi-leito e leito para viagens de longa distância',
-      image: '/partners/parvi-transporte.jpg',
-      features: [
-        'Ônibus de luxo com semi-leito e leito',
-        'Wi-Fi e acessibilidade para cadeirantes',
-        'Roteiros nacionais e internacionais',
-        'Qualidade premium reconhecida'
-      ],
-      contact: '0800 081 1818'
-    }
-  ];
+  const partners = jasturConfig.partners?.map((p, idx) => ({
+    id: `partner-${idx}`,
+    name: p.name || `Parceiro ${idx + 1}`,
+    description: p.description || '',
+    image: p.logo || '',
+    features: [
+      'Qualidade comprovada',
+      'Compromisso com segurança',
+      'Atendimento profissional',
+      'Parceria confiável'
+    ]
+  })) || [];
 
   return (
     <Section id="parceiros" background="white" padding="xl" className="relative overflow-hidden">
@@ -68,7 +53,7 @@ const PartnersSection: React.FC = () => {
                   <div className="relative mb-8 overflow-hidden rounded-2xl">
                     <motion.img
                       src={partner.image}
-                      alt={`${partner.name} - Parceiro Passeios Natal Tur`}
+                      alt={`${partner.name} - Parceiro ${jasturConfig.company.name}`}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                       whileHover={{ scale: 1.05 }}
                     />
@@ -178,4 +163,4 @@ const PartnersSection: React.FC = () => {
   );
 };
 
-export default PartnersSection; 
+export default PartnersSection;
