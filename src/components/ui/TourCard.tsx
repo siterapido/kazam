@@ -14,6 +14,7 @@ interface TourCardProps {
   images: string[];
   delay?: number;
   imagePosition?: 'center' | 'bottom' | 'top' | 'left' | 'right';
+  onCtaClick?: () => void;
 }
 
 export const TourCard: React.FC<TourCardProps> = ({
@@ -27,7 +28,8 @@ export const TourCard: React.FC<TourCardProps> = ({
   cta,
   images,
   delay = 0,
-  imagePosition = 'center'
+  imagePosition = 'center',
+  onCtaClick
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -178,6 +180,7 @@ export const TourCard: React.FC<TourCardProps> = ({
           className="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg mt-auto"
           whileHover={{ scale: 1.01 }}
           whileTap={{ scale: 0.99 }}
+          onClick={onCtaClick}
         >
           {cta}
         </motion.button>

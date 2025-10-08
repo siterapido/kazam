@@ -1,8 +1,22 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { TourCard } from './TourCard';
+import { composeWhatsAppMessage, openWhatsApp } from '../../lib/utils';
+import { jasturConfig } from '../../config/jastur';
 
 const UpcomingToursSection: React.FC = () => {
+  const handleUpcomingTourClick = (tour: any) => {
+    const message = composeWhatsAppMessage({
+      kind: 'destination',
+      destination: {
+        id: tour.title.toLowerCase().replace(/\s+/g, '-'),
+        name: tour.title,
+        description: tour.description
+      }
+    });
+    openWhatsApp(jasturConfig.contact.whatsapp, message);
+  };
+
   const tours = [
     {
       title: "São José do Campestre",
@@ -141,6 +155,7 @@ const UpcomingToursSection: React.FC = () => {
               cta={tour.cta}
               images={tour.images}
               delay={index * 0.2}
+              onCtaClick={() => handleUpcomingTourClick(tour)}
             />
           ))}
         </div>

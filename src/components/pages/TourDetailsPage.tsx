@@ -16,7 +16,7 @@ import { ImageCarousel } from '../ui/ImageCarousel';
 import { CTAButton } from '../ui/CTAButton';
 import { Card, CardBody } from '../ui/Card';
 import { WhatsAppButton } from '../ui/WhatsAppButton';
-import { openWhatsApp } from '../../lib/utils';
+import { openWhatsApp, composeWhatsAppMessage } from '../../lib/utils';
 
 const TourDetailsPage: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -50,8 +50,28 @@ const TourDetailsPage: React.FC = () => {
     return [dest.image];
   };
 
+  // Normaliza valor numérico de vagas caso venha como string (ex: "20 pessoas")
+  const normalizeAvailableSpots = (val: unknown): number | undefined => {
+    if (typeof val === 'number') return val;
+    const match = String(val ?? '').match(/\d+/);
+    return match ? Number(match[0]) : undefined;
+  };
+
   const handleWhatsAppContact = () => {
-    const message = `Olá! Gostaria de saber mais sobre o passeio "${tour.name}". Poderia me dar mais informações sobre disponibilidade, preços e como reservar?`;
+    const message = composeWhatsAppMessage({
+      kind: 'tour',
+      tour: {
+        id: tour.id,
+        name: tour.name,
+        category: tour.category,
+        duration: tour.duration,
+        departureDate: tour.departureDate,
+        availableSpots: normalizeAvailableSpots(tour.availableSpots),
+        price: tour.price,
+        included: tour.included,
+        description: tour.description,
+      }
+    });
     openWhatsApp(jasturConfig.contact.whatsapp, message);
   };
 
@@ -276,7 +296,20 @@ const TourDetailsPage: React.FC = () => {
       {/* Botão flutuante do WhatsApp */}
       <WhatsAppButton 
         phoneNumber={jasturConfig.contact.whatsapp} 
-        message={`Olá! Gostaria de saber mais sobre o passeio "${tour.name}".`}
+        message={composeWhatsAppMessage({
+          kind: 'tour',
+          tour: {
+            id: tour.id,
+            name: tour.name,
+            category: tour.category,
+            duration: tour.duration,
+            departureDate: tour.departureDate,
+            availableSpots: normalizeAvailableSpots(tour.availableSpots),
+            price: tour.price,
+            included: tour.included,
+            description: tour.description,
+          }
+        })}
       />
     </div>
   );

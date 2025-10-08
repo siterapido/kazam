@@ -1,8 +1,22 @@
 import React from 'react';
 import { Section, SectionHeader } from './Section';
 import { TourCard } from './TourCard';
+import { composeWhatsAppMessage, openWhatsApp } from '../../lib/utils';
+import { jasturConfig } from '../../config/jastur';
 
 const BuggyToursSection: React.FC = () => {
+  const handleBuggyTourClick = (tour: any) => {
+    const message = composeWhatsAppMessage({
+      kind: 'service',
+      service: {
+        id: tour.title.toLowerCase().replace(/\s+/g, '-'),
+        title: tour.title,
+        description: tour.description
+      }
+    });
+    openWhatsApp(jasturConfig.contact.whatsapp, message);
+  };
+
   const tours = [
     {
       title: 'Passeio de Buggy (Genipabu) Dunas fixas e móveis',
@@ -112,6 +126,7 @@ const BuggyToursSection: React.FC = () => {
                 : 'center'
             }
             delay={index * 0.1}
+            onCtaClick={() => handleBuggyTourClick(tour)}
           />
         ))}
       </div>

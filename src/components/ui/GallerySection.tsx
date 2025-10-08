@@ -8,14 +8,22 @@ import { CTAButton } from './CTAButton';
 import { DestinationImageSlider } from './DestinationImageSlider';
 
 import { jasturConfig } from '../../config/jastur';
-import { openWhatsApp } from '../../lib/utils';
+import { openWhatsApp, composeWhatsAppMessage } from '../../lib/utils';
 
 const DestinationsSection: React.FC = () => {
   const navigate = useNavigate();
 
   const handleDestinationClick = (destinationId: string) => {
     const destination = jasturConfig.featuredDestinations.find(d => d.id === destinationId);
- const message = `Olá! Gostaria de saber mais sobre ${destination?.name} da ${jasturConfig.company.name}. ${destination?.description}`;
+    if (!destination) return;
+    const message = composeWhatsAppMessage({
+      kind: 'destination',
+      destination: {
+        id: destination.id,
+        name: destination.name,
+        description: destination.description,
+      }
+    });
     openWhatsApp(jasturConfig.contact.whatsapp, message);
   };
 

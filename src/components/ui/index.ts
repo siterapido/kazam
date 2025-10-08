@@ -16,3 +16,4 @@ export { default as FAQSection } from './FAQSection';
 
 export { default as FooterSection } from './FooterSection';
 export { default as PartnersSection } from './PartnersSection';
+export { default as CommunitySection } from './CommunitySection';

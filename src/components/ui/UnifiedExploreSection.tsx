@@ -7,12 +7,20 @@ import { CTAButton } from './CTAButton';
 import { ServiceIcon } from './ServiceIcon';
 
 import { jasturConfig } from '../../config/jastur';
-import { openWhatsApp } from '../../lib/utils';
+import { openWhatsApp, composeWhatsAppMessage } from '../../lib/utils';
 
 const UnifiedExploreSection: React.FC = () => {
   const handleServiceClick = (serviceId: string) => {
     const service = jasturConfig.services.find(s => s.id === serviceId);
-    const message = `Olá! Gostaria de saber mais sobre ${service?.title.toLowerCase()} da ${jasturConfig.company.name}.`;
+    if (!service) return;
+    const message = composeWhatsAppMessage({
+      kind: 'service',
+      service: {
+        id: service.id,
+        title: service.title,
+        description: service.description,
+      }
+    });
     openWhatsApp(jasturConfig.contact.whatsapp, message);
   };
 
