@@ -50,7 +50,7 @@ export function DestinationImageSlider({ images, alt, className = '' }: Destinat
       <img
         src={images[0]}
         alt={alt}
-        className={`w-full h-full object-cover ${className}`}
+        className={`w-full h-full object-cover object-center ${className}`}
       />
     );
   }
@@ -61,7 +61,7 @@ export function DestinationImageSlider({ images, alt, className = '' }: Destinat
       <img
         src={images[(currentIndex - 1 + images.length) % images.length]}
         alt=""
-        className="w-full h-full object-cover absolute inset-0"
+        className="w-full h-full object-cover object-center absolute inset-0"
         aria-hidden="true"
       />
       
@@ -70,7 +70,7 @@ export function DestinationImageSlider({ images, alt, className = '' }: Destinat
           key={currentIndex}
           src={images[currentIndex]}
           alt={`${alt} - Foto ${currentIndex + 1}`}
-          className="w-full h-full object-cover absolute inset-0"
+          className="w-full h-full object-cover object-center absolute inset-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

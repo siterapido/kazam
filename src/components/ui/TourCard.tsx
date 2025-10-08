@@ -13,6 +13,7 @@ interface TourCardProps {
   cta: string;
   images: string[];
   delay?: number;
+  imagePosition?: 'center' | 'bottom' | 'top' | 'left' | 'right';
 }
 
 export const TourCard: React.FC<TourCardProps> = ({
@@ -25,9 +26,21 @@ export const TourCard: React.FC<TourCardProps> = ({
   price,
   cta,
   images,
-  delay = 0
+  delay = 0,
+  imagePosition = 'center'
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const positionClass =
+    imagePosition === 'bottom'
+      ? 'object-bottom'
+      : imagePosition === 'top'
+      ? 'object-top'
+      : imagePosition === 'left'
+      ? 'object-left'
+      : imagePosition === 'right'
+      ? 'object-right'
+      : 'object-center';
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % images.length);
@@ -57,7 +70,7 @@ export const TourCard: React.FC<TourCardProps> = ({
               key={index}
               src={image}
               alt={`${title} - Imagem ${index + 1}`}
-              className="absolute inset-0 w-full h-full object-cover"
+              className={`absolute inset-0 w-full h-full object-cover ${positionClass}`}
               initial={{ opacity: 0 }}
               animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
               transition={{ duration: 0.5 }}

@@ -5,61 +5,92 @@ import { TourCard } from './TourCard';
 const UpcomingToursSection: React.FC = () => {
   const tours = [
     {
-      title: "LAGOA DO ARROZ",
-      date: "28/09",
-      location: "Búzios",
-      description: "Trilha de 5km com banho na lagoa cristalina e diversão garantida",
+      title: "São José do Campestre",
+      date: "19/10",
+      location: "São José do Campestre - RN",
+      description: "Passeio cultural e ecológico por São José do Campestre, com pontos históricos e natureza.",
       includes: [
         "🚍 Saída de Natal",
-        "🍽️ Café da manhã e almoço",
-        "👣 Trilha + banho refrescante",
-        "🎒 Translado + guia de turismo"
+        "🗺️ Guia de turismo",
+        "📸 Paradas para fotos",
+        "💧 Águas e suporte básico"
       ],
-      price: "R$ 85,00",
-      cta: "Garanta já sua vaga e venha viver essa experiência com a Kazan Adventure!",
+      price: "Consulte",
+      cta: "Garanta sua vaga para São José do Campestre!",
       images: [
-        "/Próximos destinos/lagoa do arroz.jpg.webp"
+        "/Próximos destinos/campestre.jpg"
       ]
     },
     {
-      title: "BATE E VOLTA ENSAIO DA ANITA",
-      date: "17/01",
-      location: "Natal – Recife",
-      description: "Oportunidade de curtir o ensaio mais esperado do ano com clima de Carnaval e retorno seguro",
+      title: "Pedra da Boca",
+      date: "30/11",
+      location: "Araruna - PB",
+      description: "Aventura na Pedra da Boca com paisagens únicas e trilhas para todos os níveis.",
       includes: [
-        "📲 Informações/reservas via direct ou WhatsApp"
-      ],
-      highlights: [
-        "🌴🔥 Experiência única",
-        "🥳🎶 Diversão garantida"
+        "🚍 Transporte ida e volta",
+        "👣 Trilhas guiadas",
+        "📸 Pontos instagramáveis",
+        "🧴 Suporte durante o passeio"
       ],
       price: "Consulte",
-      cta: "Garanta já sua vaga e venha viver essa experiência única com a gente!",
+      cta: "Reserve agora sua experiência na Pedra da Boca!",
+      images: [
+        "/Próximos destinos/pedra-da-boca.webp"
+      ]
+    },
+    {
+      title: "Ensaios da Anitta",
+      date: "17/01",
+      location: "Natal – Recife",
+      description: "Bate e volta para curtir os ensaios da Anitta com segurança e comodidade.",
+      includes: [
+        "🚐 Bate e volta",
+        "📲 Reservas via WhatsApp",
+        "🎶 Clima de Carnaval",
+        "🛡️ Retorno seguro"
+      ],
+      highlights: [
+        "🥳 Diversão garantida",
+        "🎤 Experiência única"
+      ],
+      price: "Consulte",
+      cta: "Garanta sua vaga para os ensaios da Anitta!",
       images: [
         "/Próximos destinos/annita.png"
       ]
     },
     {
-      title: "BÚZIOS RN",
-      date: "15/02",
-      location: "Nísia Floresta - RN",
-      description: "Explore as belezas naturais de Búzios RN com suas praias paradisíacas e paisagens deslumbrantes",
+      title: "Aldeia Catu",
+      date: "25/01",
+      location: "Catu - RN",
+      description: "Imersão cultural na Aldeia Catu com vivência local e turismo comunitário.",
+      includes: [
+        "🚍 Saída de Natal",
+        "🗺️ Guia local",
+        "🤝 Vivência cultural",
+        "📸 Paradas para fotos"
+      ],
+      price: "Consulte",
+      cta: "Participe dessa experiência na Aldeia Catu!",
+      images: [
+        "/Próximos destinos/aldeia-catu.jpg"
+      ]
+    },
+    {
+      title: "Pipa",
+      date: "08/02",
+      location: "Tibau do Sul - RN",
+      description: "Day trip para Pipa: praias paradisíacas, falésias e pontos instagramáveis.",
       includes: [
         "🚍 Transporte ida e volta",
         "🏖️ Acesso às praias",
         "📸 Pontos instagramáveis",
-        "🥥 Água de coco inclusa",
         "👨‍🏫 Guia especializado"
       ],
-      highlights: [
-        "🌊 Praias cristalinas",
-        "🌅 Pôr do sol único",
-        "🐚 Piscinas naturais"
-      ],
-      price: "R$ 120,00",
-      cta: "Reserve sua vaga e descubra o paraíso de Búzios RN!",
+      price: "Consulte",
+      cta: "Reserve sua vaga e venha curtir Pipa!",
       images: [
-        "/Próximos destinos/buzios rn.webp"
+        "/Próximos destinos/pipa.jpg"
       ]
     }
   ];
