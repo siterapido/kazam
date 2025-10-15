@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { ChevronLeft, ChevronRight, Calendar, MapPin, Users } from 'lucide-react';
+import { toWebpPath } from '@/lib/utils';
 
 interface TourCardProps {
   title: string;
@@ -32,6 +33,31 @@ export const TourCard: React.FC<TourCardProps> = ({
   onCtaClick
 }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [webpAvailable, setWebpAvailable] = useState<boolean[]>(() => images.map(() => false));
+
+  useEffect(() => {
+    let isMounted = true;
+    const controller = new AbortController();
+    const checkAll = async () => {
+      const checks = await Promise.all(
+        images.map(async (img) => {
+          const webp = toWebpPath(img);
+          try {
+            const res = await fetch(webp, { method: 'HEAD', signal: controller.signal });
+            return res.ok;
+          } catch {
+            return false;
+          }
+        })
+      );
+      if (isMounted) setWebpAvailable(checks);
+    };
+    checkAll();
+    return () => {
+      isMounted = false;
+      controller.abort();
+    };
+  }, [images]);
 
   const positionClass =
     imagePosition === 'bottom'
@@ -67,17 +93,25 @@ export const TourCard: React.FC<TourCardProps> = ({
       {/* Image Slider */}
       <div className="relative h-64 overflow-hidden">
         <div className="relative w-full h-full">
-          {images.map((image, index) => (
-            <motion.img
-              key={index}
-              src={image}
-              alt={`${title} - Imagem ${index + 1}`}
-              className={`absolute inset-0 w-full h-full object-cover ${positionClass}`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
-              transition={{ duration: 0.5 }}
-            />
-          ))}
+          {images.map((image, index) => {
+            const webp = toWebpPath(image);
+            const useWebp = webpAvailable[index];
+            return (
+              <picture key={index}>
+                {useWebp && <source type="image/webp" srcSet={webp} />}
+                <motion.img
+                  src={image}
+                  alt={`${title} - Imagem ${index + 1}`}
+                  className={`absolute inset-0 w-full h-full object-cover ${positionClass}`}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: index === currentImageIndex ? 1 : 0 }}
+                  transition={{ duration: 0.5 }}
+                  loading={index === 0 ? 'eager' : 'lazy'}
+                  decoding="async"
+                />
+              </picture>
+            );
+          })}
         </div>
 
         {/* Navigation Arrows */}

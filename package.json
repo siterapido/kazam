@@ -6,6 +6,8 @@
   "scripts": {
     "config:update": "node scripts/generate-config.js",
     "dev": "npm run config:update && vite",
+    "images:webp": "node scripts/convert-images-to-webp.js",
+    "prebuild": "node scripts/convert-images-to-webp.js",
     "build": "npm run config:update && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -41,6 +43,8 @@
     "terser": "^5.43.1",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
-    "vite": "^7.0.4"
+    "vite": "^7.0.4",
+    "fast-glob": "^3.3.2",
+    "sharp": "^0.33.5"
   }
 }

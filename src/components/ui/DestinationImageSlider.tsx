@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { toWebpPath } from '@/lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -11,6 +12,39 @@ interface DestinationImageSliderProps {
 export function DestinationImageSlider({ images, alt, className = '' }: DestinationImageSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [webpAvailable, setWebpAvailable] = useState<Record<string, boolean>>({});
+
+  // Verifica disponibilidade de WebP para cada imagem e cacheia o resultado
+  useEffect(() => {
+    let isMounted = true;
+    const checkWebpAvailability = async () => {
+      const entries = await Promise.all(
+        images.map(async (img) => {
+          const webp = toWebpPath(img);
+          try {
+            const res = await fetch(webp, { method: 'HEAD' });
+            return [img, res.ok] as const;
+          } catch {
+            return [img, false] as const;
+          }
+        })
+      );
+      if (!isMounted) return;
+      const map: Record<string, boolean> = {};
+      for (const [img, ok] of entries) {
+        map[img] = ok;
+      }
+      setWebpAvailable(map);
+    };
+    if (images.length > 0) {
+      checkWebpAvailability();
+    }
+    return () => {
+      isMounted = false;
+    };
+  }, [images]);
+
+  const hasWebp = (img: string) => webpAvailable[img] === true;
 
   // Auto-play do slider mais lento
   useEffect(() => {
@@ -46,39 +80,65 @@ export function DestinationImageSlider({ images, alt, className = '' }: Destinat
   }
 
   if (images.length === 1) {
+    const img = images[0];
     return (
-      <img
-        src={images[0]}
-        alt={alt}
-        className={`w-full h-full object-cover object-center ${className}`}
-      />
+      <picture>
+        {hasWebp(img) && <source type="image/webp" srcSet={toWebpPath(img)} />}
+        <img
+          src={img}
+          alt={alt}
+          className={`w-full h-full object-cover object-center ${className}`}
+          loading="lazy"
+          decoding="async"
+        />
+      </picture>
     );
   }
 
   return (
     <div className={`relative overflow-hidden bg-gray-100 ${className}`}>
       {/* Imagem de fundo sempre visível */}
-      <img
-        src={images[(currentIndex - 1 + images.length) % images.length]}
-        alt=""
-        className="w-full h-full object-cover object-center absolute inset-0"
-        aria-hidden="true"
-      />
+      {(() => {
+        const bg = images[(currentIndex - 1 + images.length) % images.length];
+        return (
+          <picture>
+            {hasWebp(bg) && <source type="image/webp" srcSet={toWebpPath(bg)} />}
+            <img
+              src={bg}
+              alt=""
+              className="w-full h-full object-cover object-center absolute inset-0"
+              aria-hidden="true"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+        );
+      })()}
       
       <AnimatePresence mode="sync">
-        <motion.img
-          key={currentIndex}
-          src={images[currentIndex]}
-          alt={`${alt} - Foto ${currentIndex + 1}`}
-          className="w-full h-full object-cover object-center absolute inset-0"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ 
-            duration: 0.8,
-            ease: "easeInOut"
-          }}
-        />
+        {(() => {
+          const cur = images[currentIndex];
+          return (
+            <picture>
+              {hasWebp(cur) && <source type="image/webp" srcSet={toWebpPath(cur)} />}
+              <motion.img
+                key={currentIndex}
+                src={cur}
+                alt={`${alt} - Foto ${currentIndex + 1}`}
+                className="w-full h-full object-cover object-center absolute inset-0"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ 
+                  duration: 0.8,
+                  ease: "easeInOut"
+                }}
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          );
+        })()}
       </AnimatePresence>
 
       {/* Controles de navegação */}

@@ -242,10 +242,6 @@ const FooterSection: React.FC = () => {
               <span className="text-gray-400 text-sm">Empresa Certificada</span>
             </div>
             <div className="flex items-center justify-center gap-2">
-              <div className="w-3 h-3 bg-secondary-500 rounded-full"></div>
-              <span className="text-gray-400 text-sm">Seguro Viagem Incluso</span>
-            </div>
-            <div className="flex items-center justify-center gap-2">
               <div className="w-3 h-3 bg-accent-500 rounded-full"></div>
               <span className="text-gray-400 text-sm">Atendimento 24/7</span>
             </div>

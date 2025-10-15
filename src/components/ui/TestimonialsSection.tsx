@@ -230,7 +230,13 @@ const TestimonialsSection: React.FC = () => {
                 {/* Header do depoimento */}
                 <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
                   <div className="flex items-center gap-4">
-                    <img src={testimonials[currentIndex].image} alt={testimonials[currentIndex].name} className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover shadow-md" />
+                    <img
+                      src={testimonials[currentIndex].image}
+                      alt={testimonials[currentIndex].name}
+                      className="w-14 h-14 md:w-16 md:h-16 rounded-full object-cover shadow-md"
+                      loading="lazy"
+                      decoding="async"
+                    />
                     <div>
                       <div className="flex items-center gap-2 flex-wrap">
                         <h3 className="text-base md:text-lg font-semibold text-gray-900">
@@ -352,7 +358,13 @@ const TestimonialsSection: React.FC = () => {
               onClick={() => goToTestimonial(index)}
             >
               <div className="flex items-center gap-3 mb-4">
-                <img src={testimonial.image} alt={testimonial.name} className="w-12 h-12 rounded-full object-cover" />
+                <img
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  className="w-12 h-12 rounded-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
                 <div>
                   <h4 className="font-semibold text-gray-900 text-sm">
                     {testimonial.name}

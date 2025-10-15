@@ -29,10 +29,10 @@ const UpcomingToursSection: React.FC = () => {
         "📸 Paradas para fotos",
         "💧 Águas e suporte básico"
       ],
-      price: "Consulte",
+      price: "R$ 130,00",
       cta: "Garanta sua vaga para São José do Campestre!",
       images: [
-        "/Próximos destinos/campestre.jpg"
+        "/Próximos destinos/campestre1.png"
       ]
     },
     {
@@ -67,7 +67,7 @@ const UpcomingToursSection: React.FC = () => {
         "🥳 Diversão garantida",
         "🎤 Experiência única"
       ],
-      price: "Consulte",
+      price: "R$ 140,00",
       cta: "Garanta sua vaga para os ensaios da Anitta!",
       images: [
         "/Próximos destinos/annita.png"

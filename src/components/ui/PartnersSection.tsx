@@ -5,6 +5,7 @@ import { Handshake, Star, Users, Shield } from 'lucide-react';
 import { Section, SectionHeader } from './Section';
 import { Card, CardBody } from './Card';
 import { jasturConfig } from '../../config/jastur';
+import { toWebpPath } from '@/lib/utils';
 
 const PartnersSection: React.FC = () => {
   const partners = jasturConfig.partners?.map((p, idx) => ({
@@ -51,12 +52,22 @@ const PartnersSection: React.FC = () => {
                 <CardBody className="p-8">
                   {/* Imagem do parceiro */}
                   <div className="relative mb-8 overflow-hidden rounded-2xl">
-                    <motion.img
-                      src={partner.image}
-                      alt={`${partner.name} - Parceiro ${jasturConfig.company.name}`}
-                      className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
-                      whileHover={{ scale: 1.05 }}
-                    />
+                    {(() => {
+                      const webp = toWebpPath(partner.image);
+                      return (
+                        <picture>
+                          <source type="image/webp" srcSet={webp} />
+                          <motion.img
+                            src={partner.image}
+                            alt={`${partner.name} - Parceiro ${jasturConfig.company.name}`}
+                            className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                            whileHover={{ scale: 1.05 }}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </picture>
+                      );
+                    })()}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     
                     {/* Badge de parceiro */}

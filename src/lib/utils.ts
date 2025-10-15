@@ -103,3 +103,11 @@ export function openWhatsApp(phoneNumber?: string, message?: string): void {
   const whatsappUrl = generateWhatsAppLink(phoneNumber, message);
   window.open(whatsappUrl, '_blank');
 }
+
+/**
+ * Converte caminho de imagem para a variante .webp mantendo a estrutura
+ * Ex.: /images/foto.jpg -> /images/foto.webp
+ */
+export function toWebpPath(src: string): string {
+  return src.replace(/\.(png|jpg|jpeg)$/i, '.webp');
+}

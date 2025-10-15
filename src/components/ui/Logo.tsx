@@ -1,6 +1,8 @@
 
 import { motion } from 'motion/react';
 import { jasturConfig } from '../../config/jastur';
+import { toWebpPath } from '@/lib/utils';
+import { OptimizedImage } from './OptimizedImage';
 
 interface LogoProps {
   className?: string;
@@ -24,13 +26,15 @@ export function Logo({ className = '', size = 'md', variant = 'full' }: LogoProp
   const logoClasses = `font-bold ${textSizeClasses[size]} ${className}`;
 
   const renderIcon = () => (
-    <motion.img
-      src={jasturConfig.logo?.file || '/logo.png'}
-      alt={jasturConfig.logo?.alt || jasturConfig.company?.name || 'Logo'}
-      className={`${sizeClasses[size]} w-auto object-contain`}
-      whileHover={{ scale: 1.05 }}
-      transition={{ duration: 0.2 }}
-    />
+    <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 0.2 }}>
+      <OptimizedImage
+        src={jasturConfig.logo?.file || '/logo.png'}
+        alt={jasturConfig.logo?.alt || jasturConfig.company?.name || 'Logo'}
+        className={`${sizeClasses[size]} w-auto object-contain`}
+        loading="eager"
+        decoding="async"
+      />
+    </motion.div>
   );
 
   const renderText = () => (

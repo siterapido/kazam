@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { toWebpPath } from '@/lib/utils';
 
 // Array com as imagens existentes na pasta slides
 const slides = [
@@ -15,6 +16,35 @@ export function BackgroundSlider() {
   const [current, setCurrent] = useState(0);
   const [paused, setPaused] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [webpAvailable, setWebpAvailable] = useState<Record<string, boolean>>({});
+
+  // Checa e cacheia disponibilidade de WebP para cada imagem
+  useEffect(() => {
+    let mounted = true;
+    const checkAllWebp = async () => {
+      const entries = await Promise.all(
+        images.map(async (img) => {
+          const webp = toWebpPath(img);
+          try {
+            const res = await fetch(webp, { method: 'HEAD' });
+            return [img, res.ok] as const;
+          } catch {
+            return [img, false] as const;
+          }
+        })
+      );
+      if (!mounted) return;
+      const map: Record<string, boolean> = {};
+      for (const [img, ok] of entries) map[img] = ok;
+      setWebpAvailable(map);
+    };
+    checkAllWebp();
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  const hasWebp = (img: string) => webpAvailable[img] === true;
 
   useEffect(() => {
     if (!paused) {
@@ -33,17 +63,25 @@ export function BackgroundSlider() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
     >
-      {images.map((img, idx) => (
-        <img
-          key={img}
-          src={img}
-          alt={`Destino turístico ${idx + 1}`}
-          className={`transition-all duration-1500 absolute inset-0 w-full h-full object-cover max-w-full ${
-            idx === current ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
-          }`}
-          draggable={false}
-        />
-      ))}
+      {images.map((img, idx) => {
+        const webp = toWebpPath(img);
+        const classes = `transition-all duration-1500 absolute inset-0 w-full h-full object-cover max-w-full ${
+          idx === current ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-105 z-0'
+        }`;
+        return (
+          <picture key={img}>
+            {hasWebp(img) && <source type="image/webp" srcSet={webp} />}
+            <img
+              src={img}
+              alt={`Destino turístico ${idx + 1}`}
+              className={classes}
+              draggable={false}
+              loading={idx === 0 ? 'eager' : 'lazy'}
+              decoding="async"
+            />
+          </picture>
+        );
+      })}
       
       {/* Overlay gradiente melhorado para melhor contraste */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/70 pointer-events-none z-10" />

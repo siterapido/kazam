@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, X, Maximize2 } from 'lucide-react';
+import { toWebpPath } from '@/lib/utils';
 
 interface ImageCarouselProps {
   images: string[];
@@ -23,6 +24,35 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [isPlaying, setIsPlaying] = useState(autoPlay);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const [webpAvailable, setWebpAvailable] = useState<Record<string, boolean>>({});
+
+  // Verifica disponibilidade de WebP para cada imagem (HEAD) e cacheia resultados
+  useEffect(() => {
+    let mounted = true;
+    const checkAllWebp = async () => {
+      const entries = await Promise.all(
+        images.map(async (img) => {
+          const webp = toWebpPath(img);
+          try {
+            const res = await fetch(webp, { method: 'HEAD' });
+            return [img, res.ok] as const;
+          } catch {
+            return [img, false] as const;
+          }
+        })
+      );
+      if (!mounted) return;
+      const map: Record<string, boolean> = {};
+      for (const [img, ok] of entries) map[img] = ok;
+      setWebpAvailable(map);
+    };
+    if (images.length > 0) checkAllWebp();
+    return () => {
+      mounted = false;
+    };
+  }, [images]);
+
+  const hasWebp = (img: string) => webpAvailable[img] === true;
 
   // Auto-play functionality
   useEffect(() => {
@@ -103,16 +133,27 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
         {/* Main Image Container */}
         <div className="relative h-full">
           <AnimatePresence mode="wait">
-            <motion.img
-              key={currentIndex}
-              src={images[currentIndex]}
-              alt={`${alt} - Imagem ${currentIndex + 1}`}
-              className="w-full h-full object-cover object-center"
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
-            />
+            {(() => {
+              const currentImage = images[currentIndex];
+              return (
+                <picture key={currentIndex}>
+                  {hasWebp(currentImage) && (
+                    <source type="image/webp" srcSet={toWebpPath(currentImage)} />
+                  )}
+                  <motion.img
+                    src={currentImage}
+                    alt={`${alt} - Imagem ${currentIndex + 1}`}
+                    className="w-full h-full object-cover object-center"
+                    initial={{ opacity: 0, x: 100 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -100 }}
+                    transition={{ duration: 0.5 }}
+                    loading={currentIndex === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
+                  />
+                </picture>
+              );
+            })()}
           </AnimatePresence>
 
           {/* Navigation Arrows */}
@@ -185,11 +226,18 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
                       : 'border-gray-200 hover:border-gray-300'
                   }`}
                 >
-                  <img
-                    src={image}
-                    alt={`Thumbnail ${index + 1}`}
-                    className="w-full h-full object-cover object-center"
-                  />
+                  <picture>
+                    {hasWebp(image) && (
+                      <source type="image/webp" srcSet={toWebpPath(image)} />
+                    )}
+                    <img
+                      src={image}
+                      alt={`Thumbnail ${index + 1}`}
+                      className="w-full h-full object-cover object-center"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </picture>
                 </button>
               ))}
             </div>
@@ -217,15 +265,26 @@ export const ImageCarousel: React.FC<ImageCarouselProps> = ({
 
             {/* Fullscreen Image */}
             <div className="relative w-full h-full flex items-center justify-center p-4">
-              <motion.img
-                key={`fullscreen-${currentIndex}`}
-                src={images[currentIndex]}
-                alt={`${alt} - Imagem ${currentIndex + 1}`}
-                className="max-w-full max-h-full object-contain"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3 }}
-              />
+              {(() => {
+                const currentImage = images[currentIndex];
+                return (
+                  <picture key={`fullscreen-${currentIndex}`}>
+                    {hasWebp(currentImage) && (
+                      <source type="image/webp" srcSet={toWebpPath(currentImage)} />
+                    )}
+                    <motion.img
+                      src={currentImage}
+                      alt={`${alt} - Imagem ${currentIndex + 1}`}
+                      className="max-w-full max-h-full object-contain"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3 }}
+                      loading="eager"
+                      decoding="async"
+                    />
+                  </picture>
+                );
+              })()}
 
               {/* Navigation in Fullscreen */}
               {images.length > 1 && (

@@ -41,7 +41,7 @@ const BuggyToursSection: React.FC = () => {
         'Com emoção ou sem emoção'
       ],
       highlights: ['Dunas móveis', 'Fotos panorâmicas', 'Taxas inclusas'],
-      price: 'R$ 530 / buggy',
+      price: 'A consultar',
       cta: 'Reservar pelo WhatsApp',
       images: ['/Próximos destinos/Passeios de Buggy/pexels-fabio-akamine-1315530474-29467599.jpg']
     },
@@ -67,7 +67,7 @@ const BuggyToursSection: React.FC = () => {
         'Com emoção ou sem emoção'
       ],
       highlights: ['Experiência rápida', 'Paradas para fotos', 'Atividades opcionais'],
-      price: 'R$ 360 / buggy',
+      price: 'A consultar',
       cta: 'Reservar pelo WhatsApp',
       images: ['/Próximos destinos/Passeios de Buggy/pexels-frederic-hancke-113473984-33503244.jpg']
     },
@@ -94,7 +94,7 @@ const BuggyToursSection: React.FC = () => {
         'Com emoção ou sem emoção'
       ],
       highlights: ['Travessia de balsa inclusa', 'Jacumã com emoção', 'Dia completo'],
-      price: 'R$ 720 / buggy',
+      price: 'A consultar',
       cta: 'Reservar pelo WhatsApp',
       images: ['/Próximos destinos/Passeios de Buggy/pexels-victorlucss-16565329.jpg']
     }
