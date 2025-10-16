@@ -1,7 +1,6 @@
 
 import { motion } from 'motion/react';
 import { jasturConfig } from '../../config/jastur';
-import { toWebpPath } from '@/lib/utils';
 import { OptimizedImage } from './OptimizedImage';
 
 interface LogoProps {
