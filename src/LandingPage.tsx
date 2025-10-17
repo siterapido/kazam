@@ -6,7 +6,7 @@ import BuggyToursSection from "./components/ui/BuggyToursSection";
 import TestimonialsSection from "./components/ui/TestimonialsSection";
 import FAQSection from "./components/ui/FAQSection";
 import FooterSection from "./components/ui/FooterSection";
-import { CommunitySection } from "./components/ui";
+import { CommunitySection, SimplePartnersSection } from "./components/ui";
 import { WhatsAppButton } from "./components/ui/WhatsAppButton";
 
 import { jasturConfig } from "./config/jastur";
@@ -19,6 +19,8 @@ const LandingPage: React.FC = () => {
       <BuggyToursSection />
       <UnifiedExploreSection />
       <CommunitySection />
+      {/* Sessão simples de parceiros */}
+      <SimplePartnersSection />
       <TestimonialsSection />
       <FAQSection />
       <FooterSection />
